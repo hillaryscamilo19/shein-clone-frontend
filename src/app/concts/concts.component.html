@@ -1,0 +1,36 @@
+<mat-toolbar>
+    URKU PORTAFOLIO
+    <div class="flex-box">
+      <h1 [routerLink]="['/Home']">Home</h1>
+      <h2 [routerLink]="['/shared']">Ropa</h2>
+      <h4 [routerLink]="['/pages']">Page</h4>
+      <h5 [routerLink]="['/contact']">Contact Us</h5>
+    </div>
+  </mat-toolbar>
+  
+  <div class="container">
+    <div class="matInput">
+      <mat-form-field class="input1" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Ex. maria" />
+      </mat-form-field>
+      <mat-form-field class="input2" appearance="fill">
+        <mat-label>Correo Electronico</mat-label>
+        <input matInput placeholder="Ex. hcamilo@gmail.com" />
+      </mat-form-field>
+  
+      <mat-form-field class="input3" appearance="fill">
+        <mat-label>Asunto</mat-label>
+        <input matInput placeholder="Ex. Pizza" />
+      </mat-form-field>
+      <div class="contenedor">
+        <mat-form-field class="input4" appearance="fill">
+          <mat-label>Mensaje</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+        <button>Enviar</button>
+        <img class="imagen" [src]="imagen" />
+      </div>
+    </div>
+  </div>
+  

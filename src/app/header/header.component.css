@@ -1,0 +1,212 @@
+/* toolbal principal */
+
+.container span{
+    color: rgb(27, 26, 26);
+    margin-left: 120px;
+}
+.container mat-toolbar{
+    background-color:  rgb(255 255 255);
+}
+
+.flex-box{
+    display: flex;
+}
+.flex-box h1{
+    margin: 0px;
+    width: 3px;
+    margin-left: 500px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+}
+
+.flex-box h2{
+    margin: 0px;
+    width: 3px;
+    margin-left: 176px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+}
+
+.flex-box h3{
+    margin: 0px;
+    width: 3px;
+    margin-left: 176px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+}
+
+.flex-box h4{
+    margin: 0px;
+    width: 3px;
+    margin-left: 176px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+}
+
+.flex-box h5{
+    margin: 0px;
+    width: 3px;
+    margin-left: 176px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+}
+/* contenido de imagenes */
+.fondo{
+    width: 100px;
+    height: 190px;
+    background-color: rgba(255, 247, 244, 0);
+    cursor: pointer;
+}
+
+.container{
+    width: 1087px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container .imagen{   
+    position: absolute;
+    width: 1087px;
+    height: 580px;
+    margin-top: 5%;
+    margin-left: 305px;
+}
+
+
+.container .imagen2{
+    position: absolute;
+    width: 473px;
+    height: 481px;
+    margin-top: 35%;
+    margin-left: 111px;
+
+}
+
+.container .imagen3{
+    position: absolute;
+    width: 469px;
+    height: 478px;
+    margin-top: 35%;
+    margin-left: 623px;
+}
+
+
+.container .imagen4{
+    position: absolute;
+    width: 470px;
+    height: 489px;
+    margin-top: 161%;
+    margin-left: 114px;
+}
+
+
+
+.container .imagen5{
+    position: absolute;
+    width: 475px;
+    height: 489px;
+    margin-top: 65%;
+    margin-left: 625px;
+}
+
+
+.container .imagen6{
+    position: absolute;
+    width: 475px;
+    height: 571px;
+    margin-top: 96%;
+    margin-left: 114px;
+
+}
+
+
+.container .imagen7{
+    position: absolute;
+    width: 473px;
+    height: 493px;
+    margin-top: 131%;
+    margin-left: 115px;
+}
+
+.container .imagen8{
+    position: absolute;
+    width: 481px;
+    height: 498px;
+    margin-top: 131%;
+    margin-left: 630px;
+}
+
+
+.container .imagen9{
+    position: absolute;
+    width: 475px;
+    height: 571px;
+    margin-top: 96%;
+    margin-left: 626px;
+}
+
+.container .imagen10{
+    position: absolute;
+    width: 475px;
+    height: 489px;
+    margin-top: 65%;
+    margin-left: 111px;
+}
+
+.container .imagen11{
+    position: absolute;
+    width: 481px;
+    height: 489px;
+    margin-top: 161%;
+    margin-left: 629px;
+}
+
+/* toolbal principal */
+
+mat-toolba{
+    background: darkcyan;
+    color: white;
+}
+
+mat-sidenav{
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: rgb(31, 140, 243);
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+mat-sidenav-container{
+    height: calc(100vh - 65px);
+}
+
+.containe{
+    height: calc(100vh - 98px);
+    margin: 16px;
+    margin-left: 32px;
+    display: flex;
+    justify-content: center;
+
+    font-size: 2rem;
+    color: lightgray;
+}

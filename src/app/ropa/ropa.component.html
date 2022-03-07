@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="toggleSidebar()">menu</mat-icon>
+    </button>
+    <h1>Ropa</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [opened]="opened">
+    <mat-nav-list>
+      <img
+        class="avatar mat-elevation-z4"
+        src="https://i.pinimg.com/564x/60/c9/43/60c9432b9466c2a6912b26d0ce42c152.jpg"
+      />
+
+      <h4 class="logo">City Style</h4>
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button">
+        <mat-icon [routerLink]="['/Home']">home</mat-icon>
+        <span [routerLink]="['/Home']">Home</span>
+
+        <button mat-button class="menu-button">
+          <mat-icon>contacts</mat-icon>
+          <span [routerLink]="['/contact']">Contacts</span>
+        </button>
+
+        <button mat-button class="menu-button">
+          <mat-icon>info</mat-icon>
+          <span>Help</span>
+        </button>
+      </button>
+      <a mat-list-item>Vestido</a>
+      <a mat-list-item>Falda</a>
+      <a mat-list-item>Blusa</a>
+      <a mat-list-item>Pantalones</a>
+      <a mat-list-item>Abrigo</a>
+      <a mat-list-item>Zapatos</a>
+      <a mat-list-item>Tacos</a>
+      <a mat-list-item>Cartera</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <div class="contect">
+        <img class="imagen" [src]="img1"  />
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

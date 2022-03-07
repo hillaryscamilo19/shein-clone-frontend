@@ -1,0 +1,108 @@
+/* toolbal principal */
+
+.container span {
+    color: rgb(27, 26, 26);
+    margin-left: 120px;
+  }
+  .container mat-toolbar {
+    background-color: rgb(255 255 255);
+  }
+  
+  .flex-box {
+    display: flex;
+  }
+  .flex-box h1 {
+    margin: 0px;
+    width: 3px;
+    margin-left: 500px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+  }
+  
+  .flex-box h2 {
+    margin: 0px;
+    width: 3px;
+    margin-left: 176px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+  }
+  
+  .flex-box h3 {
+    margin: 0px;
+    width: 3px;
+    margin-left: 176px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+  }
+  
+  .flex-box h4 {
+    margin: 0px;
+    width: 3px;
+    margin-left: 176px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+  }
+  
+  .flex-box h5 {
+    margin: 0px;
+    width: 3px;
+    margin-left: 176px;
+    text-align: center;
+    line-height: 87px;
+    font-size: 17px;
+    color: rgb(23, 24, 23);
+    cursor: pointer;
+  }
+  
+  .matInput {
+    margin-top: 10%;
+  }
+  
+  .matInput button {
+    height: 38px;
+    width: 144px;
+    background-color: antiquewhite;
+    margin-top: 2%;
+    border-radius: 2%;
+  }
+  
+  .input1 {
+    width: 203px;
+    margin-left: 80%;
+    margin-top: 8%;
+  }
+  
+  .input2 {
+    margin-left: 80%;
+    margin-top: 2%;
+  }
+  
+  .input3 {
+    margin-left: 80%;
+    margin-top: 2%;
+  }
+  
+  .input4 {
+    margin-left: 80%;
+    margin-top: 2%;
+  }
+  
+  .imagen {
+    width: 747px;
+    height: 721px;
+    margin-top: -37%;
+    margin-left: 26%;
+  }
+  
