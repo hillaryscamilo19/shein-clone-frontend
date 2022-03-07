@@ -6,19 +6,18 @@ import { PagesComponent } from './pages/pages.component';
 import { RopaComponent } from './ropa/ropa.component';
 import { ClothingContentComponent } from './clothing-content/clothing-content.component';
 
-
 const routes: Routes = [
-  {path: 'Home' , component:HomeComponent},
-  {path: 'ropa' , component: RopaComponent},
+  { path: 'Home', component: HomeComponent },
+  { path: 'ropa', component: RopaComponent },
   // {path: 'shared', loadChildren: () => import('../app/shared/shared.module').then(m => m.SharedModule)},
-  {path: 'contact' , component:ConctsComponent},
-  {path: 'pages', component:PagesComponent},
-  {path: 'contenido', component:ClothingContentComponent},
-  {path:  '' , component:HomeComponent}
+  { path: 'contact', component: ConctsComponent },
+  { path: 'pages', component: PagesComponent },
+  { path: 'contenido', component: ClothingContentComponent },
+  { path: '', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

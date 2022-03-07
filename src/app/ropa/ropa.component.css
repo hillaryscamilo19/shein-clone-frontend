@@ -171,13 +171,13 @@ mat-sidenav-container {
   display: flex;
 }
 
-.contect{
-    height:  calc(100vh - 98px);
-    margin: 16px;
-    margin-left: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contect {
+  height: calc(100vh - 98px);
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 mat-divider {
