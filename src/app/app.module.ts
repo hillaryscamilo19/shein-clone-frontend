@@ -4,13 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //modules
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { RopaComponent } from './ropa/ropa.component';
-import { ContenidoComponent } from './contenido/contenido.component';
-import { ConctsComponent } from './concts/concts.component';
-import { PagesComponent } from './pages/pages.component';
-import { SidevarComponent } from './sidevar/sidevar.component';
+import { HomeComponent } from './components/home/home.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+
+
 //material angular
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,19 +17,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { ClothingContentComponent } from './clothing-content/clothing-content.component';
+import { MatStepperModule } from '@angular/material/stepper';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent,
-    RopaComponent,
-    ContenidoComponent,
-    ConctsComponent,
-    PagesComponent,
-    SidevarComponent,
-    ClothingContentComponent,
+    ShopComponent,
+    ContactComponent,
+    AboutUsComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -42,6 +39,7 @@ import { ClothingContentComponent } from './clothing-content/clothing-content.co
     MatListModule,
     MatButtonModule,
     MatInputModule,
+    MatStepperModule 
   ],
   providers: [],
   bootstrap: [AppComponent],
