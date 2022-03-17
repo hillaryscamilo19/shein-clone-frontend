@@ -1,0 +1,12 @@
+<mat-toolbar>
+    <button mat-icon-button>
+      <mat-icon>storefront</mat-icon>
+    </button>
+    <h6>Store</h6>
+    <ul *ngFor="let home of rutas">
+      <span [routerLink]="home.ruta"> {{ home.name }}</span>
+    </ul>
+    <button mat-icon-button>
+      <mat-icon class="icon">local_grocery_store </mat-icon>
+    </button>
+  </mat-toolbar>

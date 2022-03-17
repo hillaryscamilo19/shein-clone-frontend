@@ -18,6 +18,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
+import { StepperComponent } from './components/stepper/stepper.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     ShopComponent,
     ContactComponent,
     AboutUsComponent,
+    StepperComponent,
+    HeaderComponent,
   
   ],
   imports: [

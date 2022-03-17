@@ -61,6 +61,20 @@ mat-stepper {
   left: 991px;
   top: 541px;
 }
+
+.mat-step-icon .mat-icon {
+  font-size: 0px;
+  height: 60px;
+  width: 168px;
+}
+
+.matStep img {
+  width: 99px;
+  height: 117px;
+  position: absolute;
+  left: 1%;
+}
+
 .title {
   position: absolute;
   width: 658px;
@@ -115,17 +129,11 @@ mat-stepper {
   top: -4px;
   font-size: 28px;
 }
-.matStep img {
-  width: 99px;
-  height: 117px;
-  position: absolute;
-  left: 1%;
-}
 
-// .image {
-//   position: absolute;
-//   width: 352px;
-//   height: 417px;
-//   left: 64%;
-//   top: 212px;
-// }
+.imagen {
+  position: absolute;
+  width: 304px;
+  height: 371px;
+  left: 61%;
+  top: 172px;
+}

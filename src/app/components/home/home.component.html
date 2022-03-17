@@ -12,6 +12,7 @@
 </mat-toolbar>
 
 <div class="img">
+  <img class="imagen" [src]="foto" />
 </div>
 
 <div class="title">
@@ -26,10 +27,11 @@
 </div>
 
 <div class="matStep">
-  <mat-stepper *ngFor="let home of imagen">
-    <mat-step class="matStep" [ngClass]="home.img"><img src="{{home.img}}"></mat-step>
-    <mat-step><img src="{{home.img1}}"></mat-step>
-    <mat-step><img src="{{home.img2}}"></mat-step>
+  <button mat-icon-button>
+    <mat-icon>circle</mat-icon>
+  </button>
+  <mat-stepper>
+    <mat-step *ngFor="let home of imagen"><img src="{{ home?.img }}"/></mat-step>
+    <mat-step *ngFor="let home of imagen">{{home.price}}</mat-step>
   </mat-stepper>
 </div>
-
