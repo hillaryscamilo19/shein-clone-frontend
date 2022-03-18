@@ -1,0 +1,28 @@
+.container h1 {
+  height: 23px;
+  margin: 0%;
+  padding: 1%;
+  margin-left: 7%;
+  text-align: center;
+  font-size: 332%;
+}
+.container span {
+  position: relative;
+  height: 23px;
+  top: 30%;
+  left: 9px;
+  text-align: center;
+}
+.encabezado {
+    height: 114px;
+    width: 1872px;
+    background-color: #d7d7d7;
+    margin-top: 6px;
+    margin-left: -1%;
+    text-align: center;
+    font-size: 448%;
+}
+
+.encabezado h1{
+    font-size: 20%;
+}

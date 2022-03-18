@@ -1,16 +1,3 @@
-<mat-toolbar>
-  <button mat-icon-button>
-    <mat-icon>storefront</mat-icon>
-  </button>
-  <h6>Store</h6>
-  <ul *ngFor="let home of rutas">
-    <span [routerLink]="home.ruta"> {{ home.name }}</span>
-  </ul>
-  <button mat-icon-button>
-    <mat-icon class="icon">local_grocery_store </mat-icon>
-  </button>
-</mat-toolbar>
-
 <div class="img">
   <img class="imagen" [src]="foto" />
 </div>
@@ -28,10 +15,17 @@
 
 <div class="matStep">
   <button mat-icon-button>
-    <mat-icon>circle</mat-icon>
+    <!-- <mat-icon>circle</mat-icon> -->
   </button>
   <mat-stepper>
-    <mat-step *ngFor="let home of imagen"><img src="{{ home?.img }}"/></mat-step>
-    <mat-step *ngFor="let home of imagen">{{home.price}}</mat-step>
+    <mat-step *ngFor="let home of imagen">
+      <mat-card>
+        <mat-card-title-group>
+          <img mat-card-md-image src="{{ home.img }}" />
+          <mat-card-title>{{ home.name }}</mat-card-title>
+          <mat-card-subtitle>{{ home.price }}</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card>
+    </mat-step>
   </mat-stepper>
 </div>

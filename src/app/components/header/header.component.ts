@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
     this.rutas = [
       {
         name: 'HOME',
-        ruta: '/',
+        ruta: '/home',
       },
       {
         name: 'ABOUT US',

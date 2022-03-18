@@ -9,7 +9,6 @@ import { ShopComponent } from './components/shop/shop.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 
-
 //material angular
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -20,7 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { StepperComponent } from './components/stepper/stepper.component';
 import { HeaderComponent } from './components/header/header.component';
-
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import { HeaderComponent } from './components/header/header.component';
     AboutUsComponent,
     StepperComponent,
     HeaderComponent,
-  
   ],
   imports: [
     BrowserModule,
@@ -43,7 +41,8 @@ import { HeaderComponent } from './components/header/header.component';
     MatListModule,
     MatButtonModule,
     MatInputModule,
-    MatStepperModule 
+    MatStepperModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
