@@ -1,0 +1,22 @@
+.container input {
+  width: 41pc;
+  height: 29px;
+  margin-top: 58px;
+  border: none;
+  margin-left: 302%;
+}
+
+.container mat-icon {
+  width: 129pc;
+  height: 36px;
+  margin-top: 9px;
+  border: none;
+  margin-left: 568%;
+}
+
+.buton button {
+  background-color: white;
+  text-align: center;
+  margin-top: 58px;
+  margin-left: 2%;
+}

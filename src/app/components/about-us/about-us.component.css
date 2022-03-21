@@ -1,28 +1,21 @@
-.container h1 {
-  height: 23px;
-  margin: 0%;
-  padding: 1%;
-  margin-left: 7%;
-  text-align: center;
-  font-size: 332%;
-}
-.container span {
-  position: relative;
-  height: 23px;
-  top: 30%;
-  left: 9px;
-  text-align: center;
-}
 .encabezado {
-    height: 114px;
-    width: 1872px;
-    background-color: #d7d7d7;
-    margin-top: 6px;
-    margin-left: -1%;
-    text-align: center;
-    font-size: 448%;
+  margin-top: 7%;
+  height: 102px;
 }
 
-.encabezado h1{
-    font-size: 20%;
+.encabezado h2 {
+  background-color: rgb(145, 143, 165);
+  font-size: 50px;
+  text-align: center;
+}
+
+.container h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 29px;
+  margin: 3%;
 }

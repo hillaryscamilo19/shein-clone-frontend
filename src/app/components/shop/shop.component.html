@@ -1,1 +1,20 @@
-<p>shop works!</p>
+<div class="container">
+  <button mat-icon-button>
+    <mat-icon (click)="clickd()">search</mat-icon>
+  </button>
+  <mat-form-field>
+    <input placeholder="Buscar" />
+  </mat-form-field>
+</div>
+
+<div class="buton">
+  <button mat-stroked-button>Todo</button>
+  <button mat-stroked-button>Coat</button>
+  <button mat-stroked-button>Trousers</button>
+  <button mat-stroked-button>Dress</button>
+  <button mat-stroked-button>shores</button>
+</div>
+
+<div class="buscador" *ngFor="let shop of imagen">
+  <img src="{{ shop.img }}"/>
+</div>
