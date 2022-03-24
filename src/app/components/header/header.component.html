@@ -1,12 +1,26 @@
-<mat-toolbar>
-  <button mat-icon-button>
-    <mat-icon>storefront</mat-icon>
-  </button>
-  <h6>Store</h6>
-  <ul *ngFor="let home of rutas">
-    <span [routerLink]="home.ruta"> {{ home.name }}</span>
-  </ul>
-  <button mat-icon-button>
-    <mat-icon class="icon">local_grocery_store </mat-icon>
-  </button>
-</mat-toolbar>
+<div class="container">
+  <mat-toolbar class="matobal">
+    <button mat-icon-butto>
+      <mat-icon class="icono">storefront</mat-icon>
+    </button>
+    <h6 class="titulo">Store</h6>
+    <ul *ngFor="let home of rutas" class="rutas">
+      <span [routerLink]="home.ruta"> {{ home.name }}</span>
+    </ul>
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="head"
+      aria-label="Ejemplo de icono-botón con un menú"
+    >
+    <mat-icon class="icon">local_grocery_store</mat-icon>
+    </button>
+    <mat-menu #head> 
+      <button mat-menu-item *ngFor="let header of lista">
+        <span></span>
+      </button>
+      <button mat-menu-item>
+        <span>v</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+</div>

@@ -21,7 +21,8 @@ import { StepperComponent } from './components/stepper/stepper.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -45,8 +46,9 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
     MatInputModule,
     MatStepperModule,
     MatCardModule,
-    CdkAccordionModule,
-    MatExpansionModule
+    MatSlideToggleModule,
+    MatExpansionModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent],

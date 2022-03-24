@@ -1,22 +1,78 @@
-.container input {
-  width: 41pc;
-  height: 29px;
-  margin-top: 58px;
-  border: none;
-  margin-left: 302%;
+.cotenedor {
+  width: 100%;
 }
 
-.container mat-icon {
-  width: 129pc;
+.icono {
+  width: 9px;
   height: 36px;
+  margin-left: 12px;
   margin-top: 9px;
   border: none;
-  margin-left: 568%;
 }
 
-.buton button {
-  background-color: white;
-  text-align: center;
-  margin-top: 58px;
-  margin-left: 2%;
+.form {
+  width: 100%;
+}
+
+.input {
+  width: 40%;
+  height: 29px;
+  margin-left: 34%;
+  margin-top: 0%;
+  border: none;
+}
+
+.seccion {
+  padding-top: 0%;
+  margin-left: 36%;
+}
+
+.buscador {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 285px;
+  margin-left: 5%;
+  margin-top: 22%;
+  height: 71px;
+  border-radius: 0%;
+  cursor: pointer;
+}
+
+.foto img{
+  width: 320px;
+  height: 286px;
+  margin-top: -97%;
+  margin-left: -17px;
+  border: none;
+}
+
+section button {
+  margin-left: 3%;
+  margin-top: 5%;
+  background-color: rgb(185, 113, 113);
+  color: black;
+}
+
+.shopin{
+  position: absolute;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 20px;
+}
+
+.mat-menu-panel {
+  min-width: 449px;
+  max-width: 286px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(105vh - 48px);
+  border-radius: 4px;
+  outline: 0;
+  min-height: 64px;
 }

@@ -1,8 +1,8 @@
-mat-toolbar {
+.matoba{
     background-color: rgb(255, 255, 255);
     color: rgb(15, 15, 15);
   }
-  mat-toolbar h6 {
+  .titulo {
     color: rgb(40 34 34);
     position: relative;
     width: 80px;
@@ -11,7 +11,7 @@ mat-toolbar {
     top: -8px;
     font-size: 18px;
   }
-  mat-toolbar ul {
+  .rutas{
     position: relative;
     color: #1ca6cd;
     width: 65px;
@@ -21,28 +21,7 @@ mat-toolbar {
     top: -8px;
     font-size: 18px;
   }
-  mat-toolbar:hover {
-    color: #fff;
-  }
-  mat-toolbar::before {
-    position: absolute;
-    height: 1%;
-    width: 54px;
-    left: 71%;
-    border-radius: 30%;
-    top: 59px;
-    background-color: #1ca6cd;
-    content: " ";
-    /* opacity*/
-    opacity: 0;
-    transform: scaleY(0);
-    transition: transform 0.2s, opacity 0.2s;
-  }
-  mat-toolbar:hover::before {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-  mat-icon {
+.icono {
     position: relative;
     width: 80px;
     height: 11px;
@@ -50,55 +29,10 @@ mat-toolbar {
     top: -6px;
     font-size: 30px;
     color: rgba(28, 166, 205, 1);
-  }
-  .title {
-    position: absolute;
-    width: 658px;
-    height: 365px;
-    left: 86px;
-    top: 298px;
-  }
-  .title h1 {
-    color: white;
-    position: absolute;
-    width: 664px;
-    height: 371px;
-    left: -4px;
-    font-size: 158%;
-    top: -10%;
-  }
-  .title h2 {
-    color: rgba(101, 101, 101, 1);
-    position: absolute;
-    width: 664px;
-    height: 371px;
-    left: -4px;
-    font-size: 232%;
-    top: 0%;
-  }
-  .title h4 {
-    color: rgb(0, 0, 0);
-    position: absolute;
-    width: 664px;
-    height: 371px;
-    left: -4px;
-    font-size: 109%;
-    top: 26%;
-  }
-  .title button {
-    position: absolute;
-    width: 251px;
-    height: 52px;
-    left: -8px;
-    top: 203px;
-    background-color: white;
-    border: none;
-    border-radius: 0%;
-    color: rgba(121, 188, 207, 1);
-  }
+  } 
   .icon {
     color: black;
-    position: relative;
+    display: flex;
     width: 80px;
     height: 11px;
     left: 2693%;

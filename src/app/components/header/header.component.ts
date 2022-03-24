@@ -1,15 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
+import { ServiciosaddService } from 'src/app/serviciosadd.service';
+import { ShopComponent } from '../shop/shop.component';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
   public rutas: Array<any> = [];
-  constructor() { }
+  public lista: Array<any> = [];
+  ju:any;
+  constructor(private service: ServiciosaddService) {}
+
+  @ViewChild(ShopComponent) child;
 
   ngOnInit(): void {
+    this.service.disparador.subscribe((data) => {
+      console.log('recibiendo data........', data);
+      this.lista.push(data);
+    });
+    interface AfterViewInit{
+      
+    }
+    ngAfterViewInit(): void {
+      // this.ju = child.datoEJ
+    }
     this.rutas = [
       {
         name: 'HOME',
@@ -29,5 +45,4 @@ export class HeaderComponent implements OnInit {
       },
     ];
   }
-
 }

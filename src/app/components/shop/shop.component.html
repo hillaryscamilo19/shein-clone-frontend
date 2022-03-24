@@ -1,24 +1,39 @@
-<div class="container">
-  <button mat-icon-button>
-    <mat-icon (click)="clickd()">search</mat-icon>
-  </button>
-  <mat-form-field>
-    <input placeholder="Buscar" />
-  </mat-form-field>
-</div>
+<div class="cotenedor">
+  <div>
+    <button
+      mat-icon-button
+      class="icono"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon (click)="click()" class="shopin">search</mat-icon>
+    </button>
+    <div class="form">
+      <input class="input" placeholder="Buscar" />
+    </div>
 
-<div class="buton">
-    <mat-accordion class="example-headers-align">
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    hola
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-        </mat-expansion-panel>
-    </mat-accordion>
-</div>
+    <section class="seccion">
+      <div class="example-button-row">
+        <button mat-raised-button>Everything</button>
+        <button mat-raised-button>Dress</button>
+        <button mat-raised-button>Coat</button>
+        <button mat-raised-button>Pants</button>
+        <button mat-raised-button>Shoes</button>
+      </div>
+    </section>
 
-<div class="buscador" *ngFor="let shop of imagen">
-  <img src="{{ shop.img }}"/>
+    <div class="buscador">
+      <mat-card *ngFor="let shop of image" class="card">
+        <mat-card-content class="foto">
+          <img src="{{ shop.img }}" height="250px" width="250px" />
+        </mat-card-content>
+        <mat-card-title-group>
+          <button mat-icon-button>
+            <mat-icon (click)="click()">add_shopping_cart</mat-icon>
+          </button>
+          <mat-card-title>{{ shop.title }}</mat-card-title>
+          <mat-card-subtitle>{{ shop.price }}</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card>
+    </div>
+  </div>
 </div>
