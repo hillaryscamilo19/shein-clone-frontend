@@ -1,7 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { MatCard } from '@angular/material/card';
+import { Component, OnInit, Input } from '@angular/core';
 import { ServiciosaddService } from 'src/app/serviciosadd.service';
-
 
 @Component({
   selector: 'app-shop',
@@ -9,9 +7,7 @@ import { ServiciosaddService } from 'src/app/serviciosadd.service';
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent implements OnInit {
-  // public image: Array<any> = [];
-  datoEJ: any;
-  @Input() data:any;
+  @Input() data: any;
   image: any = [
     {
       title: 'soft green coat',
@@ -64,16 +60,10 @@ export class ShopComponent implements OnInit {
       img: 'https://i.pinimg.com/564x/0b/e6/72/0be672994ba780774dfcad1492952532.jpg',
     },
   ];
-  constructor(private service: ServiciosaddService) {
-
-  }
+  constructor(private service: ServiciosaddService) {}
 
   ngOnInit(): void {}
-  click(): void {
-    // this.service.disparador.emit({
-    //   this.datoEJ = this.image;
-    // })
-    this.datoEJ = this.image
-    console.log(this.service)
+  click(shop: any): void {
+    this.service.getData(shop);
   }
 }

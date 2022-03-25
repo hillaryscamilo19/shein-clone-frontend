@@ -5,7 +5,7 @@
       class="icono"
       aria-label="Example icon-button with a menu"
     >
-      <mat-icon (click)="click()" class="shopin">search</mat-icon>
+      <mat-icon class="shopin">search</mat-icon>
     </button>
     <div class="form">
       <input class="input" placeholder="Buscar" />
@@ -28,7 +28,7 @@
         </mat-card-content>
         <mat-card-title-group>
           <button mat-icon-button>
-            <mat-icon (click)="click()">add_shopping_cart</mat-icon>
+            <mat-icon (click)="click(shop)">add_shopping_cart</mat-icon>
           </button>
           <mat-card-title>{{ shop.title }}</mat-card-title>
           <mat-card-subtitle>{{ shop.price }}</mat-card-subtitle>

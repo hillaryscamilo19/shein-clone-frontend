@@ -7,19 +7,14 @@
     <ul *ngFor="let home of rutas" class="rutas">
       <span [routerLink]="home.ruta"> {{ home.name }}</span>
     </ul>
-    <button
-      mat-icon-button
-      [matMenuTriggerFor]="head"
-      aria-label="Ejemplo de icono-botón con un menú"
-    >
-    <mat-icon class="icon">local_grocery_store</mat-icon>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example">
+      <mat-icon class="icon">local_grocery_store</mat-icon>
     </button>
-    <mat-menu #head> 
-      <button mat-menu-item *ngFor="let header of lista">
-        <span></span>
-      </button>
-      <button mat-menu-item>
-        <span>v</span>
+    <mat-menu #menu="matMenu" class="frame">
+      <button mat-menu-item *ngFor="let header of service.lista" class="la">
+        <img src="{{ header.img }}" />
+        <h1>{{header.title}}</h1>
+        <h2>{{header.price}}</h2>
       </button>
     </mat-menu>
   </mat-toolbar>

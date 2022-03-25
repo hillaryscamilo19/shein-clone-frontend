@@ -9,23 +9,15 @@ import { ShopComponent } from '../shop/shop.component';
 })
 export class HeaderComponent implements OnInit {
   public rutas: Array<any> = [];
-  public lista: Array<any> = [];
   ju:any;
-  constructor(private service: ServiciosaddService) {}
+  constructor(public service: ServiciosaddService) {}
 
-  @ViewChild(ShopComponent) child;
+  // @ViewChild(ShopComponent) child;
 
   ngOnInit(): void {
-    this.service.disparador.subscribe((data) => {
-      console.log('recibiendo data........', data);
-      this.lista.push(data);
-    });
-    interface AfterViewInit{
-      
-    }
-    ngAfterViewInit(): void {
-      // this.ju = child.datoEJ
-    }
+    // ngAfterViewInit(): void {
+    //   // this.ju = child.datoEJ
+    // }
     this.rutas = [
       {
         name: 'HOME',
