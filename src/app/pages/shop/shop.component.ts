@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ServiciosaddService } from 'src/app/serviciosadd.service';
+import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 
 @Component({
   selector: 'app-shop',
@@ -11,13 +11,13 @@ export class ShopComponent implements OnInit {
   image: any = [
     {
       title: 'soft green coat',
-      price: '$5850',
+      price: '$585',
       img: 'https://i.pinimg.com/564x/51/c8/7d/51c87d38c557cbb4fbab0274bcc25d36.jpg',
     },
     {
       title: 'green',
-      price: '$50',
-      img: 'https://i.pinimg.com/564x/57/13/63/571363a39a444febba93a0d2bafe7f84.jpg',
+      price: '$250',
+      img: 'https://i.pinimg.com/564x/09/3a/f4/093af4550abca3ab79da02aaeab1edbe.jpg',
     },
     {
       title: 'kfna',
@@ -27,36 +27,36 @@ export class ShopComponent implements OnInit {
     {
       title: 'kajf',
       price: '$150',
-      img: 'https://i.pinimg.com/564x/8f/11/f1/8f11f16a51eab3385e6a247d4abf4a39.jpg',
+      img: 'https://i.pinimg.com/564x/32/39/45/323945c382dfbd309614e9389fa958f1.jpg',
     },
     {
       title: 'kafjkaf',
       price: '$500',
-      img: 'https://i.pinimg.com/564x/ac/cc/db/acccdb39e1f5b2fd051ada85f2690ce1.jpg',
+      img: 'https://i.pinimg.com/564x/5f/1c/08/5f1c086b7d1fba900b50ac6e4a4e10ff.jpg',
     },
     {
       title: 'Akojfoa',
-      price: '$5200',
-      img: 'https://i.pinimg.com/564x/47/2f/d7/472fd700eb1b18d717209da6cf2e560d.jpg',
+      price: '$900',
+      img: 'https://i.pinimg.com/564x/95/13/01/9513015cb8eb440b5558ad12a6270013.jpg',
     },
     {
       title: 'Akojfoa',
-      price: '$5200',
-      img: 'https://i.pinimg.com/564x/eb/39/20/eb39207089a20581e8142ed4597ab936.jpg',
+      price: '$158',
+      img: 'https://i.pinimg.com/564x/08/26/93/082693fcffdc44e1421faa40c1373e1f.jpg',
     },
     {
       title: 'Akojfoa',
-      price: '$5200',
+      price: '$23',
       img: 'https://i.pinimg.com/564x/e7/a8/e8/e7a8e8b65147fa0196bed6496a19d89f.jpg',
     },
     {
       title: 'Akojfoa',
-      price: '$5200',
+      price: '$125',
       img: 'https://i.pinimg.com/564x/2d/11/84/2d118465f2bf97cbfc44e3d9054b9fd7.jpg',
     },
     {
       title: 'Akojfoa',
-      price: '$5200',
+      price: '$854',
       img: 'https://i.pinimg.com/564x/0b/e6/72/0be672994ba780774dfcad1492952532.jpg',
     },
   ];

@@ -1,15 +1,14 @@
-import { Component, OnInit} from '@angular/core';
-import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+  selector: 'app-navs',
+  templateUrl: './navs.component.html',
+  styleUrls: ['./navs.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class NavsComponent implements OnInit {
   public rutas: Array<any> = [];
   ju:any;
-  constructor(public service: ServiciosaddService) {}
+  // constructor(public service: ServiciosaddService) {}
 
   // @ViewChild(ShopComponent) child;
 
@@ -37,3 +36,4 @@ export class HeaderComponent implements OnInit {
     ];
   }
 }
+

@@ -1,0 +1,21 @@
+.container{
+    justify-content: center;
+}
+
+.icon{
+    font-size: 42px;
+    margin-left: -106%;
+    color: rgb(100, 171, 204);
+}
+.title{
+    justify-content: flex-start;
+    color: rgb(100, 171, 204);
+    font-size: 142%;
+    margin-left: -165px;
+}
+
+
+.rutas {
+    justify-content: flex-end;
+    color: rgb(92, 158, 189);
+}

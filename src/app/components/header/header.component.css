@@ -1,5 +1,5 @@
-.matoba {
-  background-color: rgb(255, 255, 255);
+/* .matoba {
+  background-color: rgb(163, 2, 2);
   color: rgb(15, 15, 15);
 }
 .titulo {
@@ -30,17 +30,22 @@
   font-size: 30px;
   color: rgba(28, 166, 205, 1);
 }
-.icon {
-  color: black;
-  display: flex;
-  width: 80px;
-  height: 11px;
-  left: 2693%;
-  top: -4px;
-  font-size: 28px;
+.title {
+  font-size: 15px;
 }
 
-.la{
-  height: 50%;
-  width: 800%;
+.la {
+  height: 150%;
+  width: 150%;
 }
+
+.icon{
+  margin-left: 61%;
+  position: fixed;
+  font-size: 27px;
+  margin-top: 0%;
+}
+
+.go{
+  display: flex;
+} */
