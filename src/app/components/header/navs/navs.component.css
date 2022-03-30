@@ -1,21 +1,64 @@
-.container{
-    justify-content: center;
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
 }
 
-.icon{
-    font-size: 42px;
-    margin-left: -106%;
-    color: rgb(100, 171, 204);
-}
-.title{
-    justify-content: flex-start;
-    color: rgb(100, 171, 204);
-    font-size: 142%;
-    margin-left: -165px;
+.car {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
 
+.icon {
+  font-size: 42px;
+  color: rgb(100, 171, 204);
+}
+
+.title {
+  color: rgb(100, 171, 204);
+  text-align: center;
+  margin-left: 15%;
+  margin-top: 20%;
+}
+
+.mat {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.matolbar {
+  background-color: rgb(255, 253, 253);
+}
+
+.buton {
+  margin-right: 10%;
+}
+
+.buton:hover {
+  color: rgb(246, 56, 230);
+}
+
+.buton::before {
+  content: "";
+  position: absolute;
+  top: 61px;
+  height: 42%;
+  margin-left: -16%;
+  width: 328px;
+  background-color: violet;
+  opacity: 0;
+}
+.buton:hover::before{
+  opacity: 1;
+}
 
 .rutas {
-    justify-content: flex-end;
-    color: rgb(92, 158, 189);
+  cursor: pointer;
+  font-size: 92%;
+  color: rgb(103, 195, 238);
 }
+

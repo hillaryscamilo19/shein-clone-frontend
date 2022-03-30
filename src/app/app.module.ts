@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //pages
-import {HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
@@ -24,6 +24,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavsComponent } from './components/header/navs/navs.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { NavsComponent } from './components/header/navs/navs.component';
     MatSlideToggleModule,
     MatExpansionModule,
     MatMenuModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

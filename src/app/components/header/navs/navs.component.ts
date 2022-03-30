@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 
 @Component({
   selector: 'app-navs',
   templateUrl: './navs.component.html',
-  styleUrls: ['./navs.component.css']
+  styleUrls: ['./navs.component.css'],
 })
 export class NavsComponent implements OnInit {
   public rutas: Array<any> = [];
-  ju:any;
-  // constructor(public service: ServiciosaddService) {}
+  ju: any;
+  lista: any;
+  constructor(public service: ServiciosaddService) {}
 
   // @ViewChild(ShopComponent) child;
 
   ngOnInit(): void {
-    // ngAfterViewInit(): void {
-    //   // this.ju = child.datoEJ
-    // }
+    this.service.disparador.subscribe((data) => {
+      console.log('recibiendo data........', data);
+      this.lista.push(data);
+    });
     this.rutas = [
       {
         name: 'HOME',
@@ -36,4 +39,3 @@ export class NavsComponent implements OnInit {
     ];
   }
 }
-

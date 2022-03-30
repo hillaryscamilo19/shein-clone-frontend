@@ -1,21 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .encabezado {
-  margin-top: 7%;
-  height: 102px;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  margin-top: 4%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.encabezado h2 {
-  background-color: rgb(145, 143, 165);
-  font-size: 50px;
-  text-align: center;
+.title {
+  font-size: 30px;
+  margin-top: 30%;
+  margin-top: 2%;
+  font-family: math;
 }
 
-.container h3 {
-  text-align: center;
-  font-size: 20px;
+.con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+  justify-content: center;
+  width: 28%;
+  font-family: math;
 }
 
-.container h1 {
-  text-align: center;
-  font-size: 29px;
-  margin: 3%;
+.titu{
+  font-family: math;
 }

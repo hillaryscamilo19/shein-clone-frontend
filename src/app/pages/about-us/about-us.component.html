@@ -1,8 +1,10 @@
-<div class="encabezado" style="color: rgb(0, 0, 0)">
-  <h2>Nosotro</h2>
-</div>
+<div class="container">
+  <div class="encabezado" style="color: rgb(0, 0, 0)">
+    <h2 class="title">Nosotros</h2>
+  </div>
 
-<div class="container" *ngFor="let home of titulo">
-  <h1>{{home.name}}</h1>
-  <h3>{{home.title}}</h3>
+  <div class="con" *ngFor="let home of titulo">
+    <h1 class="titu">{{ home.name }}</h1>
+    <h3>{{ home.title }}</h3>
+  </div>
 </div>

@@ -76,3 +76,7 @@ section button {
   outline: 0;
   min-height: 64px;
 }
+
+.titulo {
+  font-size: 90%;
+}

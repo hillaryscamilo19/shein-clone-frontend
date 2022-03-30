@@ -8,21 +8,21 @@
       <mat-icon class="shopin">search</mat-icon>
     </button>
     <div class="form">
-      <input class="input" placeholder="Buscar" />
+      <input class="input" placeholder="Buscar" formControlName="id"/>
     </div>
 
     <section class="seccion">
       <div class="example-button-row">
-        <button mat-raised-button>Everything</button>
-        <button mat-raised-button>Dress</button>
-        <button mat-raised-button>Coat</button>
-        <button mat-raised-button>Pants</button>
-        <button mat-raised-button>Shoes</button>
+        <button mat-raised-button (click)="ima = image">Everything</button>
+        <button mat-raised-button (click)="ima = vestidos">Dress</button>
+        <button mat-raised-button (click)="ima = abrigos">Coat</button>
+        <button mat-raised-button (click)="ima = pantalones">Pants</button>
+        <button mat-raised-button (click)="ima = zapatos">Shoes</button>
       </div>
     </section>
 
     <div class="buscador">
-      <mat-card *ngFor="let shop of image" class="card">
+      <mat-card *ngFor="let shop of ima" class="card">
         <mat-card-content class="foto">
           <img src="{{ shop.img }}" height="200px" width="20px" />
         </mat-card-content>
@@ -30,7 +30,7 @@
           <button mat-icon-button>
             <mat-icon (click)="click(shop)">add_shopping_cart</mat-icon>
           </button>
-          <mat-card-title>{{ shop.title }}</mat-card-title>
+          <mat-card-title class="titulo">{{ shop.title }}</mat-card-title>
           <mat-card-subtitle>{{ shop.price }}</mat-card-subtitle>
         </mat-card-title-group>
       </mat-card>
