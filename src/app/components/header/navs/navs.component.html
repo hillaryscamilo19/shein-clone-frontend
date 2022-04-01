@@ -1,21 +1,30 @@
 <div class="container">
-  <div class="car">
-    <button mat-icon-button>
-      <mat-icon class="icon">storefront</mat-icon>
-    </button>
-    <h3 class="title">Store</h3>
+  <div class="flex-container">
+    <div class="logo">
+      <a href="/">
+        <mat-icon class="icon">storefront</mat-icon>
+        <h3 class="title">Store</h3>
+      </a>
+    </div>
+    <div class="router">
+      <ul>
+        <li *ngFor="let home of rutas" class="rutas" [routerLink]="home.ruta">
+          <mat-icon class="icon cart">{{ home?.icon }}</mat-icon
+          >{{ home.name }}
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="mat">
-    <mat-toolbar class="matolbar">
-      <ul *ngFor="let home of rutas" class="rutas">
-        <span [routerLink]="home.ruta"> {{ home.name }}</span>
-      </ul>
-      <div class="div"></div>
-    </mat-toolbar>
+    <div class="div"></div>
     <div class="buton" *ngFor="let header of service.lista">
       <button mat-icon-button>
-        <mat-icon class="icon">local_grocery_store</mat-icon>
-        <img class="imagen" src="{{ header.img }}" height="100px" width="100px" />
+        <img
+          class="imagen"
+          src="{{ header.img }}"
+          height="100px"
+          width="100px"
+        />
         <h1 class="title" height="1px" width="1px">{{ header.title }}</h1>
         <h2 class="precio">{{ header.price }}</h2>
       </button>

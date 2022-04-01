@@ -26,7 +26,7 @@ export class NavsComponent implements OnInit {
       },
       {
         name: 'ABOUT US',
-        ruta: '/about',
+        ruta: '/about ',
       },
       {
         name: 'SHOP',
@@ -36,6 +36,11 @@ export class NavsComponent implements OnInit {
         name: 'CONTACT',
         ruta: '/contact',
       },
+      {
+        name: 'CART',
+        ruta: '',
+        icon: 'local_grocery_store',
+      }
     ];
   }
 }

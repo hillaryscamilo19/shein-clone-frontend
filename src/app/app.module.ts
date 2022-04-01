@@ -25,6 +25,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavsComponent } from './components/header/navs/navs.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { ShopPipe } from './pages/shop.pipe';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { MatDividerModule } from '@angular/material/divider';
     HomeComponent,
     SidevarComponent,
     NavsComponent,
+    ShopPipe,
   ],
   imports: [
     BrowserModule,

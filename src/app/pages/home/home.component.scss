@@ -1,12 +1,12 @@
 /* ngClass */
 mat-stepper {
   background-color: #efafbc;
-  position: absolute;
-  width: 488px;
-  text-align: end;
-  height: 177px;
-  left: 991px;
-  top: 541px;
+    position: absolute;
+    width: 488px;
+    text-align: end;
+    height: 224px;
+    left: 712px;
+    top: 541px;
 }
 
 mat-card {
@@ -14,7 +14,7 @@ mat-card {
   border-radius: 3%;
   width: 218px;
   height: 60px;
-  left: 22%;
+  left: 14%;
   top: 48%;
 }
 
@@ -24,7 +24,13 @@ mat-card {
   width: 168px;
 }
 
+
+.matStep{
+  overflow: hidden !important;
+}
+
 .matStep img {
+  overflow: hidden;
   width: 127px;
   height: 134px;
   position: absolute;
