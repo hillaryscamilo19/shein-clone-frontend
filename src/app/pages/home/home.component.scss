@@ -1,0 +1,99 @@
+/* ngClass */
+mat-stepper {
+  background-color: #efafbc;
+  position: absolute;
+  width: 423px;
+  text-align: end;
+  height: 192px;
+  left: 963px;
+  top: 541px;
+}
+
+mat-card {
+  position: absolute;
+  border-radius: 3%;
+  width: 218px;
+  height: 60px;
+  left: 14%;
+  top: 48%;
+}
+
+.mat-step-icon .mat-icon {
+  font-size: 0px;
+  height: 60px;
+  width: 168px;
+}
+
+
+.matStep{
+  overflow: hidden !important;
+}
+
+.matStep img {
+  overflow: hidden;
+  width: 127px;
+  height: 134px;
+  position: absolute;
+  left: 61%;
+}
+
+.title {
+  position: absolute;
+  width: 658px;
+  height: 365px;
+  left: 86px;
+  top: 298px;
+}
+.title h1 {
+  color: rgb(231, 3, 3);
+  position: absolute;
+  width: 664px;
+  height: 371px;
+  left: -4px;
+  font-size: 158%;
+  top: -10%;
+}
+.title h2 {
+  color: rgb(209, 118, 118);
+  position: absolute;
+  width: 664px;
+  height: 371px;
+  left: -4px;
+  font-size: 232%;
+  top: 0%;
+}
+.title h4 {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  width: 664px;
+  height: 371px;
+  left: -4px;
+  font-size: 109%;
+  top: 26%;
+}
+.title button {
+  position: absolute;
+  width: 251px;
+  height: 52px;
+  left: -8px;
+  top: 203px;
+  background-color: white;
+  border: none;
+  border-radius: 0%;
+  color: rgba(121, 188, 207, 1);
+}
+.imagen {
+  position: absolute;
+  width: 518px;
+  height: 388px;
+  left: 56%;
+  top: 172px;
+}
+
+.price {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  left: 5%;
+  top: 1px;
+}

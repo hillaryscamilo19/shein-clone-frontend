@@ -1,0 +1,31 @@
+<div class="img">
+  <img class="imagen" [src]="foto" />
+</div>
+
+<div class="title">
+  <h1>OUTFIT OF THE DAY</h1>
+  <h2>ALL YOUR <br />STYLES ARE HERE</h2>
+  <h4>
+    Consectetur adipiscing elit, cursus condimentum donec non dictum. Id et
+    <br />set ac mauris, adipicing tincidunt amet vel at. Quis labortis id.<br />
+    cosectetur adipsicing elit.
+  </h4>
+  <button>BUY NOW ></button>
+</div>
+
+<div class="matStep">
+  <button mat-icon-button>
+    <!-- <mat-icon>circle</mat-icon> -->
+  </button>
+  <mat-stepper>
+    <mat-step *ngFor="let home of imagen">
+      <mat-card>
+        <mat-card-title-group>
+          <img mat-card-md-image src="{{ home.img }}" />
+          <mat-card-title>{{ home.name }}</mat-card-title>
+          <mat-card-subtitle>{{ home.price }}</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card>
+    </mat-step>
+  </mat-stepper>
+</div>

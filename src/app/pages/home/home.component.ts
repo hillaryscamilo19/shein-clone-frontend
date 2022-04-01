@@ -1,4 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -6,14 +7,17 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  @Input()data:any;
+  @Input() data: any;
   public rutas: Array<any> = [];
   public imagen: Array<any> = [];
-
+  public foto!: string;
 
   constructor() {}
 
   ngOnInit(): void {
+    this.foto = '../../../assets/img/IMG.png';
+ 
+
     this.rutas = [
       {
         name: 'HOME',
@@ -34,22 +38,23 @@ export class HomeComponent implements OnInit {
     ];
     this.imagen = [
       {
-        img: ''
-      },
-      {
-        img1: 'https://i.pinimg.com/564x/44/c7/07/44c70742913b5294de8886284030cc33.jpg',
+        img: '../../../assets/img/Jaket1.png',
         name: 'Casual Jaket',
-        price:'$125'
+        price: '$125',
       },
       {
-        img2: 'https://i.pinimg.com/564x/77/22/8d/77228dfedae1acb82fdf881b644b3151.jpg',
-        name: 'hi',
+        img: '../../../assets/img/Jaket2.png',
+        name: 'black jacket',
+        price: '$550',
       },
       {
-        img: 'https://i.pinimg.com/564x/f1/fe/d3/f1fed3273a32de7ad69220274872d077.jpg',
-        name: 'hole',
+        img: '../../../assets/img/jaket3.png',
+        name: ' pink jacket',
+        price: '$350',
       },
     ];
   }
-  clicked(): void {}
+  clicked(): void {
+
+  }
 }

@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.encabezado {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  margin-top: 4%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 30px;
+  margin-top: 30%;
+  margin-top: 2%;
+  font-family: math;
+}
+
+.con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1%;
+  justify-content: center;
+  width: 28%;
+  font-family: math;
+}
+
+.titu{
+  font-family: math;
+}
