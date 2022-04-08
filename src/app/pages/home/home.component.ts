@@ -11,12 +11,17 @@ export class HomeComponent implements OnInit {
   public rutas: Array<any> = [];
   public imagen: Array<any> = [];
   public foto!: string;
-
+  public facebook!: string;
+  public instagram!: string;
+  public telegram!: string;
   constructor() {}
 
   ngOnInit(): void {
-    this.foto = '../../../assets/img/IMG.png';
- 
+    this.foto = '../../../assets/img/Jaket.png';
+    this.facebook = '../../../assets/img/facebook.png';
+    this.instagram = '../../../assets/img/instagram.png';
+    this.telegram = '../../../assets/img/telegram.png';
+
 
     this.rutas = [
       {

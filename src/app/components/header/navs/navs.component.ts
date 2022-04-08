@@ -10,6 +10,9 @@ export class NavsComponent implements OnInit {
   public rutas: Array<any> = [];
   ju: any;
   lista: any;
+  showFiller = false;
+
+ 
   constructor(public service: ServiciosaddService) {}
 
   // @ViewChild(ShopComponent) child;
@@ -26,7 +29,7 @@ export class NavsComponent implements OnInit {
       },
       {
         name: 'ABOUT US',
-        ruta: '/about ',
+        ruta: '/about',
       },
       {
         name: 'SHOP',
@@ -37,10 +40,16 @@ export class NavsComponent implements OnInit {
         ruta: '/contact',
       },
       {
-        name: 'CART',
-        ruta: '',
+        name: '',
         icon: 'local_grocery_store',
+
       }
     ];
+  }
+  click(name: string): void{
+    if (name == "icono"){
+      this.showFiller=true;
+    }
+    console.log(this.showFiller)
   }
 }

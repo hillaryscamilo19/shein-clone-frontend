@@ -1,12 +1,72 @@
-/* ngClass */
-mat-stepper {
-  background-color: #efafbc;
+.container-princ {
+  width: 82%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-left: 9%;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-left: 38%;
+  margin-top: 4%;
+}
+
+.title {
   position: absolute;
-  width: 423px;
+  justify-content: center;
+  width: 670px;
+  height: 369px;
+  margin-top: 16%;
+  margin-left: -31%;
+}
+
+.button {
+  position: absolute;
+  width: 264px;
+  height: 53px;
+  left: -48px;
+  top: 234px;
+  background-color: white;
+  border: none;
+  border-radius: -7%;
+  color: #0898c1;
+}
+
+
+.social{
+  position: absolute;
+  margin-top: 50%;
+  margin-left: -1%;
+}
+
+.instagram{
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 8%;
+}
+
+.telegram{
+  position: absolute;
+  margin-top: 50%;
+  margin-left: 17%;
+}
+
+.mat-step-icon-mat-step-icon-state-edit {
+  background-color: #fffffd;
+  color: #fff;
+}
+
+mat-stepper {
+  background-color: #111111;
+  position: absolute;
+  width: 405px;
   text-align: end;
-  height: 192px;
-  left: 900px;
-  top: 555px;
+  height: 162px;
+  left: 1099px;
+  top: 683px;
 }
 
 mat-card {
@@ -18,82 +78,31 @@ mat-card {
   top: 48%;
 }
 
-.mat-step-icon .mat-icon {
-  font-size: 0px;
-  height: 60px;
-  width: 168px;
-}
-
-
-.matStep{
-  overflow: hidden !important;
-}
-
-.matStep img {
-  overflow: hidden;
-  width: 127px;
-  height: 134px;
-  position: absolute;
-  left: 61%;
-}
-
-.title {
-  position: absolute;
-  width: 658px;
-  height: 365px;
-  left: 86px;
-  top: 298px;
-}
 .title h1 {
-  color: #e70303;
+  color: #e49d9d;
   position: absolute;
   width: 664px;
   height: 371px;
-  left: 166px;
-  font-size: 158%;
+  left: -39px;
+  font-size: 163%;
   top: -10%;
 }
+
 .title h2 {
-  color: #d17676;
+  color: #e7bfbf;
   position: absolute;
   width: 664px;
   height: 371px;
-  left: 162px;
+  left: -41px;
   font-size: 232%;
-  top: 0%;
+  top: 8%;
 }
 .title h4 {
-  color: black;
+  color: rgb(255, 244, 244);
   position: absolute;
   width: 664px;
   height: 371px;
-  left: 159px;
+  left: -44px;
   font-size: 124%;
-  top: 22%;
-}
-.title button {
-  position: absolute;
-  width: 264px;
-  height: 52px;
-  left: 156px;
-  top: 196px;
-  background-color: white;
-  border: none;
-  border-radius: -7%;
-  color: #79bccf;
-}
-.imagen {
-  position: absolute;
-  width: 522px;
-  height: 388px;
-  left: 52%;
-  top: 172px;
-}
-
-.price {
-  position: absolute;
-  width: 50px;
-  height: 20px;
-  left: 5%;
-  top: 1px;
+  top: 30%;
 }
