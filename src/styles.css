@@ -4,5 +4,5 @@ html,body{
     height: 100%;
     margin: 0;
     background-image: url('https://i.pinimg.com/564x/e2/c6/f9/e2c6f9a2d7421fb48de5eb29e3204a83.jpg');
-    /* background-size: cover; */
+    background-size: cover;
 }

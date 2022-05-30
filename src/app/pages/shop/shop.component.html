@@ -16,7 +16,7 @@
         />
       </div>
     </div>
-
+  
     <section class="seccion">
       <div class="example-button-row">
         <button mat-raised-button (click)="ima = image">Everything</button>
@@ -34,7 +34,7 @@
         </mat-card-content>
         <mat-card-title-group>
           <button mat-icon-button>
-            <mat-icon (click)="click(shop)">add_shopping_cart</mat-icon>
+            <mat-icon (click)="addshopping(shop)">add_shopping_cart</mat-icon>
           </button>
           <mat-card-title class="titulo">{{ shop.title }}</mat-card-title>
           <mat-card-subtitle>{{ shop.price }}</mat-card-subtitle>
@@ -49,11 +49,9 @@
           Toggle extra text
         </button>
       </mat-drawer>
-    
       <div class="example-sidenav-content">
-        V
+        
       </div>
-    
     </mat-drawer-container>
   </div>
 </div>

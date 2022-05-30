@@ -1,4 +1,3 @@
-import { FiltershopPipe } from './pipes/filtershop.pipe';
 import { Component, OnInit, Input } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import * as dataRaw from '../shop/data/store.json';
@@ -156,14 +155,15 @@ export class ShopComponent implements OnInit {
   constructor(private service: ServiciosaddService) {}
 
   ngOnInit(): void {}
-  click(shop: any): void {
+  addshopping(shop: any): void {
     this.service.getData(shop);
-    console.log(this.vestidos);
+    this.service.addcar()
+    // console.log(this.vestidos);
   }
 
   buton(getjs: any): void {
     this.service.getData(getjs);
-    console.log(this.ima);
+    // console.log(this.ima);
   }
 
   
@@ -171,7 +171,7 @@ export class ShopComponent implements OnInit {
     if (name == "icono"){
       this.showFiller=true;
     }
-    console.log(this.showFiller)
+    // console.log(this.showFiller)
   }
 }
 

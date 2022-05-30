@@ -25,6 +25,7 @@ import { NavsComponent } from './components/header/navs/navs.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { FiltershopPipe } from './pages/shop/pipes/filtershop.pipe';
 import { FormsModule } from '@angular/forms';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NavsComponent,
     FiltershopPipe,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
