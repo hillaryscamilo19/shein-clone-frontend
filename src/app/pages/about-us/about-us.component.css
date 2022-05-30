@@ -6,9 +6,9 @@
 
 .encabezado {
   display: flex;
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  margin-top: 4%;
+  background-color: rgb(209 209 209);
+  width: 148%;
+  margin-top: 0%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1%;
+  margin-top: 6%;
   justify-content: center;
   width: 28%;
   font-family: math;
@@ -33,4 +33,10 @@
 
 .titu{
   font-family: math;
+  color: white;
+}
+
+.titles{
+  color: white;
+  font-size: 142%;
 }

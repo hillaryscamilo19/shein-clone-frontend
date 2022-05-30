@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
+import * as dataRaw from '../shop/data/store.json';
 
 @Component({
   selector: 'app-shop',
@@ -7,19 +8,22 @@ import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.se
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent implements OnInit {
+  filter = '';
   @Input() data: any;
+  imagen = dataRaw;
+  showFiller = false;
   image = [
     {
       title: 'soft green coat',
       price: '$585',
       img: 'https://i.pinimg.com/564x/51/c8/7d/51c87d38c557cbb4fbab0274bcc25d36.jpg',
-      obje: 'abrigo',
+      objec: 'abrigo',
     },
     {
       title: 'Ripped pants',
       price: '$250',
       img: 'https://i.pinimg.com/564x/09/3a/f4/093af4550abca3ab79da02aaeab1edbe.jpg',
-      obje: 'pantalon',
+      objec: 'pantalon',
     },
     {
       title: 'Ripped bell bottoms',
@@ -75,7 +79,7 @@ export class ShopComponent implements OnInit {
       img: 'https://i.pinimg.com/564x/29/25/c2/2925c25352ac25ea9f1c8bfbdfb65ae7.jpg',
       objec: 'vestido',
     },
-        {
+    {
       title: 'Teal Classic Dress',
       price: '$500',
       img: 'https://i.pinimg.com/564x/cb/81/a7/cb81a717d613bd8a7f47cd5f31df8383.jpg',
@@ -142,7 +146,6 @@ export class ShopComponent implements OnInit {
       objec: 'zapato',
     },
   ];
-
   ima = this.image;
 
   zapatos = this.image.filter((zapato) => zapato.objec === 'zapato');
@@ -151,13 +154,25 @@ export class ShopComponent implements OnInit {
   pantalones = this.image.filter((pantalon) => pantalon.objec === 'pantalon');
   constructor(private service: ServiciosaddService) {}
 
-  ngOnInit(): void {
-  }
-  click(shop: any): void {
+  ngOnInit(): void {}
+  addshopping(shop: any): void {
     this.service.getData(shop);
-    console.log(this.vestidos);
+    this.service.addcar()
+    // console.log(this.vestidos);
   }
 
-  buton(): void{
+  buton(getjs: any): void {
+    this.service.getData(getjs);
+    // console.log(this.ima);
+  }
+
+  
+  clicked(name: string): void{
+    if (name == "icono"){
+      this.showFiller=true;
+    }
+    // console.log(this.showFiller)
   }
 }
+
+

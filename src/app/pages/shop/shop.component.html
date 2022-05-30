@@ -4,13 +4,19 @@
       mat-icon-button
       class="icono"
       aria-label="Example icon-button with a menu"
-    >
-      <!-- <mat-icon class="shopin">search</mat-icon> -->
-    </button>
+    ></button>
     <div class="form">
-      <input class="input" placeholder="Buscar"/>
+      <div class="div">
+        <input
+          type="text"
+          class="input"
+          placeholder="Search"
+          [(ngModel)]="filter"
+          name="filter"
+        />
+      </div>
     </div>
-
+  
     <section class="seccion">
       <div class="example-button-row">
         <button mat-raised-button (click)="ima = image">Everything</button>
@@ -22,18 +28,30 @@
     </section>
 
     <div class="buscador">
-      <mat-card *ngFor="let shop of ima" class="card">
+      <mat-card *ngFor="let shop of ima | filtershop: filter" class="card">
         <mat-card-content class="foto">
           <img src="{{ shop.img }}" height="200px" width="20px" />
         </mat-card-content>
         <mat-card-title-group>
           <button mat-icon-button>
-            <mat-icon (click)="click(shop)">add_shopping_cart</mat-icon>
+            <mat-icon (click)="addshopping(shop)">add_shopping_cart</mat-icon>
           </button>
           <mat-card-title class="titulo">{{ shop.title }}</mat-card-title>
           <mat-card-subtitle>{{ shop.price }}</mat-card-subtitle>
         </mat-card-title-group>
       </mat-card>
     </div>
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Auto-resizing sidenav</p>
+        <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+        <button (click)="showFiller = !showFiller" mat-raised-button>
+          Toggle extra text
+        </button>
+      </mat-drawer>
+      <div class="example-sidenav-content">
+        
+      </div>
+    </mat-drawer-container>
   </div>
 </div>

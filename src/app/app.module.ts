@@ -8,7 +8,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { SidevarComponent } from './components/sidevar/sidevar.component';
 //material angular
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,14 +17,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 import { StepperComponent } from './pages/home/components/stepper/stepper.component';
-import { HeaderComponent } from './components/header/header.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatMenuModule } from '@angular/material/menu';
 import { NavsComponent } from './components/header/navs/navs.component';
 import { MatDividerModule } from '@angular/material/divider';
-import { ShopPipe } from './pages/shop.pipe';
+import { FiltershopPipe } from './pages/shop/pipes/filtershop.pipe';
+import { FormsModule } from '@angular/forms';
+import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 
 
 @NgModule({
@@ -35,11 +35,10 @@ import { ShopPipe } from './pages/shop.pipe';
     ContactComponent,
     AboutUsComponent,
     StepperComponent,
-    HeaderComponent,
     HomeComponent,
-    SidevarComponent,
     NavsComponent,
-    ShopPipe,
+    FiltershopPipe,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +55,8 @@ import { ShopPipe } from './pages/shop.pipe';
     MatSlideToggleModule,
     MatExpansionModule,
     MatMenuModule,
-    MatDividerModule
+    MatDividerModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent],
