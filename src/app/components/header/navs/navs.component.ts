@@ -46,11 +46,11 @@ export class NavsComponent implements OnInit {
         name: '',
 
       },
-      {
-        name: '',
-        ruta:'shopping',
-        icon: 'local_grocery_store',
-      }
+      // {
+      //   name: '',
+      //   ruta:'shopping',
+      //   icon: 'local_grocery_store',
+      // }
     ];
   }
 

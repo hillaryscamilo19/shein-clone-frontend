@@ -26,6 +26,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FiltershopPipe } from './pages/shop/pipes/filtershop.pipe';
 import { FormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { InicioComponent } from './login/inicio/inicio.component';
+import { RegistroComponent } from './login/registro/registro.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
     NavsComponent,
     FiltershopPipe,
     ShoppingCartComponent,
+    InicioComponent,
+    RegistroComponent,
   ],
   imports: [
     BrowserModule,
