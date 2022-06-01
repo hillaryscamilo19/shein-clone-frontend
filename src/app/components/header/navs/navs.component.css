@@ -5,6 +5,7 @@
   text-align: center;
   width: 101%;
 }
+
 .flex-container {
   max-width: 2000px;
   width: 112%;
@@ -12,16 +13,18 @@
   display: flex;
   flex-direction: row;
 }
+
 .usuario {
-  width: 20%;
+  width: 11%;
   height: 10%;
-  position: relative;
+  margin-top: 15%;
+  margin-left: 527%;
 }
 
 .fondo {
   width: 154px;
   height: 42px;
-  margin-top: 22%;
+  margin-top: 7%;
 }
 
 .logo a {
@@ -33,6 +36,7 @@
   text-align: center;
   align-items: center;
 }
+
 .logo h3 {
   margin-top: 20px;
 }
@@ -49,9 +53,11 @@
   margin-left: -28%;
   margin-top: 20%;
 }
+
 .router {
   width: 50%;
 }
+
 .rutas {
   cursor: pointer;
   font-size: 136%;
@@ -122,8 +128,6 @@ li {
 .mat-sidenav {
   background-color: antiquewhite;
 }
-
-
 
 @media (min-width: 1880px) {
   .container {

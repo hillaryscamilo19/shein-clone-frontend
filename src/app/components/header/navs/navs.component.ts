@@ -31,21 +31,11 @@ export class NavsComponent implements OnInit {
     this.rutas = [];
   }
 
-<<<<<<< HEAD
   click(name: string): void {
     if (name == 'icono') {
       this.showFiller = true;
     }
     console.log(this.showFiller);
-=======
-      },
-      // {
-      //   name: '',
-      //   ruta:'shopping',
-      //   icon: 'local_grocery_store',
-      // }
-    ];
->>>>>>> 66d5cbdd14d35384c5b0f3296366da09da9bf124
   }
 
   openDialog() {
