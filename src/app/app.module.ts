@@ -26,10 +26,16 @@ import { MatDividerModule } from '@angular/material/divider';
 import { FiltershopPipe } from './pages/shop/pipes/filtershop.pipe';
 import { FormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+<<<<<<< HEAD
 import { InicioComponent } from './pages/login/inicio/inicio.component';
 import { RegisterComponent } from './pages/login/register/register.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+=======
+import { InicioComponent } from './login/inicio/inicio.component';
+import { RegistroComponent } from './login/registro/registro.component';
+
+>>>>>>> 66d5cbdd14d35384c5b0f3296366da09da9bf124
 
 @NgModule({
   declarations: [
@@ -43,7 +49,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     FiltershopPipe,
     ShoppingCartComponent,
     InicioComponent,
+<<<<<<< HEAD
     RegisterComponent,
+=======
+    RegistroComponent,
+>>>>>>> 66d5cbdd14d35384c5b0f3296366da09da9bf124
   ],
 
   entryComponents: [InicioComponent],

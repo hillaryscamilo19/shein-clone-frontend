@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   text-align: center;
   width: 101%;
 }
@@ -127,6 +127,6 @@ li {
 
 @media (min-width: 1880px) {
   .container {
-    max-width: 3000px;
+    max-width: 2000px;
   }
 }
