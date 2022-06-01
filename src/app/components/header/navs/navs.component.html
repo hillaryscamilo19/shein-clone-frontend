@@ -1,14 +1,16 @@
 <div class="container">
   <div class="flex-container">
     <div class="logo">
-      <a href="">
-        <mat-icon class="icon">storefron</mat-icon>
-        <h3 class="title">Store</h3>
-      </a>
+        <img class="fondo" [src]="fondo" />
+        <button mat-button (click)="openDialog()">
+          <img class="usuario" [src]="usuario" />
+        </button>
     </div>
     <div class="router">
       <ul>
-        <li *ngFor="let navs of rutas" class="rutas" [routerLink]="navs.ruta"><mat-icon  class="icon cart">{{navs?.icon}}</mat-icon>{{ navs.name }}</li>
+        <li *ngFor="let navs of rutas" class="rutas" [routerLink]="navs.ruta">
+          <mat-icon class="icon cart">{{ navs?.icon }}</mat-icon>{{ navs.name }}
+        </li>
       </ul>
     </div>
   </div>
@@ -27,14 +29,3 @@
     </div>
   </div>
 </div>
-<!-- 
-<div class="sidenav">
-   <mat-sidenav-container class="container1">
-     <mat-sidenav #sidenav [(opened)]="opened">
-       <h1>ksdfksf</h1>
-     </mat-sidenav>
-     <mat-sidenav-content>
-       <h3>kcfksfvsksn</h3>
-     </mat-sidenav-content>
-   </mat-sidenav-container>
-</div> -->
