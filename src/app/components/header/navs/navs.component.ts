@@ -40,9 +40,5 @@ export class NavsComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(InicioComponent);
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(`Dialog result: ${result}`);
-    // });
   }
 }

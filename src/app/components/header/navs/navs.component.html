@@ -3,17 +3,17 @@
     <div class="logo">
       <img class="fondo" [src]="fondo" />
     </div>
-    <button mat-button (click)="openDialog()">
-      <img class="usuario" [src]="usuario" />
-    </button>
-    <div class="router">
+    <!-- <div class="router">
       <ul>
         <li *ngFor="let navs of rutas" class="rutas" [routerLink]="navs.ruta">
           <mat-icon class="icon cart">{{ navs?.icon }}</mat-icon
           >{{ navs.name }}
         </li>
       </ul>
-    </div>
+    </div> -->
+    <button mat-button (click)="openDialog()">
+      <img class="usuario" [src]="usuario" />
+    </button>
   </div>
   <div class="mat">
     <div class="buton" *ngFor="let header of service.lista">
