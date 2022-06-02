@@ -2,10 +2,10 @@
   <div class="flex-container">
     <div class="logo">
       <img class="fondo" [src]="fondo" />
-      <button mat-button (click)="openDialog()">
-        <img class="usuario" [src]="usuario" />
-      </button>
     </div>
+    <button mat-button (click)="openDialog()">
+      <img class="usuario" [src]="usuario" />
+    </button>
     <div class="router">
       <ul>
         <li *ngFor="let navs of rutas" class="rutas" [routerLink]="navs.ruta">

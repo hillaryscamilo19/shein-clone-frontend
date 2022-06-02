@@ -1,24 +1,23 @@
 .container {
-  display: flex;
-  justify-content: center;
+/*   display: flex;
+  justify-content: center; */
   background-color: rgb(255, 255, 255);
-  text-align: center;
-  width: 101%;
+  /* text-align: center; */
+  width: 100%;
 }
 
 .flex-container {
-  max-width: 2000px;
-  width: 112%;
   height: 111px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .usuario {
-  width: 11%;
-  height: 10%;
+  width: 36px;
+  height: 38px;
   margin-top: 15%;
-  margin-left: 527%;
+  /*margin-left: 527%; */
 }
 
 .fondo {
@@ -27,7 +26,7 @@
   margin-top: 7%;
 }
 
-.logo a {
+/* .logo a {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -35,16 +34,16 @@
   text-decoration: none;
   text-align: center;
   align-items: center;
-}
+} */
 
 .logo h3 {
   margin-top: 20px;
 }
 
-.icon {
+/* .icon {
   font-size: 42px;
   color: rgb(100, 171, 204);
-}
+} */
 
 .title {
   font-size: 29px;
@@ -58,18 +57,21 @@
   width: 50%;
 }
 
-.rutas {
+/* .rutas {
   cursor: pointer;
   font-size: 136%;
   margin-top: 0%;
   color: rgb(103, 195, 238);
-}
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+} */
 
-.login {
+/* .login {
   width: 34px;
   height: 32px;
   margin-left: 300%;
-}
+} */
 .icon {
   font-size: 42px;
   color: rgb(10, 10, 10);
@@ -78,18 +80,18 @@
   position: relative !important;
   left: -4rem !important;
 }
-.mat {
+/* .mat {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+} */
 .buton {
   margin-right: 10%;
 }
-.material-icons {
+/* .material-icons {
   position: relative !important;
   top: -0.5rem !important;
-}
+} */
 ul {
   list-style: none;
   display: flex;
@@ -103,34 +105,35 @@ ul {
   align-items: center;
 }
 
-li {
-  display: flex;
-  justify-content: space-around;
-  height: auto;
-}
-
-.container1 {
+/* .container1 {
   position: absolute;
   width: 19%;
   height: 60%;
   margin-left: 80%;
-}
+} */
 
-.sidenav .mat-sidenav {
+/* .sidenav .mat-sidenav {
   padding: 16px;
-}
-
+} */
+/* 
 .sidenav {
   color: rgb(0, 211, 218);
   width: 215px;
-}
+} */
 
-.mat-sidenav {
-  background-color: antiquewhite;
-}
-
-@media (min-width: 1880px) {
+/* .mat-sidenav {
+  background-color: rgb(198, 124, 28);
+} */
+/* 
+@media (min-width: 1258px) {
   .container {
-    max-width: 2000px;
+    max-width: 1258px;
+  }
+}
+ */
+
+@media (max-width:2238px) {
+  .container {
+    min-width: 2000px;
   }
 }
