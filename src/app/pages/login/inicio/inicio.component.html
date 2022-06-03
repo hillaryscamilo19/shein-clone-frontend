@@ -1,17 +1,28 @@
 <div class="cotainer">
   <div class="relleno">
-    <h1>Log In</h1>
-    <mat-icon class="email">person</mat-icon>
-    <input type="text" class="input1" placeholder="Username" />
+    <h1 class="logo">Log In</h1>
+    <!-- <mat-icon class="email">person</mat-icon> -->
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label >Username</mat-label>
+        <input matInput placeholder="email" type="text">
+
+      </mat-form-field>
+    </form>
     <br />
-    <mat-icon>lock</mat-icon>
-    <input type="text" class="input2" placeholder="Password" />
+    <!-- <mat-icon>lock</mat-icon> -->
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label >Password</mat-label>
+        <input matInput placeholder="Password"  type='{{hide ? "password":"text"}}' >
+        <mat-icon (click)="hide = !hide" matSuffix>{{
+          hide ? "visibility_off" : "visibility"}}</mat-icon>
+      </mat-form-field>
+    </form>
     <br />
-    <mat-checkbox class="check">Show password</mat-checkbox>
+    <!-- <mat-checkbox class="check">Show password</mat-checkbox> -->
     <br />
-    <button mat-button (click)="openDialog()">Create Account</button>
-    <h3 class="create" routerLink="check-in">Create Account</h3>
-    <br />
-    <button class="butto">Login</button>
+    <button class="butto">sign up with google<img class="imagen" [src]="google" /></button>
+
   </div>
 </div>

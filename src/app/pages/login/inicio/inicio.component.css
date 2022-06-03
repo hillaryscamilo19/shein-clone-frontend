@@ -1,43 +1,59 @@
-.cotainer{
-    width: 100%;
-    height: 100%;
+.cotainer {
+  width: 100%;
+  height: 100%;
 }
 
-.input1{
-    width: 284px;
-    height: 25px;
-    border-radius: 2%;
-    margin-top: 6%;
+.logo {
+  margin-left: 23%;
+  font-size: 38px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.input2{
-    width: 284px;
-    height: 25px;
-    border-radius: 2%;
-    margin-top: 6%;
+.email {
+  margin-top: 10%;
 }
 
-.create{
-    margin-top: 8%;
-    margin-left: 5%;
+.input1 {
+  width: 282px;
+  height: 44px;
+  /* border-radius: 2%; */
+  margin-top: 6%;
+  border-color: #66646224;
+  background-color: rgba(247, 238, 238, 0.273);
 }
 
-.check{
-    margin-top: 6%;
+.input2 {
+  width: 282px;
+  height: 44px;
+  margin-top: 11%;
+  border-color: #66646224;
+  background-color: rgba(247, 238, 238, 0.273);
 }
 
-
-
-.password{
-    position: absolute;
-    margin-left: 10%;
-    margin-top: -1%;
+.create {
+  margin-top: 3%;
+  font-size: 13px;
+  margin-left: 10%;
+  color: rgb(16, 23, 237);
 }
 
-.butto{
-    width: 158px;
-    height: 34px;
+.password {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: -1%;
+}
+
+.imagen{
+    margin-top: -20%;
+    margin-left: 87%;
+}
+
+.butto {
+    width: 207px;
+    height: 36px;
     border-radius: 5%;
-    margin-top: 6%;
-    margin-left: 24%;
+    margin-top: -15%;
+    margin-left: 2%;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(108 103 103 / 29%);
 }

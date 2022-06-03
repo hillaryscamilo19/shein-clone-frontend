@@ -8,9 +8,13 @@ import { RegisterComponent } from '../register/register.component';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
+  hide = true;
+  public google!: string
   constructor(public dialog: MatDialog) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.google = '../../../assets/img/google.png';
+  }
   openDialog() {
     const dialogRef = this.dialog.open(RegisterComponent);
   }
