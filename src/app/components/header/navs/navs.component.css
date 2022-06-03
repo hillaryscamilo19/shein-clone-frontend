@@ -7,7 +7,7 @@
 }
 
 .flex-container {
-  height: 111px;
+  height: 91px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,7 +23,7 @@
 .fondo {
   width: 154px;
   height: 42px;
-  margin-top: 7%;
+  margin-top: 20%;
 }
 
 /* .logo a {
@@ -134,6 +134,12 @@ ul {
 
 @media (max-width:2238px) {
   .container {
-    min-width: 2000px;
+    max-width: 2000px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container{
+
   }
 }

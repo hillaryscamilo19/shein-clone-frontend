@@ -105,3 +105,62 @@ mat-card {
   font-size: 124%;
   top: 30%;
 }
+
+@media (max-width: 2238px) {
+  .container-princ {
+    max-width: 2000px;
+  }
+}
+
+@media (max-width: 375px) {
+  .imagen {
+    width: 117%;
+    height: 44%;
+    margin-top: 32%;
+    margin-left: -51%;
+  }
+
+  .title {
+    margin-top: 170%;
+    margin-left: 127%;
+  }
+
+  .title h4 {
+    width: 49%;
+    font-size: 17px;
+    margin-top: 5%;
+  }
+
+  mat-stepper {
+    margin-top: -69%;
+    margin-left: -290%;
+  }
+
+  mat-card {
+    margin-left: 40%;
+  }
+
+  .button {
+    width: 47%;
+    margin-left: -1%;
+    margin-top: 11%;
+  }
+
+  .social{
+    margin-top: 58%;
+    background-color: #000000;
+  }
+
+  .telegram{
+    margin-top: 58%;
+    background-color: #000000;
+    margin-left: 12%;
+
+  }
+
+  .instagram{
+    margin-top: 58%;
+    margin-left: 26%;
+    background-color: #000000;
+  }
+}
