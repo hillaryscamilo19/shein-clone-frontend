@@ -27,9 +27,10 @@ import { FiltershopPipe } from './pages/shop/pipes/filtershop.pipe';
 import { FormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { InicioComponent } from './pages/login/inicio/inicio.component';
-import { RegisterComponent } from './pages/login/register/register.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { HttpClientModule } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,6 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     FiltershopPipe,
     ShoppingCartComponent,
     InicioComponent,
-    RegisterComponent,
   ],
 
   entryComponents: [InicioComponent],
@@ -66,7 +66,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatDividerModule,
     FormsModule,
     MatDialogModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule,
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

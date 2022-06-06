@@ -51,9 +51,7 @@
 .butto {
     width: 207px;
     height: 36px;
-    border-radius: 5%;
     margin-top: -15%;
     margin-left: 2%;
     background-color: rgb(255, 255, 255);
-    border-color: rgb(108 103 103 / 29%);
 }

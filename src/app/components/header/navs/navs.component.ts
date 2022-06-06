@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import * as dataRaw from '../navs/Data/navs.json';
 import { MatDialog } from '@angular/material/dialog';
+import { GoogleApiService } from '../../../pages/login/inicio/service/google-api.service';
 
 @Component({
   selector: 'app-navs',
@@ -19,8 +20,10 @@ export class NavsComponent implements OnInit {
   imagen = dataRaw;
   opened = false;
   MatDialog: any;
+  
 
-  constructor(public service: ServiciosaddService, public dialog: MatDialog) {}
+  constructor(public service: ServiciosaddService, public dialog: MatDialog, private readonly google:GoogleApiService) {}
+  
 
   ngOnInit(): void {
     this.fondo = '../../../assets/img/Shein.png';

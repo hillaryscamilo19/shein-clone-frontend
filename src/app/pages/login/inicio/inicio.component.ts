@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { OAuthService } from 'angular-oauth2-oidc';
+import { GoogleApiService } from './service/google-api.service';
 import { RegisterComponent } from '../register/register.component';
 
 @Component({
@@ -9,13 +11,17 @@ import { RegisterComponent } from '../register/register.component';
 })
 export class InicioComponent implements OnInit {
   hide = true;
-  public google!: string
-  constructor(public dialog: MatDialog) {}
+  public google!: string;
+  constructor(
+    public dialog: MatDialog,
+    private readonly oAuthService: OAuthService,
+    private sevices: GoogleApiService
+  ) {}
 
   ngOnInit(): void {
     this.google = '../../../assets/img/google.png';
   }
   openDialog() {
-    const dialogRef = this.dialog.open(RegisterComponent);
+   this.sevices
   }
 }
