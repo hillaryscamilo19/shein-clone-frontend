@@ -31,6 +31,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { LoginComponent } from './login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     FiltershopPipe,
     ShoppingCartComponent,
     InicioComponent,
+    LoginComponent,
   ],
 
   entryComponents: [InicioComponent],
