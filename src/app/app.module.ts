@@ -41,11 +41,11 @@ import { LoginComponent } from './pages/login/login/login.component';
     AboutUsComponent,
     StepperComponent,
     HomeComponent,
-    NavsComponent,
     FiltershopPipe,
     ShoppingCartComponent,
     InicioComponent,
     LoginComponent,
+    NavsComponent
   ],
 
   entryComponents: [InicioComponent],

@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import * as dataRaw from '../navs/Data/navs.json';
 import { MatDialog } from '@angular/material/dialog';
-import { GoogleApiService } from '../../../pages/login/inicio/service/google-api.service';
 
 @Component({
   selector: 'app-navs',
@@ -22,7 +21,7 @@ export class NavsComponent implements OnInit {
   MatDialog: any;
   
 
-  constructor(public service: ServiciosaddService, public dialog: MatDialog, private readonly google:GoogleApiService) {}
+  constructor(public service: ServiciosaddService, public dialog: MatDialog) {}
   
 
   ngOnInit(): void {

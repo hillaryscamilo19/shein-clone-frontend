@@ -1,14 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleApiService, UserInfo} from 'src/app/pages/login/inicio/service/google-api.service';
+import { MatDialog } from '@angular/material/dialog';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+  hide = true;
+  public google!: string;
+  constructor(
+    public dialog: MatDialog,
+  ) {}
 
   ngOnInit(): void {}
+
+  openDialog() {
+  }
 
 }
