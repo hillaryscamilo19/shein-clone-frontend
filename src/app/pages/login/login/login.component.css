@@ -1,62 +1,88 @@
 .cotainer {
-    width: 100%;
-    height: 100%;
-  }
-  
-.relleno{
-  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
 }
 
-  .logo {
-    margin-left: 23%;
-    font-size: 38px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-  }
-  
-  .email {
-    margin-top: 10%;
-  }
-  
-  .input1 {
-    width: 282px;
-    height: 44px;
-    /* border-radius: 2%; */
-    margin-top: 6%;
-    border-color: #66646224;
-    background-color: rgba(247, 238, 238, 0.273);
-  }
-  
-  .input2 {
-    width: 282px;
-    height: 44px;
-    margin-top: 11%;
-    border-color: #66646224;
-    background-color: rgba(247, 238, 238, 0.273);
-  }
-  
-  .create {
-    margin-top: 3%;
-    font-size: 13px;
-    margin-left: 10%;
-    color: rgb(16, 23, 237);
-  }
-  
-  .password {
-    position: absolute;
-    margin-left: 10%;
-    margin-top: -1%;
-  }
-  
-  .imagen{
-    margin-top: -2%;
-    margin-left: 5%;
-  }
-  
-  .butto {
-      width: 207px;
-      height: 36px;
-      margin-top: -15%;
-      margin-left: 2%;
-      background-color: rgb(255, 255, 255);
-  }
-  
+.relleno {
+  position: absolute;
+  background-color: rgb(242, 244, 244);
+  width: 42%;
+  height: 49%;
+  margin-top: 5%;
+  margin-left: 29%;
+}
+
+.logo {
+  margin-left: 23%;
+  font-size: 38px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+.email {
+  margin-top: 10%;
+}
+
+.form-label {
+  margin-left: 34%;
+  margin-top: 1%;
+}
+
+.form-control {
+  width: 282px;
+  height: 44px;
+  margin-left: 33%;
+}
+.form-check-label{
+  margin-left: 15%;
+}
+.form-check-label{
+  margin-left: 1%;
+}
+/* 
+.example-full-width {
+  margin-left: 36%;
+} */
+
+.form-check-input{
+  margin-left: 31%;
+}
+
+.input2 {
+  width: 282px;
+  height: 44px;
+  margin-top: 11%;
+  border-color: #66646224;
+  background-color: rgba(247, 238, 238, 0.273);
+}
+
+.create {
+  margin-top: 3%;
+  font-size: 13px;
+  margin-left: 10%;
+  color: rgb(16, 23, 237);
+}
+
+.password {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: -1%;
+}
+
+.imagen {
+  margin-top: -2%;
+  margin-left: 5%;
+}
+
+.icono{
+  margin-left: 60%;
+  margin-top: 0%;
+}
+
+.btn-outline-primary {
+  width: 281px;
+  height: 41px;
+  margin-top: 0%;
+  margin-left: 33%;
+}
