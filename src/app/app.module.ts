@@ -42,7 +42,6 @@ import { environment } from 'src/environments/environment';
     AboutUsComponent,
     StepperComponent,
     HomeComponent,
-    NavsComponent,
     FiltershopPipe,
     ShoppingCartComponent,
     InicioComponent,

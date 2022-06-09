@@ -1,23 +1,27 @@
-<div class="container">
-  <div class="container2">
-    <h1 class="title">Login In</h1>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label"
-        >Email address</label
-      >
-      <input
-        type="email"
-        class="form-control"
-        id="exampleFormControlInput1"
-        placeholder="name@example.com"
-      />
+<div class="cotainer">
+  <div class="relleno">
+    <div class="div">
+      <h1 class="logo">Log In</h1>
     </div>
-
+    <form class="example-form">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+    </form>
+    <br />
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Passwword</label>
+      <label for="exampleFormControlInput1" class="form-label">Password</label>
+      <!-- <mat-icon class="icono" (click)="hide = !hide" matSuffix>{{hide ? "visibility_off" : "visibility"}}</mat-icon> -->
       <input
-      
-        type="password"
+        type="{{ hide ? 'password' : 'text' }}"
         class="form-control"
         id="exampleFormControlInput1"
       />

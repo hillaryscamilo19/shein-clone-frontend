@@ -1,28 +1,74 @@
 <div class="cotainer">
   <div class="relleno">
     <h1 class="logo">Log In</h1>
-    <!-- <mat-icon class="email">person</mat-icon> -->
     <form class="example-form">
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label >Username</mat-label>
-        <input matInput placeholder="email" type="text">
-
+        <mat-label>Username</mat-label>
+        <input matInput placeholder="email" type="text" />
       </mat-form-field>
     </form>
     <br />
-    <!-- <mat-icon>lock</mat-icon> -->
     <form class="example-form">
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label >Password</mat-label>
-        <input matInput placeholder="Password"  type='{{hide ? "password":"text"}}' >
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Password"
+          type="{{ hide ? 'password' : 'text' }}"
+        />
         <mat-icon (click)="hide = !hide" matSuffix>{{
-          hide ? "visibility_off" : "visibility"}}</mat-icon>
+          hide ? "visibility_off" : "visibility"
+        }}</mat-icon>
       </mat-form-field>
     </form>
     <br />
-    <!-- <mat-checkbox class="check">Show password</mat-checkbox> -->
-    <br />
-    <button class="butto" (click)="openDialog">sign up with google<img class="imagen" [src]="google" /></button>
-
+    <button class="butto" (click)="(openDialog)">
+      sign up with google<img class="imagen" [src]="google" />
+    </button>
   </div>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+    import { GoogleAuthProvider, getAuth, signInWithRedirect,getRedirectResult } from "firebase/auth";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDwsIAh8_ah91FZhPdjHJWo29gM2K3YI0s",
+      authDomain: "api-399c3.firebaseapp.com",
+      projectId: "api-399c3",
+      storageBucket: "api-399c3.appspot.com",
+      messagingSenderId: "932409603874",
+      appId: "1:932409603874:web:169552d4bd103e4b8a177b"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider(app);
+
+    login.addEventListener('click',(e) =>{
+      signInWithRedirect(auth, provider);
+
+      getRedirectResult(auth)
+       .the((result) => {
+         //this given you a google Access token. You can use it to Access Google APIs.
+         const credential = GoogleAuthProvider.credentialFromResult(result);
+         const token = Credential.accessToken;
+
+         //The signed-in user info.
+
+         const user = result.user;
+       }).catch((error)=>{
+         //Handle Error here.
+         const errorCode = error.code;
+         const errorMessage= error.message
+         //The email of the user's account used.
+         const email = error.email;
+         //The AuthCredential Type that was used.
+         const credential = GoogleAuthProvider.credentialFromError(error);
+       })
+    });
+  </script>
 </div>
