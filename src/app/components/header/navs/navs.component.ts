@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import * as dataRaw from '../navs/Data/navs.json';
 import { MatDialog } from '@angular/material/dialog';
-import { GoogleApiService } from '../../../pages/login/inicio/service/google-api.service';
+import { GoogleApiService } from 'src/app/pages/login/login/service/google-api.service';
 
 @Component({
   selector: 'app-navs',
@@ -11,6 +11,7 @@ import { GoogleApiService } from '../../../pages/login/inicio/service/google-api
   styleUrls: ['./navs.component.css'],
 })
 export class NavsComponent implements OnInit {
+  userLogged = this.googleService.getUserLogged();
   public rutas: Array<any> = [];
   public fondo!: string;
   public usuario!: string;
@@ -20,9 +21,9 @@ export class NavsComponent implements OnInit {
   imagen = dataRaw;
   opened = false;
   MatDialog: any;
-  
 
-  constructor(public service: ServiciosaddService, public dialog: MatDialog, private readonly google:GoogleApiService) {}
+
+  constructor(public service: ServiciosaddService,private googleService:GoogleApiService) {}
   
 
   ngOnInit(): void {
@@ -38,10 +39,5 @@ export class NavsComponent implements OnInit {
     if (name == 'icono') {
       this.showFiller = true;
     }
-    console.log(this.showFiller);
-  }
-
-  openDialog() {
-    const dialogRef = this.dialog.open(InicioComponent);
   }
 }

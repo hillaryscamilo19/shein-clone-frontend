@@ -31,7 +31,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
-import { LoginComponent } from './login/login/login.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,6 @@ import { LoginComponent } from './login/login/login.component';
     FiltershopPipe,
     ShoppingCartComponent,
     InicioComponent,
-    LoginComponent,
   ],
 
   entryComponents: [InicioComponent],
@@ -70,7 +70,8 @@ import { LoginComponent } from './login/login/login.component';
     MatDialogModule,
     MatCheckboxModule,
     HttpClientModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [],
   bootstrap: [AppComponent],

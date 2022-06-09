@@ -11,9 +11,8 @@
         </li>
       </ul>
     </div> -->
-    <button mat-button (click)="openDialog()">
-      <img class="usuario" [src]="usuario" />
-    </button>
+    <img class="usuario" [src]="usuario" routerLink="login" id="login"/>
+    <mat-icon class="carrito">shopping_cart</mat-icon>
   </div>
   <div class="mat">
     <div class="buton" *ngFor="let header of service.lista">

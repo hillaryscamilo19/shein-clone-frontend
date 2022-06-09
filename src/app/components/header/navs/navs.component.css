@@ -16,8 +16,14 @@
 .usuario {
   width: 36px;
   height: 38px;
-  margin-top: 15%;
-  /*margin-left: 527%; */
+  margin-top: 2%;
+  margin-left: 74%;
+}
+
+.carrito{
+  font-size: 40px;
+  margin-top: 2%;
+  margin-left: -6%;
 }
 
 .fondo {
