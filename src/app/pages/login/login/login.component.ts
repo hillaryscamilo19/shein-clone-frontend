@@ -1,19 +1,19 @@
+import { GoogleservisService } from './../services/googleservis.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { initializeApp } from 'firebase/app';
-import {
-  GoogleAuthProvider,
-  getAuth,
-  signInWithPopup,
-  signOut
-} from 'firebase/auth';
-
+import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  usuario = {
+    email: '',
+    password: '',
+  };
+
   hide = true;
   public google!: string;
   public firebaseConfig = {
@@ -24,70 +24,18 @@ export class LoginComponent implements OnInit {
     messagingSenderId: '932409603874',
     appId: '1:932409603874:web:169552d4bd103e4b8a177b',
   };
-  public app = initializeApp(this.firebaseConfig);
-  public auth = getAuth(this.app);
-  public provider = new GoogleAuthProvider();
-  startSection: any
-  
+  startSection: any;
 
-
-  constructor(public dialog: MatDialog) {}
+  constructor(private authService: GoogleservisService, private router: Router) {}
 
   ngOnInit(): void {}
 
-  googleToken() {
-    // signInWithRedirect(this.auth, this.provider);
-    // getRedirectResult(this.auth)
-    //   .then((result: any) => {
-    //     //this given you a google Access token. You can use it to Access Google APIs.
-    //     const credential = GoogleAuthProvider.credentialFromResult(result);
-    //     const token = credential!.accessToken;
-    //     console.log(token)
-    //     // The signed-in user info.
-    //     const user = result.user;
-    //     this.startSection.addEventListener('click',()=>{
-    //       signInWithRedirect(this.auth, this.provider);
-    //     })
-    //   })
-    //   .catch((error: any) => {
-    //     //Handle Error here.
-    //     const errorCode = error.code;
-    //     const errorMessage = error.message;
-    //     //The email of the user's account used.
-    //     const email = error.email;
-    //     //The AuthCredential Type that was used.
-    //     const credential = GoogleAuthProvider.credentialFromError(error);
-    //   });
-    signInWithPopup(this.auth, this.provider)
-    .then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential!.accessToken;
-      // The signed-in user info.
-      const user = result.user;
-
-      alert(user.displayName);
-      // ...
-    }).catch((error) => {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // The email of the user's account used.
-      const email = error.customData.email;
-      // The AuthCredential type that was used.
-      const credential = GoogleAuthProvider.credentialFromError(error);
-      // ...
-      alert(errorMessage);
-    });
-
-    signOut(this.auth).then(() => {
-      // Sign-out successful.
-    }).catch((_error: any) => {
-      // An error happened.
-    });
-    
+  ingresar() {
+    console.log(this.usuario);
+    const { email, password } = this.usuario;
+    this.authService.loginWithGoogle(email,password).then(res =>{
+      console.log("se registro:",res);
+      this.router.navigate(['/home'])
+    })
   }
-
-
-
 }

@@ -1,32 +1,31 @@
 <div class="cotainer">
   <div class="relleno">
     <div class="div">
-      <h1 class="logo">Log In</h1>
+      <h1 class="title">Log In</h1>
     </div>
     <form class="example-form">
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Email address</label
-        >
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
         <input
           type="email"
           class="form-control"
           id="exampleFormControlInput1"
           placeholder="name@example.com"
+
         />
       </div>
     </form>
     <br />
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Password</label>
-      <!-- <mat-icon class="icono" (click)="hide = !hide" matSuffix>{{hide ? "visibility_off" : "visibility"}}</mat-icon> -->
       <input
         type="{{ hide ? 'password' : 'text' }}"
         class="form-control"
         id="exampleFormControlInput1"
+
       />
     </div>
     <br />
-    <button (click)="googleToken()" type="button" class="btn btn-outline-primary" id="startSection">sign up with google</button>
+    <button (click)="ingresar()" type="button" class="btn btn-outline-primary" id="startSection">sign up with google</button>
   </div> 
 </div>

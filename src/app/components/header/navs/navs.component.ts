@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import * as dataRaw from '../navs/Data/navs.json';
 import { MatDialog } from '@angular/material/dialog';
+import { GoogleservisService } from 'src/app/pages/login/services/googleservis.service';
 
 @Component({
   selector: 'app-navs',
@@ -10,6 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./navs.component.css'],
 })
 export class NavsComponent implements OnInit {
+  userLogged = this.authService.getUserLogged();
   public rutas: Array<any> = [];
   public fondo!: string;
   public usuario!: string;
@@ -21,7 +23,7 @@ export class NavsComponent implements OnInit {
   MatDialog: any;
   
 
-  constructor(public service: ServiciosaddService, public dialog: MatDialog) {}
+  constructor(public service: ServiciosaddService, private authService: GoogleservisService ) {}
   
 
   ngOnInit(): void {
@@ -40,7 +42,4 @@ export class NavsComponent implements OnInit {
     console.log(this.showFiller);
   }
 
-  openDialog() {
-    const dialogRef = this.dialog.open(InicioComponent);
-  }
 }
