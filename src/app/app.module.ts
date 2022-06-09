@@ -31,10 +31,15 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
+<<<<<<< HEAD
 import { LoginComponent } from './pages/login/login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { RegisterComponent } from './pages/login/register/register.component';
+=======
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+>>>>>>> f81789942c0bcabb06d0c3b4d9299dfc5e612ebb
 
 @NgModule({
   declarations: [
@@ -47,10 +52,13 @@ import { RegisterComponent } from './pages/login/register/register.component';
     FiltershopPipe,
     ShoppingCartComponent,
     InicioComponent,
+<<<<<<< HEAD
     LoginComponent,
     NavsComponent,
     RegisterComponent,
 
+=======
+>>>>>>> f81789942c0bcabb06d0c3b4d9299dfc5e612ebb
   ],
 
   entryComponents: [InicioComponent],
@@ -75,11 +83,16 @@ import { RegisterComponent } from './pages/login/register/register.component';
     MatDialogModule,
     MatCheckboxModule,
     HttpClientModule,
+<<<<<<< HEAD
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     
     
     OAuthModule.forRoot()
+=======
+    OAuthModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+>>>>>>> f81789942c0bcabb06d0c3b4d9299dfc5e612ebb
   ],
   providers: [],
   bootstrap: [AppComponent],

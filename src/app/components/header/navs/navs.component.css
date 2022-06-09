@@ -16,8 +16,19 @@
 .usuario {
   width: 36px;
   height: 38px;
+<<<<<<< HEAD
   margin-top: 45%;
   margin-left: 0%;
+=======
+  margin-top: 2%;
+  margin-left: 74%;
+}
+
+.carrito{
+  font-size: 40px;
+  margin-top: 2%;
+  margin-left: -6%;
+>>>>>>> f81789942c0bcabb06d0c3b4d9299dfc5e612ebb
 }
 
 .carrito{

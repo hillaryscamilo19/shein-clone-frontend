@@ -38,4 +38,14 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home'])
     })
   }
+<<<<<<< HEAD
+=======
+
+
+  logout() {
+    this.googleService.logout();
+  }
+>>>>>>> f81789942c0bcabb06d0c3b4d9299dfc5e612ebb
 }
+
+
