@@ -1,7 +1,5 @@
 import { GoogleservisService } from './../services/googleservis.service';
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { initializeApp } from 'firebase/app';
 import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -38,14 +36,11 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home'])
     })
   }
-<<<<<<< HEAD
-=======
 
 
   logout() {
-    this.googleService.logout();
+    this.authService.logout();
   }
->>>>>>> f81789942c0bcabb06d0c3b4d9299dfc5e612ebb
 }
 
 

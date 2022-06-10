@@ -21,18 +21,15 @@
   height: 369px;
   margin-top: 16%;
   margin-left: -31%;
+  padding: 40px;
 }
 
-.button {
+.btn-outline-info {
   position: absolute;
   width: 264px;
   height: 53px;
   left: -48px;
   top: 234px;
-  background-color: white;
-  border: none;
-  border-radius: -7%;
-  color: #000000;
 }
 
 .social {
@@ -59,22 +56,21 @@
 }
 
 mat-stepper {
+  position: relative;
   background-color: #f3e6bd;
-  position: absolute;
   width: 405px;
   text-align: end;
   height: 162px;
-  left: 1099px;
-  top: 702px;
+  margin-left: 89%;
+  top: 7px;
 }
 
 mat-card {
-  position: absolute;
-  border-radius: 3%;
-  width: 234px;
+  background-color: #f3e6bd;
+  width: 125px;
   height: 85px;
-  left: -22%;
-  top: 48%;
+  margin-left: 0%;
+  top: 8%;
 }
 
 .title h1 {
@@ -96,6 +92,7 @@ mat-card {
   font-size: 232%;
   top: 8%;
 }
+
 .title h4 {
   color: rgb(15, 13, 13);
   position: absolute;
@@ -106,65 +103,70 @@ mat-card {
   top: 30%;
 }
 
-@media (max-width: 2238px)  {
+@media (max-width: 650px) {
   .container-princ {
-    max-width: 2000px;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
   }
 }
 
-@media screen and (max-width: 915px) and (min-width:412px) {
-  .container{
-    width: 100%;
-    height: 44%;
-    margin-top: 32%;
-    margin-left: -51%;
-    font-size: 15%;
+@media screen and (max-width: 1020px) {}
+
+@media screen and (max-width: 1200px) {
+  .container-princ {
+    background-position: 50%;
   }
 
+  .imagen {
+    width: 456px;
+    margin-left: -266px;
+    display: grid;
+    align-content: stretch;
+  }
+}
+
+@media (max-width: 1700px) {
+  .container-princ {
+    background-position: 50%;
+  }
   .title {
-    width: 49%;
-    font-size: 17px;
-    margin-top: 20%;
+    width: 57%;
+    font-size: 13px;
+    margin-top: 172%;
+    margin-left: 2%;
   }
-
   .title h4 {
-    width: 49%;
-    font-size: 17px;
+    width: 97%;
+    font-size: 20px;
     margin-top: 5%;
   }
-
   mat-stepper {
     margin-top: -69%;
     margin-left: -290%;
   }
-
   mat-card {
     margin-left: 40%;
   }
-
-  .button {
-    width: 47%;
-    margin-left: -1%;
-    margin-top: 27%;
+  .btn-outline-info {
+    width: 136%;
+    margin-left: 4%;
+    margin-top: 93%;
   }
-
   .social {
     position: absolute;
-    margin-top: 77%;
-    margin-left: 2%;
-
+    margin-top: 219%;
+    margin-left: -23%;
   }
-
   .telegram {
     position: absolute;
-    margin-top: 77%;
-    margin-left: 22%;
+    margin-top: 220%;
+    margin-left: 59%
   }
-
   .instagram {
     position: absolute;
-    margin-top: 77%;
-    margin-left: 12%;
-
+    margin-top: 220%;
+    margin-left: 20%;
   }
 }
