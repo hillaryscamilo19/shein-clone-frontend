@@ -3,7 +3,6 @@
     <div class="logo">
       <img class="fondo" [src]="fondo" routerLink="home" />
     </div>
-<<<<<<< HEAD
     <div>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" >
       <img class="usuario" [src]="usuario"  /> 
@@ -27,18 +26,6 @@
       </button>
     </div>
     
-=======
-    <!-- <div class="router">
-      <ul>
-        <li *ngFor="let navs of rutas" class="rutas" [routerLink]="navs.ruta">
-          <mat-icon class="icon cart">{{ navs?.icon }}</mat-icon
-          >{{ navs.name }}
-        </li>
-      </ul>
-    </div> -->
-    <img class="usuario" [src]="usuario" routerLink="login" id="login"/>
-    <mat-icon class="carrito">shopping_cart</mat-icon>
->>>>>>> f81789942c0bcabb06d0c3b4d9299dfc5e612ebb
   </div>
   <div class="mat">
     <div class="buton" *ngFor="let header of service.lista">

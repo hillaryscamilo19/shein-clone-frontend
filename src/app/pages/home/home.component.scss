@@ -64,7 +64,7 @@ mat-stepper {
   width: 405px;
   text-align: end;
   height: 162px;
-  left: 1099px;
+  left: 60%;
   top: 702px;
 }
 
@@ -110,7 +110,82 @@ mat-card {
   .container-princ {
     max-width: 2000px;
   }
+
 }
+
+
+@media screen and (max-width: 117px){
+  .container-princ {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 9%;
+    align-items: center;
+  }
+
+  .title {
+    position: absolute;
+    justify-content: center;
+    width: 670px;
+    height: 369px;
+    margin-top: 16%;
+    margin-left: -31%;
+  }
+  
+  .button {
+    position: absolute;
+    width: 264px;
+    height: 53px;
+    left: -48px;
+    top: 234px;
+    background-color: white;
+    border: none;
+    border-radius: -7%;
+    color: #000000;
+  }
+  
+  .social {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: -1%;
+  }
+  
+  .instagram {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 8%;
+  }
+  
+  .telegram {
+    position: absolute;
+    margin-top: 50%;
+    margin-left: 17%;
+  }
+
+  mat-stepper {
+    background-color: #f3e6bd;
+    position: absolute;
+    width: 405px;
+    text-align: end;
+    height: 162px;
+    left: 60%;
+    top: 702px;
+  }
+  
+  mat-card {
+    position: absolute;
+    border-radius: 3%;
+    width: 234px;
+    height: 85px;
+    left: -22%;
+    top: 48%;
+  }
+
+}
+
+
+
 
 @media screen and (max-width: 915px) and (min-width:412px) {
   .container{
