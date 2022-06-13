@@ -27,9 +27,14 @@ import { FiltershopPipe } from './pages/shop/pipes/filtershop.pipe';
 import { FormsModule } from '@angular/forms';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
 import { InicioComponent } from './pages/login/inicio/inicio.component';
-import { RegisterComponent } from './pages/login/register/register.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { HttpClientModule } from '@angular/common/http';
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { LoginComponent } from './pages/login/login/login.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { RegisterComponent } from './pages/login/register/register.component';
 
 @NgModule({
   declarations: [
@@ -39,11 +44,13 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     AboutUsComponent,
     StepperComponent,
     HomeComponent,
-    NavsComponent,
     FiltershopPipe,
     ShoppingCartComponent,
     InicioComponent,
+    LoginComponent,
+    NavsComponent,
     RegisterComponent,
+
   ],
 
   entryComponents: [InicioComponent],
@@ -66,7 +73,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatDividerModule,
     FormsModule,
     MatDialogModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

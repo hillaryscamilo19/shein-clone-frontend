@@ -1,6 +1,18 @@
-export class Store{
-    id: number = 0;
-    price: number = 0;
-    quantity: number = 0;
-    completed: boolean = false;
+import { ShopComponent } from "../shop.component";
+
+export interface Store{
+    id: number;
+    precio: number;
+    estado: EstadoPedido;
+    completed: boolean;
+    fecha: Date;
+    producto: ProductoPedido;
+
 }
+
+interface ProductoPedido {
+    producto: ShopComponent;
+    cantidad: number;
+}
+
+export type EstadoPedido = 'enviado'  | 'visto' | 'camino' | 'entregado';

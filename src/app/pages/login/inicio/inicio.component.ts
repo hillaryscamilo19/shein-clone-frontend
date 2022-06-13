@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { RegisterComponent } from '../register/register.component';
+
 
 @Component({
   selector: 'app-inicio',
@@ -8,10 +8,15 @@ import { RegisterComponent } from '../register/register.component';
   styleUrls: ['./inicio.component.css'],
 })
 export class InicioComponent implements OnInit {
-  constructor(public dialog: MatDialog) {}
+  hide = true;
+  public google!: string;
+  constructor(
+    public dialog: MatDialog,
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.google = '../../../assets/img/google.png';
+  }
   openDialog() {
-    const dialogRef = this.dialog.open(RegisterComponent);
   }
 }

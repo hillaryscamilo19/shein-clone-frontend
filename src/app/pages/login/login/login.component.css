@@ -1,0 +1,85 @@
+.container2{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    background-color: rgb(243, 251, 251);
+    margin-top: 4%;
+    margin-left: 36%;
+}
+.title {
+  margin-left: 23%;
+  font-size: 38px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+.form-label{
+    width: 30%;
+    margin-left: 20%;
+    margin-top: 4%;
+}
+
+.form-control{
+    width: 60%;
+    margin-left: 20%;
+
+}
+
+.form-check-input{
+    margin-left: 15%;
+}
+
+.form-check-label{
+    margin-left: 2%;
+}
+
+.btn-outline-primary{
+    margin-left: 19%;
+    margin-top: 5%;
+    width: 60%;
+}
+
+
+@media (max-width: 1700px) {
+    .container2{
+        position: absolute;
+        width: 91%;
+        height: 62%;
+        background-color: rgb(255 255 255 / 18%);
+        margin-top: 20%;
+        font-size: 98%;
+        margin-left: 5%;
+    }
+    
+    .title {
+        margin-left: 23%;
+        font-size: 38px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-left: 33%;
+        margin-top: 10%;
+    }
+
+
+@media (max-width: 2000px) {
+    .container2{
+        position: absolute;
+        width: 91%;
+        height: 62%;
+        background-color: rgb(255 255 255 / 78%);
+        margin-top: 20%;
+        font-size: 98%;
+        margin-left: 5%;
+    }
+    
+    
+    }
+    
+    .title {
+        margin-left: 23%;
+        font-size: 38px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-left: 41%;
+        margin-top: 10%;
+    }
+}
