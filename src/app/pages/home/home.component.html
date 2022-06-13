@@ -2,25 +2,6 @@
   <div class="container">
     <img class="imagen" [src]="foto" />
   </div>
-  <div class="title">
-    <h1>OUTFIT OF THE DAY</h1>
-    <h2>ALL YOUR <br />STYLES ARE HERE</h2>
-    <h4>
-      Consectetur adipiscing elit, cursus condimentum donec non dictum. Id et
-      <br />set ac mauris, adipicing tincidunt amet vel at. Quis labortis id.<br />
-      cosectetur adipsicing elit.
-    </h4>
-    <button type="button" class="btn btn-outline-info" routerLink="/shop">BUY NOW ></button>
-    <a href="https://www.facebook.com/profile.php?id=100010750935985">
-    <img class="social" [src]="facebook" >
-    </a>
-    <a href="https://www.instagram.com/hilarysramirez/?hl=en">
-      <img class="instagram" [src]="instagram" >
-    </a>
-    <a href="https://web.telegram.org/k/">
-      <img class="telegram" [src]="telegram" >
-    </a>
-  </div>
   <div class="matStep">
     <mat-stepper>
       <mat-step *ngFor="let home of imagen" class="matstep">
@@ -33,5 +14,33 @@
         </mat-card>
       </mat-step>
     </mat-stepper>
+  </div>
+
+  <div class="title">
+    <h1>OUTFIT OF THE DAY</h1>
+    <h2>ALL YOUR <br />STYLES ARE HERE</h2>
+    <p>
+      Consectetur adipiscing elit, cursus condimentum donec non dictum. Id et
+      <br />set ac mauris, adipicing tincidunt amet vel at. Quis labortis id.<br />
+      cosectetur adipsicing elit.
+    </p>
+    <div class="containerButton">
+      <button class="buttonComprar" routerLink="/shop">
+        Button
+        <span></span>
+      </button>
+    </div>
+
+    <div class="containerRedes">
+      <a href="https://www.facebook.com/profile.php?id=100010750935985">
+        <img class="social" [src]="facebook" />
+      </a>
+      <a href="https://www.instagram.com/hilarysramirez/?hl=en">
+        <img class="instagram" [src]="instagram" />
+      </a>
+      <a href="https://web.telegram.org/k/">
+        <img class="telegram" [src]="telegram" />
+      </a>
+    </div>
   </div>
 </div>
