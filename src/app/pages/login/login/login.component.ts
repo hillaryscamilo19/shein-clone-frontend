@@ -36,6 +36,10 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home']);
     });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4a7fbcf9d807584f5413dbb3c7381c53224ea000
 
   logout() {
     this.authService.logout();

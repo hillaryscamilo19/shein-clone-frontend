@@ -1,25 +1,17 @@
 .container2{
-    position:absolute;
+    position: absolute;
     width: 30%;
-    height: 57%;
-    background-color: rgb(241, 250, 250);
+    height: 50%;
+    background-color: rgb(243, 251, 251);
     margin-top: 4%;
-    margin-left: 27%;
-
+    margin-left: 36%;
 }
-<<<<<<< HEAD
-
 .title {
   margin-left: 23%;
   font-size: 38px;
   font-family: Georgia, "Times New Roman", Times, serif;
   margin-left: 40%;
   margin-top: 5%;
-=======
-.title{
-    margin-left: 40%;
-    margin-top: 6%;
->>>>>>> f81789942c0bcabb06d0c3b4d9299dfc5e612ebb
 }
 
 .form-label{
@@ -46,4 +38,48 @@
     margin-left: 19%;
     margin-top: 5%;
     width: 60%;
+}
+
+
+@media (max-width: 1700px) {
+    .container2{
+        position: absolute;
+        width: 91%;
+        height: 62%;
+        background-color: rgb(255 255 255 / 18%);
+        margin-top: 20%;
+        font-size: 98%;
+        margin-left: 5%;
+    }
+    
+    .title {
+        margin-left: 23%;
+        font-size: 38px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-left: 33%;
+        margin-top: 10%;
+    }
+
+
+@media (max-width: 2000px) {
+    .container2{
+        position: absolute;
+        width: 91%;
+        height: 62%;
+        background-color: rgb(255 255 255 / 78%);
+        margin-top: 20%;
+        font-size: 98%;
+        margin-left: 5%;
+    }
+    
+    
+    }
+    
+    .title {
+        margin-left: 23%;
+        font-size: 38px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        margin-left: 41%;
+        margin-top: 10%;
+    }
 }

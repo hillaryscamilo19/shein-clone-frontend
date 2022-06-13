@@ -37,7 +37,12 @@ export class NavsComponent implements OnInit {
     if (name == 'icono') {
       this.showFiller = true;
     }
+<<<<<<< HEAD
     console.log(this.showFiller);
   }
 
   }
+=======
+  }
+}
+>>>>>>> 4a7fbcf9d807584f5413dbb3c7381c53224ea000

@@ -21,18 +21,15 @@
   height: 369px;
   margin-top: 16%;
   margin-left: -31%;
+  padding: 40px;
 }
 
-.button {
+.btn-outline-info {
   position: absolute;
   width: 264px;
   height: 53px;
   left: -48px;
   top: 234px;
-  background-color: white;
-  border: none;
-  border-radius: -7%;
-  color: #000000;
 }
 
 .social {
@@ -59,22 +56,26 @@
 }
 
 mat-stepper {
+  position: relative;
   background-color: #f3e6bd;
-  position: absolute;
   width: 405px;
   text-align: end;
   height: 162px;
+<<<<<<< HEAD
   left: 60%;
   top: 702px;
+=======
+  margin-left: 89%;
+  top: 7px;
+>>>>>>> 4a7fbcf9d807584f5413dbb3c7381c53224ea000
 }
 
 mat-card {
-  position: absolute;
-  border-radius: 3%;
-  width: 234px;
+  background-color: #f3e6bd;
+  width: 125px;
   height: 85px;
-  left: -22%;
-  top: 48%;
+  margin-left: 0%;
+  top: 8%;
 }
 
 .title h1 {
@@ -96,6 +97,7 @@ mat-card {
   font-size: 232%;
   top: 8%;
 }
+
 .title h4 {
   color: rgb(15, 13, 13);
   position: absolute;
@@ -106,13 +108,17 @@ mat-card {
   top: 30%;
 }
 
-@media (max-width: 2238px)  {
+@media (max-width: 650px) {
   .container-princ {
-    max-width: 2000px;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
   }
 
 }
 
+<<<<<<< HEAD
 
 @media screen and (max-width: 117px){
   .container-princ {
@@ -194,52 +200,98 @@ mat-card {
     margin-top: 32%;
     margin-left: -51%;
     font-size: 15%;
+=======
+@media (max-width: 1700px) {
+  .container-princ {
+    background-position: 50%;
+>>>>>>> 4a7fbcf9d807584f5413dbb3c7381c53224ea000
   }
-
+  .imagen {
+    width: 467px;
+    margin-left: -494px;
+    display: grid;
+    align-content: stretch;
+}
   .title {
-    width: 49%;
-    font-size: 17px;
-    margin-top: 20%;
+    width: 57%;
+    font-size: 13px;
+    margin-top: 172%;
+    margin-left: 2%;
   }
-
   .title h4 {
-    width: 49%;
-    font-size: 17px;
+    width: 97%;
+    font-size: 20px;
     margin-top: 5%;
+  }
+  .btn-outline-info {
+    width: 130%;
+    margin-left: 0%;
+    margin-top: 93%;
+  }
+  .social {
+    position: absolute;
+    margin-top: 219%;
+    margin-left: -23%;
+  }
+  .telegram {
+    position: absolute;
+    margin-top: 220%;
+    margin-left: 59%
+  }
+  .instagram {
+    position: absolute;
+    margin-top: 220%;
+    margin-left: 20%;
   }
 
   mat-stepper {
-    margin-top: -69%;
-    margin-left: -290%;
+    position: relative;
+    background-color: #f3e6bd;
+    width: 405px;
+    text-align: end;
+    height: 162px;
+    margin-left: 3%;
+    top: 37px;
   }
-
+  
   mat-card {
-    margin-left: 40%;
-  }
-
-  .button {
-    width: 47%;
-    margin-left: -1%;
-    margin-top: 27%;
-  }
-
-  .social {
-    position: absolute;
-    margin-top: 77%;
-    margin-left: 2%;
-
-  }
-
-  .telegram {
-    position: absolute;
-    margin-top: 77%;
-    margin-left: 22%;
-  }
-
-  .instagram {
-    position: absolute;
-    margin-top: 77%;
-    margin-left: 12%;
-
+    background-color: #f3e6bd;
+    width: 125px;
+    height: 85px;
+    margin-left: 0%;
+    top: 8%;
   }
 }
+
+
+@media (max-width: 1180px) {
+  .container-princ {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 9%;
+    align-items: center;
+  }
+
+  .imagen {
+    width: 467px;
+    margin-left: -494px;
+    display: grid;
+    align-content: stretch;
+}
+
+  mat-stepper {
+    position: relative;
+    background-color: #f3e6bd;
+    width: 405px;
+    height: 162px;
+    margin-left: -7%;
+    top: 3px;
+  }
+
+  
+
+}
+
+

@@ -1,9 +1,7 @@
 .container {
-/*   display: flex;
-  justify-content: center; */
   background-color: rgb(255, 255, 255);
-  /* text-align: center; */
   width: 100%;
+  padding: 40px;
 }
 
 .flex-container {
@@ -16,6 +14,7 @@
 .usuario {
   width: 36px;
   height: 38px;
+<<<<<<< HEAD
   margin-top: 35%;
   margin-left: 9%;
 }
@@ -27,13 +26,17 @@
 }
 
 .carrito{
+=======
+  margin-top: 45%;
+  margin-left: 0%;
+}
+
+.carrito {
+>>>>>>> 4a7fbcf9d807584f5413dbb3c7381c53224ea000
   font-size: 40px;
   margin-top: 11%;
   margin-left: 16%;
 }
-
-
-
 
 .fondo {
   width: 154px;
@@ -147,9 +150,36 @@ ul {
 }
  */
 
-@media (max-width:2238px) {
+@media (max-width: 2238px) {
   .container {
     max-width: 2000px;
+  }
+
+  .container {
+    background-color: rgb(255, 255, 255);
+    width: 101%;
+    height: 137px;
+    padding: 40px;
+  }
+
+  .usuario {
+    width: 47px;
+    height: 50px;
+    margin-top: 41%;
+    margin-left: 2%;
+  }
+
+  .carrito {
+    font-size: 48px;
+    margin-top: 2%;
+    margin-left: 58%;
+  }
+  .fondo {
+    width: 152px;
+    height: 42px;
+    margin-top: 18%;
+    font-size: 29%;
+
   }
 }
 /* 
