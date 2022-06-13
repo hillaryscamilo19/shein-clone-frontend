@@ -59,17 +59,20 @@
         margin-left: 33%;
         margin-top: 10%;
     }
-}
+
 
 @media (max-width: 2000px) {
     .container2{
         position: absolute;
         width: 91%;
         height: 62%;
-        background-color: rgb(255 255 255 / 18%);
+        background-color: rgb(255 255 255 / 78%);
         margin-top: 20%;
         font-size: 98%;
         margin-left: 5%;
+    }
+    
+    
     }
     
     .title {
