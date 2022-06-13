@@ -14,7 +14,6 @@
 .usuario {
   width: 36px;
   height: 38px;
-<<<<<<< HEAD
   margin-top: 35%;
   margin-left: 9%;
 }
@@ -26,13 +25,6 @@
 }
 
 .carrito{
-=======
-  margin-top: 45%;
-  margin-left: 0%;
-}
-
-.carrito {
->>>>>>> 4a7fbcf9d807584f5413dbb3c7381c53224ea000
   font-size: 40px;
   margin-top: 11%;
   margin-left: 16%;
@@ -44,24 +36,11 @@
   margin-top: 20%;
 }
 
-/* .logo a {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-decoration: none;
-  text-align: center;
-  align-items: center;
-} */
 
 .logo h3 {
   margin-top: 20px;
 }
 
-/* .icon {
-  font-size: 42px;
-  color: rgb(100, 171, 204);
-} */
 
 .title {
   font-size: 29px;
@@ -75,21 +54,7 @@
   width: 50%;
 }
 
-/* .rutas {
-  cursor: pointer;
-  font-size: 136%;
-  margin-top: 0%;
-  color: rgb(103, 195, 238);
-  display: flex;
-  justify-content: space-around;
-  height: auto;
-} */
 
-/* .login {
-  width: 34px;
-  height: 32px;
-  margin-left: 300%;
-} */
 .icon {
   font-size: 42px;
   color: rgb(10, 10, 10);
@@ -98,18 +63,10 @@
   position: relative !important;
   left: -4rem !important;
 }
-/* .mat {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-} */
+
 .buton {
   margin-right: 10%;
 }
-/* .material-icons {
-  position: relative !important;
-  top: -0.5rem !important;
-} */
 ul {
   list-style: none;
   display: flex;
@@ -122,33 +79,6 @@ ul {
   text-align: center;
   align-items: center;
 }
-
-/* .container1 {
-  position: absolute;
-  width: 19%;
-  height: 60%;
-  margin-left: 80%;
-} */
-
-/* .sidenav .mat-sidenav {
-  padding: 16px;
-} */
-/* 
-.sidenav {
-  color: rgb(0, 211, 218);
-  width: 215px;
-} */
-
-/* .mat-sidenav {
-  background-color: rgb(198, 124, 28);
-} */
-/* 
-@media (min-width: 1258px) {
-  .container {
-    max-width: 1258px;
-  }
-}
- */
 
 @media (max-width: 2238px) {
   .container {
@@ -182,9 +112,3 @@ ul {
 
   }
 }
-/* 
-@media (max-width: 375px) {
-  .container{
-
-  }
-} */

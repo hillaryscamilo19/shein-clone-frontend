@@ -10,12 +10,7 @@ export const environment = {
     projectId: 'api-399c3',
     storageBucket: 'api-399c3.appspot.com',
     messagingSenderId: '932409603874',
-<<<<<<< HEAD
     appId: '1:932409603874:web:169552d4bd103e4b8a177b'
-=======
-    appId: '1:932409603874:web:169552d4bd103e4b8a177b',
-    redirectUri: window.location.origin
->>>>>>> 4a7fbcf9d807584f5413dbb3c7381c53224ea000
   }
 };
 
