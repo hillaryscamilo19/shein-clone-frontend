@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <mat-toolbar class="header">
     <mat-toolbar-row>
       <div class="logo">
@@ -25,3 +26,47 @@
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
+=======
+<div class="container">
+  <div class="flex-container">
+    <div class="logo">
+      <img class="fondo" [src]="fondo" routerLink="home" />
+    </div>
+    <div>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" >
+      <img class="usuario" [src]="usuario"  /> 
+      </button>
+      <button mat-button>
+        <mat-menu #menu="matMenu" > 
+          <h1></h1>
+          <button mat-menu-item *ngIf="userLogged|async as user">
+            <span>{{user.email}}</span>
+          </button>
+          <button mat-menu-item routerLink="login" >
+            <span>login</span>
+          </button>
+          <button mat-menu-item routerLink="registro">
+            <span>Register</span>
+          </button>
+        </mat-menu>
+        <mat-icon class="carrito" routerLink="shopping">shopping_cart</mat-icon>
+      </button>
+    </div>
+    
+  </div>
+  <div class="mat">
+    <div class="buton" *ngFor="let header of service.lista">
+      <button mat-icon-button>
+        <img
+          class="imagen"
+          src="{{ header.img }}"
+          height="100px"
+          width="100px"
+        />
+        <h1 class="title" height="1px" width="1px">{{ header.title }}</h1>
+        <h2 class="precio">{{ header.price }}</h2>
+      </button>
+    </div>
+  </div>
+</div>
+>>>>>>> 1b17b84cb2ef4fafd4687caccefc7a370bcc52ca

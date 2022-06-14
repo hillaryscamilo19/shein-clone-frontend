@@ -75,8 +75,9 @@ import { RegisterComponent } from './pages/login/register/register.component';
     MatDialogModule,
     MatCheckboxModule,
     HttpClientModule,
-    OAuthModule.forRoot(),
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

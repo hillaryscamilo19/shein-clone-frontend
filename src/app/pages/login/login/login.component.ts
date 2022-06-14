@@ -1,6 +1,6 @@
-import { GoogleservisService } from './../services/googleservis.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { GoogleApiService } from './service/google-api.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,23 +24,20 @@ export class LoginComponent implements OnInit {
   };
   startSection: any;
 
-  constructor(private authService: GoogleservisService, private router: Router) {}
+  constructor(private authService: GoogleApiService, private router: Router) {}
 
   ngOnInit(): void {}
 
-  ingresar() {
+  googleToken() {
     console.log(this.usuario);
     const { email, password } = this.usuario;
-    this.authService.loginWithGoogle(email,password).then(res =>{
-      console.log("se registro:",res);
-      this.router.navigate(['/home'])
-    })
+    this.authService.loginWithGoogle(email, password).then((res) => {
+      console.log('se registro:', res);
+      this.router.navigate(['/home']);
+    });
   }
-
 
   logout() {
     this.authService.logout();
   }
 }
-
-

@@ -10,6 +10,7 @@ import * as dataRaw from '../shop/data/store.json';
 export class ShopComponent implements OnInit {
   filter = '';
   @Input() data: any;
+  @Input() producto!: ShopComponent; 
   imagen = dataRaw;
   showFiller = false;
   image = [
@@ -155,9 +156,10 @@ export class ShopComponent implements OnInit {
   constructor(private service: ServiciosaddService) {}
 
   ngOnInit(): void {}
+
   addshopping(shop: any): void {
     this.service.getData(shop);
-    this.service.addcar()
+    // this.service.addcar()
     // console.log(this.vestidos);
   }
 

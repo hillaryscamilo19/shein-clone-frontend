@@ -10,6 +10,7 @@
 }
 
 .usuario {
+<<<<<<< HEAD
   width: 100%;
   display: flex;
   justify-content: left;
@@ -20,11 +21,50 @@
   display: grid;
   justify-content: left;
   flex-direction: row;
+=======
+  width: 36px;
+  height: 38px;
+  margin-top: 35%;
+  margin-left: 9%;
+}
+
+.carrito{
+  font-size: 40px;
+  margin-top: 2%;
+  margin-left: -6%;
+}
+
+.carrito{
+  font-size: 40px;
+  margin-top: 11%;
+  margin-left: 16%;
+}
+
+.fondo {
+  width: 154px;
+  height: 42px;
+  margin-top: 20%;
+}
+
+
+.logo h3 {
+  margin-top: 20px;
+}
+
+
+.title {
+  font-size: 29px;
+  color: rgb(41, 151, 206);
+  text-align: center;
+  margin-left: -28%;
+  margin-top: 20%;
+>>>>>>> 1b17b84cb2ef4fafd4687caccefc7a370bcc52ca
 }
 
 .div {
 }
 
+<<<<<<< HEAD
 .fondo {
   width: 19%;
   align-content: center;
@@ -40,6 +80,37 @@
 
   .fondo {
     width: 100%;
+=======
+
+.icon {
+  font-size: 42px;
+  color: rgb(10, 10, 10);
+}
+.cart {
+  position: relative !important;
+  left: -4rem !important;
+}
+
+.buton {
+  margin-right: 10%;
+}
+ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 280px;
+  margin: 0 5px;
+  text-align: center;
+  align-items: center;
+}
+
+@media (max-width: 2238px) {
+  .container {
+    max-width: 2000px;
+>>>>>>> 1b17b84cb2ef4fafd4687caccefc7a370bcc52ca
   }
 
   .usuario {
@@ -79,8 +150,11 @@
   .usuario {
     width: 80%;
   }
+<<<<<<< HEAD
 
   .carrito {
     font-size: 35px;
   }
+=======
+>>>>>>> 1b17b84cb2ef4fafd4687caccefc7a370bcc52ca
 }

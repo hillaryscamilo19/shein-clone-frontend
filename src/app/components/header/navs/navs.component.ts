@@ -1,4 +1,3 @@
-import { InicioComponent } from './../../../pages/login/inicio/inicio.component';
 import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import * as dataRaw from '../navs/Data/navs.json';
