@@ -1,176 +1,86 @@
-.container {
-  background-color: rgb(255, 255, 255);
+.header {
   width: 100%;
-  padding: 40px;
+  height: auto;
 }
 
 .flex-container {
-  height: 91px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .usuario {
-  width: 36px;
-  height: 38px;
-  margin-top: 45%;
-  margin-left: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
 }
 
 .carrito {
-  font-size: 40px;
-  margin-top: 11%;
-  margin-left: 16%;
+  font-size: 42px;
+  display: grid;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.div {
 }
 
 .fondo {
-  width: 154px;
-  height: 42px;
-  margin-top: 20%;
-}
-
-/* .logo a {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-decoration: none;
-  text-align: center;
-  align-items: center;
-} */
-
-.logo h3 {
-  margin-top: 20px;
-}
-
-/* .icon {
-  font-size: 42px;
-  color: rgb(100, 171, 204);
-} */
-
-.title {
-  font-size: 29px;
-  color: rgb(41, 151, 206);
-  text-align: center;
-  margin-left: -28%;
-  margin-top: 20%;
-}
-
-.router {
-  width: 50%;
-}
-
-/* .rutas {
-  cursor: pointer;
-  font-size: 136%;
-  margin-top: 0%;
-  color: rgb(103, 195, 238);
-  display: flex;
-  justify-content: space-around;
-  height: auto;
-} */
-
-/* .login {
-  width: 34px;
-  height: 32px;
-  margin-left: 300%;
-} */
-.icon {
-  font-size: 42px;
-  color: rgb(10, 10, 10);
-}
-.cart {
-  position: relative !important;
-  left: -4rem !important;
-}
-/* .mat {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-} */
-.buton {
-  margin-right: 10%;
-}
-/* .material-icons {
-  position: relative !important;
-  top: -0.5rem !important;
-} */
-ul {
-  list-style: none;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-left: 280px;
-  margin: 0 5px;
-  text-align: center;
-  align-items: center;
-}
-
-/* .container1 {
-  position: absolute;
   width: 19%;
-  height: 60%;
-  margin-left: 80%;
-} */
-
-/* .sidenav .mat-sidenav {
-  padding: 16px;
-} */
-/* 
-.sidenav {
-  color: rgb(0, 211, 218);
-  width: 215px;
-} */
-
-/* .mat-sidenav {
-  background-color: rgb(198, 124, 28);
-} */
-/* 
-@media (min-width: 1258px) {
-  .container {
-    max-width: 1258px;
-  }
+  align-content: center;
 }
- */
 
-@media (max-width: 2238px) {
-  .container {
-    max-width: 2000px;
-  }
+/* Para 600px */
 
+@media only screen and (max-width: 820px) and (min-width: 501px) {
   .container {
     background-color: rgb(255, 255, 255);
-    width: 101%;
-    height: 137px;
-    padding: 40px;
+    width: 100%;
+  }
+
+  .fondo {
+    width: 100%;
   }
 
   .usuario {
-    width: 47px;
-    height: 50px;
-    margin-top: 41%;
-    margin-left: 2%;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+  }
+
+  .fondo {
+    width: 40%;
+  }
+
+  .usuario {
+    width: 80%;
   }
 
   .carrito {
-    font-size: 48px;
-    margin-top: 2%;
-    margin-left: 58%;
-  }
-  .fondo {
-    width: 152px;
-    height: 42px;
-    margin-top: 18%;
-    font-size: 29%;
-
+    font-size: 35px;
   }
 }
-/* 
-@media (max-width: 375px) {
-  .container{
 
+@media only screen and (max-width: 820px) and (min-width: 501px) {
+  .container {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
   }
-} */
+
+  .fondo {
+    width: 20%;
+  }
+
+  .usuario {
+    width: 80%;
+  }
+
+  .carrito {
+    font-size: 35px;
+  }
+}

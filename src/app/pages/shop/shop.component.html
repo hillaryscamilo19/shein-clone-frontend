@@ -1,12 +1,10 @@
 <div class="cotenedor">
-  <div>
     <button
       mat-icon-button
       class="icono"
       aria-label="Example icon-button with a menu"
     ></button>
     <div class="form">
-      <div class="div">
         <input
           type="text"
           class="input"
@@ -14,7 +12,6 @@
           [(ngModel)]="filter"
           name="filter"
         />
-      </div>
     </div>
   
     <section class="seccion">
@@ -30,7 +27,7 @@
     <div class="buscador">
       <mat-card *ngFor="let shop of ima | filtershop: filter" class="card">
         <mat-card-content class="foto">
-          <img src="{{ shop.img }}" height="200px" width="20px" />
+          <img src="{{ shop.img }}" class="img"/>
         </mat-card-content>
         <mat-card-title-group>
           <button mat-icon-button>
@@ -54,4 +51,3 @@
       </div>
     </mat-drawer-container>
   </div>
-</div>
