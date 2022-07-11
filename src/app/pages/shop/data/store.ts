@@ -1,5 +1,4 @@
-{
-    "imagenes": [
+export const imagen = [
     {
       "title": "soft green coat",
       "price": "$585",
@@ -133,4 +132,3 @@
       "objec": "zapato"
     }
   ]
-}

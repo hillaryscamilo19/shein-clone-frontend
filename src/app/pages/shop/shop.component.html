@@ -13,10 +13,9 @@
           name="filter"
         />
     </div>
-
     <section class="seccion">
       <div class="example-button-row">
-        <button mat-raised-button (click)="ima = image">Everything</button>
+        <button mat-raised-button (click)="ima = imagen">Everything</button>
         <button mat-raised-button (click)="ima = vestidos">Dress</button>
         <button mat-raised-button (click)="ima = abrigos">Coat</button>
         <button mat-raised-button (click)="ima = pantalones">Pants</button>
@@ -31,7 +30,7 @@
         </mat-card-content>
         <mat-card-title-group>
           <button mat-icon-button>
-            <mat-icon>add_shopping_cart</mat-icon>
+            <mat-icon class= "add_shopping">add_shopping_cart</mat-icon>
           </button>
           <mat-card-title class="titulo">{{ shop.title }}</mat-card-title>
           <mat-card-subtitle>{{ shop.price }}</mat-card-subtitle>

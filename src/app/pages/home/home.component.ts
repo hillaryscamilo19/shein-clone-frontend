@@ -59,7 +59,4 @@ export class HomeComponent implements OnInit {
       },
     ];
   }
-  clicked(): void {
-
-  }
 }

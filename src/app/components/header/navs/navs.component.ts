@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
-import * as dataRaw from '../navs/Data/navs.json';
 import { GoogleApiService } from 'src/app/pages/login/login/service/google-api.service';
 
 @Component({
@@ -13,10 +12,7 @@ export class NavsComponent implements OnInit {
   public rutas: Array<any> = [];
   public fondo!: string;
   public usuario!: string;
-  ju: any;
-  lista: any;
-  showFiller = false;
-  imagen = dataRaw;
+  public carrito!: string;
   opened = false;
   MatDialog: any;
 
@@ -27,15 +23,6 @@ export class NavsComponent implements OnInit {
   ngOnInit(): void {
     this.fondo = '../../../assets/img/Shein.png';
     this.usuario = '../../../assets/img/usuario.png';
-    this.service.disparador.subscribe((data) => {
-      this.lista.push(data);
-    });
-    this.rutas = [];
-  }
-
-  click(name: string): void {
-    if (name == 'icono') {
-      this.showFiller = true;
-    }
+    this.carrito = '../../../assets/img/carrito.png';
   }
 }
