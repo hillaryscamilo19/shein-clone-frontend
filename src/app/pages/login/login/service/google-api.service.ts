@@ -21,7 +21,6 @@ export class GoogleApiService {
     }
   }
 
-  
   async login(email: string, password: string) {
     try {
       return await this.afauth.signInWithEmailAndPassword(email, password);

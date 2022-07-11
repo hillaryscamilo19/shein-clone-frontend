@@ -1,28 +1,22 @@
 .header {
   width: 100%;
-  height: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f9f9f9;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
 .usuario {
-  width: 100%;
-  display: flex;
-  justify-content: left;
+  width: 99%;
+  margin-top: 15%;
+  display: inline;
 }
 
 .carrito {
   font-size: 42px;
-  display: grid;
-  justify-content: left;
-  flex-direction: row;
+  margin-left: 28%;
+  margin-top: 13%;
 }
-
-
 
 .fondo {
   width: 19%;
@@ -44,6 +38,11 @@
   .usuario {
     font-size: 12px;
   }
+  .carrito[_ngcontent-eyk-c117] {
+    font-size: 35px;
+    margin-left: -12%;
+    margin-top: 13%;
+}
 }
 
 @media only screen and (max-width: 500px) and (min-width: 341px) {
@@ -57,11 +56,14 @@
   }
 
   .usuario {
-    width: 80%;
+    width: 89%;
+    margin-left: -100%;
   }
 
   .carrito {
     font-size: 35px;
+    margin-left: -74%;
+    margin-top: 13%;
   }
 }
 
@@ -81,5 +83,7 @@
 
   .carrito {
     font-size: 35px;
+    margin-left: 28%;
+    margin-top: 13%;
   }
 }
