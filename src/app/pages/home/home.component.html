@@ -2,6 +2,7 @@
   <div class="containerOne">
     <div class="container">
       <img class="imagen" [src]="foto" />
+        <mat-icon class="icon" (click)="scroll()">keyboard_arrow_right</mat-icon>
     </div>
     <div class="matStep">
       <mat-stepper>
@@ -31,7 +32,6 @@
       <div class="containerButton">
         <button class="buttonComprar" routerLink="/shop">
           BUY NOW
-          <span></span>
         </button>
       </div>
 

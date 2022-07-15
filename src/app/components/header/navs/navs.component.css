@@ -2,8 +2,9 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
-  background-color: #f9f9f9;
+  background-color: #fff4e5;
 }
+
 
 
 .usuario {
@@ -19,7 +20,7 @@
 }
 
 .fondo {
-  width: 19%;
+  width: 90%;
   align-content: center;
 }
 

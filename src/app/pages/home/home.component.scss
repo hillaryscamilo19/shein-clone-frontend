@@ -25,6 +25,13 @@
   padding: 0;
 }
 
+.icon{
+  font-size: 80px;
+  position: relative;
+  margin-top: 33%;
+  margin-left: 2%;
+}
+
 .title {
   display: flex;
   flex-direction: column;
@@ -55,13 +62,13 @@
 }
 
 mat-stepper {
-  background-color: #f3e6bd;
+  background-color: #ffffff;
   padding: 0;
   margin: 0;
 }
 
 mat-card {
-  background-color: #f3e6bd;
+  background-color: #ffffff;
   width: 135px;
   height: 85px;
   padding: 0;
@@ -92,8 +99,9 @@ mat-card {
   position: relative;
   padding: 0.7em 2.4em;
   font-size: 18px;
-  background: transparent;
+  background: #adaad9cf;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   overflow: hidden;
   color: royalblue;
@@ -161,7 +169,6 @@ mat-card {
   }
 
 }
-
 
 @media screen and (max-width: 117px){
   .container-princ {
@@ -232,9 +239,6 @@ mat-card {
   }
 
 }
-
-
-
 
 @media screen and (max-width: 915px) and (min-width:412px) {
   .container{

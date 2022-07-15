@@ -26,7 +26,7 @@
     <div class="buscador">
       <mat-card *ngFor="let shop of ima | filtershop: filter" class="card">
         <mat-card-content class="foto">
-          <img src="{{ shop.img }}" class="img"/>
+          <img src="{{ shop.img }}" class="img" routerLink="/home" />
         </mat-card-content>
         <mat-card-title-group>
           <button mat-icon-button>

@@ -21,7 +21,7 @@ export class NavsComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.fondo = '../../../assets/img/Shein.png';
+    this.fondo = '../../../assets/img/logo.png';
     this.usuario = '../../../assets/img/usuario.png';
     this.carrito = '../../../assets/img/carrito.png';
   }
