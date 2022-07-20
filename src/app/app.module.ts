@@ -26,6 +26,10 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatBadgeModule } from '@angular/material/badge';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+//componentes
+
+
 
 @NgModule({
   declarations: [
@@ -37,6 +41,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     LoginComponent,
     NavsComponent,
     RegisterComponent,
+    CartPageComponent,
   ],
 
   imports: [

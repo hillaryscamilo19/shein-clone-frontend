@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 // import * as dataRaw from '../shop/data/store.json';
-import { imagen } from './data/store';
+import {IProducto} from './data/store';
 
 @Component({
   selector: 'app-shop',
@@ -9,18 +9,35 @@ import { imagen } from './data/store';
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent implements OnInit {
+  listProduct: IProducto [] = [];
   filter = '';
   @Input() data: any;
   @Input() producto!: ShopComponent; 
-  imagen = imagen;
+  Data: IProducto[] = []
   showFiller = false;
-  ima = this.imagen;
 
-  zapatos = this.imagen.filter((zapato) => zapato.objec === 'zapato');
-  vestidos = this.imagen.filter((vestido) => vestido.objec === 'vestido');
-  abrigos = this.imagen.filter((abrigo) => abrigo.objec === 'abrigo');
-  pantalones = this.imagen.filter((pantalon) => pantalon.objec === 'pantalon');
-  constructor() {}
 
-  ngOnInit(): void {}
+  zapatos = this.Data.filter((zapato) => zapato.object === 'zapato');
+  vestidos = this.Data.filter((vestido) => vestido.object === 'vestido');
+  abrigos = this.Data.filter((abrigo) => abrigo.object === 'abrigo');
+  pantalones = this.Data.filter((pantalon) => pantalon.object === 'pantalon');
+
+  constructor(private productoservis: ServiciosaddService) {}
+
+
+  ngOnInit(): void {
+    this.getProduct();
+    
+  }
+
+  //backed
+  getProduct(){
+    this.productoservis.getProducto().subscribe(data =>{
+      console.log(data);
+      this.listProduct = data;
+    }, error => {
+      console.log(error);
+    })
+  }
 }
+

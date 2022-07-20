@@ -1,4 +1,4 @@
-import { imagen } from './../shop/data/store';
+// import { imagen } from './../shop/data/store';
 import { Component, OnInit, Input } from '@angular/core';
 
 
