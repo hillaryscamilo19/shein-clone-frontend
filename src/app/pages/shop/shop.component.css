@@ -23,6 +23,7 @@
 
 .input {
   width: 26%;
+  background: #d5e9e9;
   height: 30px;
   display: flex;
   justify-content: center;
