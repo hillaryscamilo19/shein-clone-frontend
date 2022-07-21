@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { toArray } from 'rxjs';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 // import * as dataRaw from '../shop/data/store.json';
 import {IProducto} from './data/store';
@@ -9,13 +10,16 @@ import {IProducto} from './data/store';
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent implements OnInit {
+  local: any;
+  icom = true;
+  session: any
   listProduct: IProducto [] = [];
   filter = '';
   @Input() data: any;
   @Input() producto!: ShopComponent; 
   Data: IProducto[] = []
   showFiller = false;
-
+  Api: any = [];
 
   zapatos = this.Data.filter((zapato) => zapato.object === 'zapato');
   vestidos = this.Data.filter((vestido) => vestido.object === 'vestido');
@@ -27,7 +31,6 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProduct();
-    
   }
 
   //backed
@@ -40,10 +43,18 @@ export class ShopComponent implements OnInit {
     })
   }
 
-  addCar(shop: any): void{
-    this.productoservis.getData(shop);
-    localStorage.setItem('session', JSON.stringify(this.Data))
-    console.log(this.Data)
+  addCar(){
+    this.productoservis.getProductoByID('62d6ca4d5d9f3195eeedb122').subscribe(data =>{
+      return this.Api.push(data);
+     
+    }, error => {
+      console.log(error);
+    })
+    localStorage.setItem('shopcomponet',JSON.stringify(this.Api));
+    
   }
+
+
+  
 }
 

@@ -13,20 +13,31 @@ export class ServiciosaddService {
   constructor(private http: HttpClient) {
     this.getData;
   }
+
   //añadir al carrito
   getData(shop: any) {
     console.log(shop);
     this.lista.push(shop);
   }
+
   getjso(getjs: any) {
     this.jso.push(getjs);
     console.log(getjs);
   }
+  
   getProducto(): Observable<any>{
     return this.http.get(this.url);
   }
 
-  addProducto(){
+  getProductoByID(id:any){
+    return this.http.get(this.url+`/${id}`);
+  }
+  addProducto(key:string,data: any){
 
+   
+  }
+
+  getadd(key: any){
   }
 }
+
