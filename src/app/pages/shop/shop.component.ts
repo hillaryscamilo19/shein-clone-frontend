@@ -1,7 +1,6 @@
+import { CarritoService } from './services/carrito.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { toArray } from 'rxjs';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
-// import * as dataRaw from '../shop/data/store.json';
 import {IProducto} from './data/store';
 
 @Component({
@@ -15,18 +14,19 @@ export class ShopComponent implements OnInit {
   session: any
   listProduct: IProducto [] = [];
   filter = '';
-  @Input() data: any;
+
   @Input() producto!: ShopComponent; 
   Data: IProducto[] = []
   showFiller = false;
-  Api: any = [];
+  Api: Array <any> = [];
 
   zapatos = this.Data.filter((zapato) => zapato.object === 'zapato');
   vestidos = this.Data.filter((vestido) => vestido.object === 'vestido');
   abrigos = this.Data.filter((abrigo) => abrigo.object === 'abrigo');
   pantalones = this.Data.filter((pantalon) => pantalon.object === 'pantalon');
 
-  constructor(private productoservis: ServiciosaddService) {}
+  
+  constructor(private productoservis: ServiciosaddService , private carritoservis : CarritoService) {}
 
 
   ngOnInit(): void {
@@ -43,18 +43,22 @@ export class ShopComponent implements OnInit {
     })
   }
 
-  addCar(){
-    this.productoservis.getProductoByID('62d6ca4d5d9f3195eeedb122').subscribe(data =>{
+  addCar(id: string){
+    this.productoservis.getProductoByID(id).subscribe(data =>{
+      console.log(data)
       return this.Api.push(data);
-     
     }, error => {
       console.log(error);
     })
-    localStorage.setItem('shopcomponet',JSON.stringify(this.Api));
-    
+    sessionStorage.setItem('API',JSON.stringify(this.Api)); 
   }
 
-
-  
+  //añadir carrito
+  shfgs(){
+    const pop = {
+      userId: 'jdkgdj',
+    }
+    
+    this.carritoservis.addCarrito(pop)
 }
-
+}

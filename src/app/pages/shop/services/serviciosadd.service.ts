@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -29,15 +30,15 @@ export class ServiciosaddService {
     return this.http.get(this.url);
   }
 
-  getProductoByID(id:any){
+  getProductoByID(id:string){
     return this.http.get(this.url+`/${id}`);
   }
-  addProducto(key:string,data: any){
+  // addProducto(key:string,data: any){
 
    
-  }
+  // }
 
-  getadd(key: any){
-  }
+  // getadd(key: any){
+  // }
 }
 

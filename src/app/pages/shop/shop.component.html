@@ -36,7 +36,7 @@
           <mat-icon (click)="icom = !icom" matSuffix>{{icom ? "favorite" : "visibility"}}</mat-icon>
         </button> -->
         <button mat-icon-button>
-          <mat-icon class="add_shopping" (click)="addCar()">add_shopping_cart</mat-icon>
+          <mat-icon class="add_shopping" (click)="addCar(store._id)">add_shopping_cart</mat-icon>
         </button>
         <mat-card-title class="titulo">{{ store.title }}</mat-card-title>
         <mat-card-subtitle>{{
