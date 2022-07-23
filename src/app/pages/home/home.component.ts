@@ -11,6 +11,8 @@ export class HomeComponent implements OnInit {
   public rutas: Array<any> = [];
   public imagen: Array<any> = [];
   public foto!: string;
+  public foto1!: string;
+  public foto2!: string;
   public facebook!: string;
   public instagram!: string;
   public telegram!: string;
@@ -18,6 +20,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.foto = '../../../assets/img/Jaket.png';
+    this.foto1 = '../../../assets/img/Jaket1.png';
+    this.foto2 = '../../../assets/img/Jaket2.png';
     this.facebook = '../../../assets/img/facebook.png';
     this.instagram = '../../../assets/img/instagram.png';
     this.telegram = '../../../assets/img/telegram.png';

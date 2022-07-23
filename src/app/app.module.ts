@@ -24,8 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
-import {MatDividerModule} from '@angular/material/divider';
-
+import { MatDividerModule } from '@angular/material/divider';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,6 @@ import {MatDividerModule} from '@angular/material/divider';
     LoginComponent,
     NavsComponent,
     RegisterComponent,
-
   ],
 
   imports: [
@@ -55,8 +54,9 @@ import {MatDividerModule} from '@angular/material/divider';
     HttpClientModule,
     MatDividerModule,
     AppRoutingModule,
+    MatPaginatorModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],
