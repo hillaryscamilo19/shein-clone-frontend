@@ -25,7 +25,15 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { MatDividerModule } from '@angular/material/divider';
+<<<<<<< HEAD
 import { MatPaginatorModule } from '@angular/material/paginator';
+=======
+import { MatBadgeModule } from '@angular/material/badge';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+//componentes
+
+
+>>>>>>> c8bd44f33a8d2e8f236fbe68c07d437cef1ad136
 
 @NgModule({
   declarations: [
@@ -37,6 +45,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     LoginComponent,
     NavsComponent,
     RegisterComponent,
+<<<<<<< HEAD
+=======
+    CartPageComponent,
+>>>>>>> c8bd44f33a8d2e8f236fbe68c07d437cef1ad136
   ],
 
   imports: [
@@ -54,7 +66,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HttpClientModule,
     MatDividerModule,
     AppRoutingModule,
+<<<<<<< HEAD
     MatPaginatorModule,
+=======
+    MatBadgeModule,
+>>>>>>> c8bd44f33a8d2e8f236fbe68c07d437cef1ad136
     AngularFireModule.initializeApp(environment.firebaseConfig),
     OAuthModule.forRoot(),
   ],

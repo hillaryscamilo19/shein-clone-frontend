@@ -23,6 +23,7 @@
 
 .input {
   width: 26%;
+  background: #d5e9e9;
   height: 30px;
   display: flex;
   justify-content: center;
@@ -53,6 +54,11 @@
 
 .img {
   height: 300px;
+}
+
+.Myicon{
+  width: 0%;
+  margin-left: 5%;
 }
 
 .add_shopping{
@@ -88,8 +94,11 @@ section button {
 }
 
 .titulo {
-  margin-left: -6%;
-  font-size: 100%;
+  margin-left: 0%;
+  align-items: center;
+  font-size: 107%;
+  display: flex;
+
 }
 
 .example-button-row {
