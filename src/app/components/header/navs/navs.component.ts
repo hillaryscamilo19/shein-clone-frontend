@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import { GoogleApiService } from 'src/app/pages/login/login/service/google-api.service';
+import { MatDialog } from '@angular/material/dialog';
+import { CartPageComponent } from 'src/app/pages/cart-page/cart-page.component';
+
 
 @Component({
   selector: 'app-navs',
@@ -17,7 +20,14 @@ export class NavsComponent implements OnInit {
   MatDialog: any;
 
 
-  constructor(public service: ServiciosaddService,private googleService:GoogleApiService) {}
+  constructor(public service: ServiciosaddService,private googleService:GoogleApiService, public dialog: MatDialog) {}
+  openDialog() {
+    const dialogRef = this.dialog.open(CartPageComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
   
 
   ngOnInit(): void {

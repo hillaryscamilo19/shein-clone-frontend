@@ -23,9 +23,13 @@
       >
         <img class="usuario" [src]="usuario" />
       </button>
-        <span matBadge="0" matBadgeOverlap="false">
-          <img class="carrito" [src]="carrito" routerLink="cart"/>
-        </span>
+      <mat-dialog-content class="mat-typography">
+
+      </mat-dialog-content>
+      <span matBadge="0" (click)="openDialog()">
+        <img class="carrito" [src]="carrito">
+      </span>
     </button>
   </mat-toolbar>
 </p>
+

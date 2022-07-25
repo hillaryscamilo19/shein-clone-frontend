@@ -4,9 +4,6 @@
   justify-content: space-around;
   background-color: #fff4e5;
 }
-
-
-
 .usuario {
   width: 99%;
   margin-top: 15%;
@@ -22,6 +19,10 @@
 .fondo {
   width: 90%;
   align-content: center;
+}
+
+.modal{
+  
 }
 
 /* Para 600px */
@@ -43,7 +44,7 @@
     font-size: 35px;
     margin-left: -12%;
     margin-top: 13%;
-}
+  }
 }
 
 @media only screen and (max-width: 500px) and (min-width: 341px) {

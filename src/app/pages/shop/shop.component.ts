@@ -2,6 +2,7 @@ import { CarritoService } from './services/carrito.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import {IProducto} from './data/store';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-shop',
@@ -33,6 +34,7 @@ export class ShopComponent implements OnInit {
     this.getProduct();
   }
 
+  
   //backed
   getProduct(){
     this.productoservis.getProducto().subscribe(data =>{
@@ -54,10 +56,15 @@ export class ShopComponent implements OnInit {
   }
 
   //añadir carrito
-  shfgs(){
+  AddCarrirto(){
     const pop = {
       userId: 'jdkgdj',
+      product: '',
+      PriceId: '',
+      ImgProduct: '',
+      Titleproduct: '',
     }
+ 
     
     this.carritoservis.addCarrito(pop)
 }

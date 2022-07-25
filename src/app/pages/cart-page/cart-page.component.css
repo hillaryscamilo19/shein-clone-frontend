@@ -1,0 +1,22 @@
+.title{
+    display: flex;
+    font-size: 22px;
+    margin-top: 2%;
+    margin-left: 83%;
+}
+
+.imagen{
+    display: flex;
+    justify-content: center;
+    width: 32%;
+    height: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+}
+
+.precio{
+    display: flex;
+    /* justify-content: end; */
+    -webkit-text-stroke-width: medium;
+    margin-left: 83%;
+}
