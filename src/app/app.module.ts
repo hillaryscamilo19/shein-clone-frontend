@@ -25,11 +25,17 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { MatDividerModule } from '@angular/material/divider';
+
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 import { MatBadgeModule } from '@angular/material/badge';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatDialogModule } from '@angular/material/dialog';
 //componentes
+
+
+
 
 @NgModule({
   declarations: [
@@ -59,6 +65,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     MatDividerModule,
     AppRoutingModule,
+
+    MatPaginatorModule,
+
     MatBadgeModule,
     MatBottomSheetModule,
     MatDialogModule,
