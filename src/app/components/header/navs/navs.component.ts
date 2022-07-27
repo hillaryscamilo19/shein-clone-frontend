@@ -1,9 +1,8 @@
+import { CartPageComponent } from './../../../pages/cart-page/cart-page.component';
 import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import { GoogleApiService } from 'src/app/pages/login/login/service/google-api.service';
 import { MatDialog } from '@angular/material/dialog';
-import { CartPageComponent } from 'src/app/pages/cart-page/cart-page.component';
-
 
 @Component({
   selector: 'app-navs',
@@ -18,9 +17,17 @@ export class NavsComponent implements OnInit {
   public carrito!: string;
   opened = false;
   MatDialog: any;
+  showHover!: boolean;
+  Addcarrito: any;
+  add: any;
 
-
-  constructor(public service: ServiciosaddService,private googleService:GoogleApiService, public dialog: MatDialog) {}
+  constructor(
+    public service: ServiciosaddService,
+    private googleService: GoogleApiService,
+    public dialog: MatDialog
+  ) {
+    this.showHover = false;
+  }
   openDialog() {
     const dialogRef = this.dialog.open(CartPageComponent);
 
@@ -28,11 +35,19 @@ export class NavsComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  
+
+
+  // howHover(show: boolean) {
+  //   this.showHover = show;
+  // }
 
   ngOnInit(): void {
     this.fondo = '../../../assets/img/logo.png';
     this.usuario = '../../../assets/img/usuario.png';
     this.carrito = '../../../assets/img/carrito.png';
+    //add car
+    this.add = sessionStorage.getItem('API');
+    this.Addcarrito = JSON.parse(this.add);
+    console.log(this.Addcarrito);
   }
 }

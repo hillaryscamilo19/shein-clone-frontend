@@ -8,10 +8,10 @@
 .imagen{
     display: flex;
     justify-content: center;
-    width: 32%;
-    height: 50%;
-    margin-top: 3%;
-    margin-left: 25%;
+    width: 14%;
+    height: 59%;
+    margin-top: -10%;
+    margin-left: 4%;
 }
 
 .precio{

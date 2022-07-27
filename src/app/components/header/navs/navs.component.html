@@ -3,7 +3,9 @@
     <div class="logo">
       <img class="fondo" [src]="fondo" routerLink="home" />
     </div>
+
     <span class="example-spacer"></span>
+
     <button mat-button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item *ngIf="userLogged | async as user">
@@ -16,20 +18,19 @@
           <span>Register</span>
         </button>
       </mat-menu>
-      <button
+
+      <div class="container-art">
+        <button
         mat-icon-button
         [matMenuTriggerFor]="menu"
         aria-label="Example icon-button with a menu"
       >
         <img class="usuario" [src]="usuario" />
       </button>
-      <!-- <mat-dialog-content class="mat-typography">
-
-      </mat-dialog-content> -->
       <span matBadge="0" (click)="openDialog()">
-        <img class="carrito" [src]="carrito">
+        <img class="carrito" [src]="carrito" />
       </span>
+      </div>
     </button>
   </mat-toolbar>
 </p>
-
