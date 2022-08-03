@@ -16,8 +16,8 @@ export class NavsComponent implements OnInit {
   public usuario!: string;
   public carrito!: string;
   opened = false;
+  showFiller = false;
   MatDialog: any;
-  showHover!: boolean;
   Addcarrito: any;
   add: any;
 
@@ -25,21 +25,7 @@ export class NavsComponent implements OnInit {
     public service: ServiciosaddService,
     private googleService: GoogleApiService,
     public dialog: MatDialog
-  ) {
-    this.showHover = false;
-  }
-  openDialog() {
-    const dialogRef = this.dialog.open(CartPageComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
-
-
-  // howHover(show: boolean) {
-  //   this.showHover = show;
-  // }
+  ) {}
 
   ngOnInit(): void {
     this.fondo = '../../../assets/img/logo.png';

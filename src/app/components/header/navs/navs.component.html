@@ -1,4 +1,4 @@
-<p class="header">
+<form class="form">
   <mat-toolbar color="primary" class="header">
     <div class="logo">
       <img class="fondo" [src]="fondo" routerLink="home" />
@@ -21,16 +21,35 @@
 
       <div class="container-art">
         <button
-        mat-icon-button
-        [matMenuTriggerFor]="menu"
-        aria-label="Example icon-button with a menu"
-      >
-        <img class="usuario" [src]="usuario" />
-      </button>
-      <span matBadge="0" (click)="openDialog()">
-        <img class="carrito" [src]="carrito" />
-      </span>
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+        >
+          <img class="usuario" [src]="usuario" />
+        </button>
+        <span
+          matBadge="0"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+          (click)="(showFiller)"
+        >
+          <img class="carrito" [src]="carrito" (click)="sidenav.toggle()" />
+        </span>
       </div>
     </button>
   </mat-toolbar>
-</p>
+  <mat-sidenav-container class="container">
+    <mat-sidenav #sidenav class="modal">
+      <span *ngFor="let store of Addcarrito">
+        <img src="{{ store.img }}" class="imagen" />
+        <h2 class="title">{{ store.title }}</h2>
+        <h1 class="precio">{{ store.price | currency: "RD" }}</h1>
+        <mat-icon class="sum">remove_circle_outline</mat-icon>
+        <mat-icon>control_point</mat-icon>
+      </span>
+    </mat-sidenav>
+    <mat-sidenav-content class="modal1">
+      <h1></h1>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</form>
