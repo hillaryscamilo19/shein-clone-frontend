@@ -28,8 +28,9 @@
       *ngFor="let store of listProduct | filtershop: filter"
       class="card"
     >
-      <mat-card-content class="foto">
-        <img src="{{ store.img }}" class="img" routerLink="/home" />
+      <mat-card-content class="foto" >
+        <img src="{{ store.img }}" class="img" routerLink="/cart" />
+        <!-- <img [src]="tag" class="tag-img"> -->
       </mat-card-content>
       <mat-card-title-group>
         <!-- <button  mat-icon-button color="warn"class="example-button-container" class="Myicon" type="{{icom ? 'button' : 'button' }}">
@@ -39,7 +40,7 @@
           <mat-icon class="add_shopping" (click)="addCar(store._id)">add_shopping_cart</mat-icon>
         </button>
         <mat-card-title class="titulo">{{ store.title }}</mat-card-title>
-        <mat-card-subtitle>{{
+        <mat-card-subtitle class="price">{{
           store.price | currency:'RD'
         }}</mat-card-subtitle>
       </mat-card-title-group>

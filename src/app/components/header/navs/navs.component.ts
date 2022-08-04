@@ -1,4 +1,4 @@
-import { CartPageComponent } from './../../../pages/cart-page/cart-page.component';
+import { CarritoService } from './../../../pages/shop/services/carrito.service';
 import { Component, OnInit } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import { GoogleApiService } from 'src/app/pages/login/login/service/google-api.service';
@@ -20,11 +20,14 @@ export class NavsComponent implements OnInit {
   MatDialog: any;
   Addcarrito: any;
   add: any;
+  count: number = 0;
+  carritoCounts: number | undefined;
 
   constructor(
     public service: ServiciosaddService,
     private googleService: GoogleApiService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public carritoService: CarritoService,
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +37,30 @@ export class NavsComponent implements OnInit {
     //add car
     this.add = sessionStorage.getItem('API');
     this.Addcarrito = JSON.parse(this.add);
-    console.log(this.Addcarrito);
+    this.service.Count.subscribe((res) => {
+      this.count = res;
+    });
+     console.log(this.carritoService.cartProduts);
+     console.log(this.add)
   }
+
+  AddcAr() {
+    this.count = this.count + 1;
+    this.service.Count.next(this.count);
+  }
+  RemovercAr() {
+    this.count = this.count - 1;
+    this.service.Count.next(this.count);
+  }
+
+  DisplayProduc(sidenav: any){
+    sidenav.toggle()
+    this.Addcarrito = JSON.parse(this.add);
+  }
+
+  removerartic(){
+    this.carritoService.deleteCarrito
+  }
+
+
 }

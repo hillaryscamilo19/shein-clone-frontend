@@ -3,16 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-cart-page',
   templateUrl: './cart-page.component.html',
-  styleUrls: ['./cart-page.component.css']
+  styleUrls: ['./cart-page.component.css'],
 })
 export class CartPageComponent implements OnInit {
-  Addcarrito:any;
+  Addcarrito: any;
   add: any;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.add = sessionStorage.getItem('API')
-    this.Addcarrito = JSON.parse(this.add)
-    console.log(this.Addcarrito)
+    this.add = sessionStorage.getItem('API');
+    this.Addcarrito = JSON.parse(this.add);
+    console.log(this.Addcarrito);
   }
 }

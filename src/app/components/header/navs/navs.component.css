@@ -35,12 +35,10 @@
 
 .modal::before {
   content: "";
-  position: absolute;
   top: 0;
   margin-top: 128%;
   height: 39rem;
   width: 17rem;
-  overflow: scroll;
 }
 
 .modal {
@@ -51,28 +49,21 @@
   margin-left: 78%;
 }
 
-.modal1 {
-  width: 50%;
-  height: 50%;
-  background-color: rgb(233, 151, 151);
-  overflow: hidden;
-}
-
 .title {
   display: flex;
-  font-size: 22px;
-  margin-top: -53%;
-  margin-left: 50%;
+  font-size: 16px;
+  margin-top: -32%;
+  margin-left: 42%;
   font-family: "EB Garamond", serif;
-  color: darkgrey;
+  color: black;
 }
 
 .imagen {
   display: flex;
   justify-content: center;
-  width: 37%;
-  height: 23%;
-  margin-top: 6%;
+  width: 30%;
+  height: 15%;
+  margin-top: 27%;
   margin-left: 9%;
 }
 
@@ -80,8 +71,8 @@
   display: flex;
   font-size: 100%;
   -webkit-text-stroke-width: medium;
-  margin-left: 51%;
-  margin-top: -5%;
+  margin-left: 43%;
+  margin-top: -6%;
   font-family: "EB Garamond", serif;
   color: black;
 }
@@ -94,8 +85,8 @@
 }
 
 .sum {
-  margin-left: 50%;
-  margin-top: 0%;
+  margin-left: 44%;
+  margin-top: -8%;
 }
 /* Para 600px */
 

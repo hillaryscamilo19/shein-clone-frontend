@@ -28,24 +28,29 @@
           <img class="usuario" [src]="usuario" />
         </button>
         <span
-          matBadge="0"
+          [matBadge]="count"
+          [matBadgeHidden]="count==0"
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
           (click)="(showFiller)"
         >
-          <img class="carrito" [src]="carrito" (click)="sidenav.toggle()" />
+          <img class="carrito" [src]="carrito" (click)=" DisplayProduc(sidenav)" />
         </span>
       </div>
     </button>
   </mat-toolbar>
   <mat-sidenav-container class="container">
     <mat-sidenav #sidenav class="modal">
-      <span *ngFor="let store of Addcarrito">
+      <!-- <p class="total">Sudtotal</p> -->
+      <span *ngFor="let store of carritoService.cartProduts">
         <img src="{{ store.img }}" class="imagen" />
         <h2 class="title">{{ store.title }}</h2>
         <h1 class="precio">{{ store.price | currency: "RD" }}</h1>
-        <mat-icon class="sum">remove_circle_outline</mat-icon>
-        <mat-icon>control_point</mat-icon>
+        <mat-icon (click)="removerartic()">delete</mat-icon>
+        <mat-icon class="sum" (click)="RemovercAr()"
+          >remove_circle_outline</mat-icon
+        ><span>{{ count }}</span>
+        <mat-icon (click)="AddcAr()">control_point</mat-icon>
       </span>
     </mat-sidenav>
     <mat-sidenav-content class="modal1">

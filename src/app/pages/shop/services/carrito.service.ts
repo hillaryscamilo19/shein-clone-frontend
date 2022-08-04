@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class CarritoService {
   url = 'http://localhost:4000/api/productos';
+  cartProduts: any = JSON.parse(sessionStorage.getItem('API') || '');
 
   constructor(private http: HttpClient) { }
 
