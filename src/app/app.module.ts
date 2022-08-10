@@ -25,6 +25,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -66,7 +67,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     MatSidenavModule,
     MatPaginatorModule,
-
+    MatCheckboxModule,
     MatBadgeModule,
     MatBottomSheetModule,
     MatDialogModule,

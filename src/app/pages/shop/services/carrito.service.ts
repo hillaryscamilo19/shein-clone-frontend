@@ -1,25 +1,28 @@
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CarritoService {
-  url = 'http://localhost:4000/api/productos';
-  cartProduts: any = JSON.parse(sessionStorage.getItem('API') || '');
+  total: Subject<number> = new BehaviorSubject<number>(100);
+  urls = 'http://localhost:4000/api/addcarrito';
 
-  constructor(private http: HttpClient) { }
+  cartProduts: any = JSON.parse(sessionStorage.getItem('API') || '[]');
 
-  getCarrito(){
-    return this.http.get(this.url);
+  constructor(private http: HttpClient) {
+    console.log(this.cartProduts);
+  }
+  getCarrito() {
+    return this.http.get(this.urls);
   }
 
-  deleteCarrito(id:string){
-    return this.http.delete(this.url+`/${id}`)
+  deleteCarrito(id: string): Observable<any> {
+    return this.http.delete(this.urls + `/${id}`);
   }
 
-  addCarrito(car:any){
-    return this.http.post(this.url, car)
+  addCarrito(urls: string, body: any): Observable<any> {
+    return this.http.post(urls, body);
   }
-
 }

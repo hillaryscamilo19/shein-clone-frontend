@@ -33,6 +33,12 @@ export class ServiciosaddService {
   getProductoByID(id: string) {
     return this.http.get(this.url + `/${id}`);
   }
+
+
+  addItems(id: string){
+    this.http.get(this.url + `/${id}`);
+  }
+
   // addProducto(key:string,data: any){
 
   // }

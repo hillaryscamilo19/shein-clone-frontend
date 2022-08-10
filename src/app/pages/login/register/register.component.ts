@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { GoogleApiService } from '../login/service/google-api.service';
 
 @Component({
   selector: 'app-register',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: GoogleApiService, private router: Router) { }
 
   ngOnInit(): void {
   }

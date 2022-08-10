@@ -2,6 +2,7 @@ import { CarritoService } from './services/carrito.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import { IProducto } from './data/store';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-shop',
@@ -9,13 +10,14 @@ import { IProducto } from './data/store';
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent implements OnInit {
+  urls = 'http://localhost:4000/api/addcarrito';
   local: any;
   icom = true;
   session: any;
   listProduct: IProducto[] = [];
   filter = '';
   tag = '';
-
+  data :any
   @Input() producto!: ShopComponent;
   Data: IProducto[] = [];
   showFiller = false;
@@ -28,7 +30,8 @@ export class ShopComponent implements OnInit {
 
   constructor(
     private productoservis: ServiciosaddService,
-    private carritoservis: CarritoService
+    private carritoservis: CarritoService,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
@@ -50,12 +53,21 @@ export class ShopComponent implements OnInit {
   }
 
   addCar(id: string) {
+  
     this.productoservis.getProductoByID(id).subscribe(
       (data) => {
+        console.log(data);
+        
+        this.carritoservis.addCarrito(this.urls,data).subscribe((data) => {
+          console.log(data);
+          
+        })
         this.carritoservis.cartProduts.push(data);
+        
         sessionStorage.setItem(
           'API',
           JSON.stringify([...this.carritoservis.cartProduts])
+
         );
       },
       (error) => {
@@ -64,16 +76,5 @@ export class ShopComponent implements OnInit {
     );
   }
 
-  //añadir carrito
-  AddCarrirto() {
-    const pop = {
-      userId: 'jdkgdj',
-      product: '',
-      PriceId: '',
-      ImgProduct: '',
-      Titleproduct: '',
-    };
-
-    this.carritoservis.addCarrito(pop);
-  }
+ 
 }
