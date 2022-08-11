@@ -1,12 +1,14 @@
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {IProducto} from '../data/store'
 
 @Injectable({
   providedIn: 'root',
 })
 export class CarritoService {
-  total: Subject<number> = new BehaviorSubject<number>(100);
+  // total: Subject<number> = new BehaviorSubject<number>(0);
   urls = 'http://localhost:4000/api/addcarrito';
 
   cartProduts: any = JSON.parse(sessionStorage.getItem('API') || '[]');
@@ -24,5 +26,9 @@ export class CarritoService {
 
   addCarrito(urls: string, body: any): Observable<any> {
     return this.http.post(urls, body);
+  }
+
+  toggleItem(items: string):Observable<IProducto>{
+    return this.http.get<IProducto>(this.urls+ '/' + items);
   }
 }

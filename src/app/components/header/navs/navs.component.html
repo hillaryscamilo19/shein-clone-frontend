@@ -51,15 +51,15 @@
   <mat-sidenav-container class="container">
     <mat-sidenav #sidenav class="modal">
       <p class="total">Sudtotal</p>
-      <span 
-      class="price"
-      >{{
-        Total | currency: "RD"
-      }}</span>
+      <app-total [total]="total" class="price"></app-total>
+
       <span *ngFor="let store of carritoService.cartProduts">
         <img src="{{ store.img }}" class="imagen" />
         <section class="example-section">
-          <mat-checkbox class="example-margi" (click)="getTotal()"></mat-checkbox>
+          <mat-checkbox
+            class="example-margi"
+            (click)="toggleItem(store._id)"
+          ></mat-checkbox>
         </section>
         <mat-icon (click)="removerartic(store._id)" class="delete"
           >delete</mat-icon
@@ -69,8 +69,9 @@
         <mat-icon class="sum" (click)="RemovercAr()"
           >remove_circle_outline</mat-icon
         ><span>{{ count }}</span>
-        <mat-icon (click)="AddcAr()">control_point</mat-icon>
+        <mat-icon (click)="AddcAr(store._id)">control_point</mat-icon>
       </span>
+      
     </mat-sidenav>
     <mat-sidenav-content class="modal1">
       <h1></h1>

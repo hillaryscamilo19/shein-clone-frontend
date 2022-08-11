@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import {IProducto} from '../data/store'
 
 @Injectable({
   providedIn: 'root',
@@ -30,19 +31,11 @@ export class ServiciosaddService {
     return this.http.get(this.url);
   }
 
-  getProductoByID(id: string) {
-    return this.http.get(this.url + `/${id}`);
+  getProductoByID(id: string):Observable<IProducto> {
+    return this.http.get<IProducto>(this.url + `/${id}`);
   }
 
-
-  addItems(id: string){
+  addItems(id: string) {
     this.http.get(this.url + `/${id}`);
   }
-
-  // addProducto(key:string,data: any){
-
-  // }
-
-  // getadd(key: any){
-  // }
 }

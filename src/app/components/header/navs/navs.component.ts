@@ -4,7 +4,6 @@ import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.se
 import { GoogleApiService } from 'src/app/pages/login/login/service/google-api.service';
 import { MatDialog } from '@angular/material/dialog';
 import { IProducto } from 'src/app/pages/shop/data/store';
-
 @Component({
   selector: 'app-navs',
   templateUrl: './navs.component.html',
@@ -13,8 +12,18 @@ import { IProducto } from 'src/app/pages/shop/data/store';
 export class NavsComponent implements OnInit {
   userLogged = this.googleService.getUserLogged();
   fecha: Date = new Date();
-  @Input() totalPrice: IProducto = new IProducto('','','',0,this.fecha,'',0,false);
-  @Input() Total: number = 0;
+  total: number = 0;
+  price = 0
+  @Input() totalPri: IProducto = new IProducto(
+    '',
+    '',
+    '',
+    0,
+    this.fecha,
+    '',
+    0,
+    false
+  );
 
   public rutas: Array<any> = [];
   public fondo!: string;
@@ -25,11 +34,10 @@ export class NavsComponent implements OnInit {
   MatDialog: any;
   Addcarrito: any;
   add: any;
-  total: number = 0;
-  items: IProducto[] = [];
+  items: any = JSON.parse(sessionStorage.getItem('API') || '[]');
   count: number = 0;
   carritoCounts: number | undefined;
-
+  isTouched:boolean = false;
   constructor(
     public service: ServiciosaddService,
     private googleService: GoogleApiService,
@@ -50,9 +58,16 @@ export class NavsComponent implements OnInit {
     });
   }
 
-  AddcAr() {
+  AddcAr(id:string) {
+    this.isTouched=true
+    if(this.isTouched){
+      this.count = this.count + 1;
+      this.isTouched = false
+    }
+    this.total += this.price * this.count;
     this.service.Count.next(this.count);
   }
+
   RemovercAr() {
     this.count = this.count - 1;
     this.service.Count.next(this.count);
@@ -72,20 +87,29 @@ export class NavsComponent implements OnInit {
     this.googleService.logout();
   }
 
+  //La funcion actualiza el precio cada vez que le hacemos click en check
+  toggleItem(item: string) {
+    this.getTotal();
+    this.service.getProductoByID(item).subscribe((data)=>{
+      this.price = data.price
+    });
+    console.log(item);
+  }
+
   getTotal() {
-    this.Total = this.Addcarrito
-      .map((item:any) => item.quantity * item.price)
-      console.log(this.Total);
-      
-      // .reduce((acc:any, item:any) => console.log('kjsklss', item),0);
-      
+    this.total = this.items
+      .filter((items: any) => !items.completed)
+      // multiplicacion de cada elemento.
+      // .map((items: any) => console.log(items.quantity * items.price));
+
+    // .reduce((acc:any, items:any) => (acc += items), 0);
   }
 
   // onToggle(totalPrice: IProducto) {
   //   totalPrice.completed = !totalPrice.completed;
   //   this.toggleItem.emit(totalPrice);
   //   console.log(this.totalPrice);
-    
+
   // }
 
   //añadir carrito

@@ -17,7 +17,7 @@ export class ShopComponent implements OnInit {
   listProduct: IProducto[] = [];
   filter = '';
   tag = '';
-  data :any
+  data: any;
   @Input() producto!: ShopComponent;
   Data: IProducto[] = [];
   showFiller = false;
@@ -53,21 +53,18 @@ export class ShopComponent implements OnInit {
   }
 
   addCar(id: string) {
-  
     this.productoservis.getProductoByID(id).subscribe(
       (data) => {
         console.log(data);
-        
-        this.carritoservis.addCarrito(this.urls,data).subscribe((data) => {
+
+        this.carritoservis.addCarrito(this.urls, data).subscribe((data) => {
           console.log(data);
-          
-        })
+        });
         this.carritoservis.cartProduts.push(data);
-        
+
         sessionStorage.setItem(
           'API',
           JSON.stringify([...this.carritoservis.cartProduts])
-
         );
       },
       (error) => {
@@ -75,6 +72,4 @@ export class ShopComponent implements OnInit {
       }
     );
   }
-
- 
 }

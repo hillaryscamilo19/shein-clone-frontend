@@ -32,6 +32,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TotalComponent } from './components/total/total.component';
 //componentes
 
 
@@ -48,6 +49,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     NavsComponent,
     RegisterComponent,
     CartPageComponent,
+    TotalComponent,
   ],
 
   imports: [

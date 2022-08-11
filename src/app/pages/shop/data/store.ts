@@ -5,7 +5,7 @@ export  class IProducto {
   price: number;
   fechaCreacion?: Date;
   img: string;
-  quantity: number = 0;
+  quantity: number;
   completed: boolean = false;
 
 
