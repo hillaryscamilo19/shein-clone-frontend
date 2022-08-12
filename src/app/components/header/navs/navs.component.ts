@@ -13,7 +13,7 @@ export class NavsComponent implements OnInit {
   userLogged = this.googleService.getUserLogged();
   fecha: Date = new Date();
   total: number = 0;
-  price = 0
+  price = 0;
   @Input() totalPri: IProducto = new IProducto(
     '',
     '',
@@ -37,7 +37,7 @@ export class NavsComponent implements OnInit {
   items: any = JSON.parse(sessionStorage.getItem('API') || '[]');
   count: number = 0;
   carritoCounts: number | undefined;
-  isTouched:boolean = false;
+  isTouched: boolean = false;
   constructor(
     public service: ServiciosaddService,
     private googleService: GoogleApiService,
@@ -58,11 +58,11 @@ export class NavsComponent implements OnInit {
     });
   }
 
-  AddcAr(id:string) {
-    this.isTouched=true
-    if(this.isTouched){
+  AddcAr(id: string) {
+    this.isTouched = true;
+    if (this.isTouched) {
       this.count = this.count + 1;
-      this.isTouched = false
+      this.isTouched = false;
     }
     this.total += this.price * this.count;
     this.service.Count.next(this.count);
@@ -70,6 +70,8 @@ export class NavsComponent implements OnInit {
 
   RemovercAr() {
     this.count = this.count - 1;
+    this.total = this.total - this.price;
+    this.total ;
     this.service.Count.next(this.count);
   }
 
@@ -90,38 +92,15 @@ export class NavsComponent implements OnInit {
   //La funcion actualiza el precio cada vez que le hacemos click en check
   toggleItem(item: string) {
     this.getTotal();
-    this.service.getProductoByID(item).subscribe((data)=>{
-      this.price = data.price
+    this.service.getProductoByID(item).subscribe((data) => {
+      this.total = data.quantity;
+      this.price = data.price;
     });
-    console.log(item);
+    console.log(this.total);
   }
 
   getTotal() {
-    this.total = this.items
-      .filter((items: any) => !items.completed)
-      // multiplicacion de cada elemento.
-      // .map((items: any) => console.log(items.quantity * items.price));
-
-    // .reduce((acc:any, items:any) => (acc += items), 0);
+    this.total = this.items.filter((items: any) => !items.completed);
+    console.log(this.total);
   }
-
-  // onToggle(totalPrice: IProducto) {
-  //   totalPrice.completed = !totalPrice.completed;
-  //   this.toggleItem.emit(totalPrice);
-  //   console.log(this.totalPrice);
-
-  // }
-
-  //añadir carrito
-  // AddCarrirto(pop: string) {
-  //   const popo = {
-  //     userId: '',
-  //     product: '',
-  //     PriceId: '',
-  //     ImgProduct: '',
-  //     Titleproduct: '',
-  //   };
-
-  //   // this.carritoService.addCarrito(pop);
-  // }
 }

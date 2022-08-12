@@ -1,8 +1,7 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {IProducto} from '../data/store'
+import { IProducto } from '../data/store';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +9,8 @@ import {IProducto} from '../data/store'
 export class CarritoService {
   // total: Subject<number> = new BehaviorSubject<number>(0);
   urls = 'http://localhost:4000/api/addcarrito';
-
+  Count = new BehaviorSubject<number>(0);
+  number = 0;
   cartProduts: any = JSON.parse(sessionStorage.getItem('API') || '[]');
 
   constructor(private http: HttpClient) {
@@ -28,7 +28,7 @@ export class CarritoService {
     return this.http.post(urls, body);
   }
 
-  toggleItem(items: string):Observable<IProducto>{
-    return this.http.get<IProducto>(this.urls+ '/' + items);
+  toggleItem(items: string): Observable<IProducto> {
+    return this.http.get<IProducto>(this.urls + '/' + items);
   }
 }

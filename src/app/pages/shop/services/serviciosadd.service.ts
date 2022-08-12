@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import {IProducto} from '../data/store'
+import { CarritoService } from './carrito.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class ServiciosaddService {
   @Output() disparador: EventEmitter<any> = new EventEmitter();
   public lista: Array<any> = [];
   public jso: Array<any> = [];
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,  public carritoService: CarritoService) {
     this.getData;
   }
 
@@ -38,4 +39,5 @@ export class ServiciosaddService {
   addItems(id: string) {
     this.http.get(this.url + `/${id}`);
   }
+
 }
