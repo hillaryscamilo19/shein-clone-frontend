@@ -9,7 +9,7 @@ import { CarritoService } from './carrito.service';
 })
 export class ServiciosaddService {
   url = 'http://localhost:4000/api/productos';
-  Count = new BehaviorSubject<number>(0);
+  // Count = new BehaviorSubject<number>(0);
   @Output() disparador: EventEmitter<any> = new EventEmitter();
   public lista: Array<any> = [];
   public jso: Array<any> = [];
@@ -33,6 +33,7 @@ export class ServiciosaddService {
   }
 
   getProductoByID(id: string):Observable<IProducto> {
+    console.log(id);
     return this.http.get<IProducto>(this.url + `/${id}`);
   }
 

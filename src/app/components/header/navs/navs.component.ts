@@ -14,6 +14,7 @@ export class NavsComponent implements OnInit {
   fecha: Date = new Date();
   total: number = 0;
   price = 0;
+  @Output() ToggleItem: EventEmitter<IProducto> = new EventEmitter();
   @Input() totalPri: IProducto = new IProducto(
     '',
     '',
@@ -30,12 +31,14 @@ export class NavsComponent implements OnInit {
   public usuario!: string;
   public carrito!: string;
   opened = false;
+  discaunt:boolean = false;
   showFiller = false;
+  disabledInput: boolean = false;
   MatDialog: any;
   Addcarrito: any;
   add: any;
   items: any = JSON.parse(sessionStorage.getItem('API') || '[]');
-  count: number = 0;
+  count: number = this.price;
   carritoCounts: number | undefined;
   isTouched: boolean = false;
   constructor(
@@ -44,7 +47,6 @@ export class NavsComponent implements OnInit {
     public dialog: MatDialog,
     public carritoService: CarritoService
   ) {
-    console.log(this.userLogged);
   }
 
   ngOnInit(): void {
@@ -53,11 +55,13 @@ export class NavsComponent implements OnInit {
     this.carrito = '../../../assets/img/carrito.png';
     this.add = sessionStorage.getItem('API');
     this.Addcarrito = JSON.parse(this.add);
-    this.service.Count.subscribe((res) => {
-      this.count = res;
-    });
+    // this.service.Count.subscribe((res) => {
+    //   this.count = res;
+    // });
   }
 
+
+  //Contador
   AddcAr(id: string) {
     this.isTouched = true;
     if (this.isTouched) {
@@ -65,14 +69,12 @@ export class NavsComponent implements OnInit {
       this.isTouched = false;
     }
     this.total += this.price * this.count;
-    this.service.Count.next(this.count);
+    // this.service.Count.next(this.count);
+    
   }
 
-  RemovercAr() {
-    this.count = this.count - 1;
-    this.total = this.total - this.price;
-    this.total ;
-    this.service.Count.next(this.count);
+  RemovercAr(item: string) {
+    this.count = this.count -1;
   }
 
   DisplayProduc(sidenav: any) {
@@ -82,7 +84,6 @@ export class NavsComponent implements OnInit {
 
   removerartic(id: any) {
     this.carritoService.deleteCarrito(id).subscribe((data) => {});
-    console.log(id);
   }
 
   logout() {
@@ -92,15 +93,16 @@ export class NavsComponent implements OnInit {
   //La funcion actualiza el precio cada vez que le hacemos click en check
   toggleItem(item: string) {
     this.getTotal();
+
     this.service.getProductoByID(item).subscribe((data) => {
       this.total = data.quantity;
       this.price = data.price;
+      console.log(this.price);
+      
     });
-    console.log(this.total);
   }
 
   getTotal() {
     this.total = this.items.filter((items: any) => !items.completed);
-    console.log(this.total);
   }
 }

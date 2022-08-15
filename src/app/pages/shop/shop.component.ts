@@ -12,7 +12,6 @@ import { HttpClient } from '@angular/common/http';
 export class ShopComponent implements OnInit {
   urls = 'http://localhost:4000/api/addcarrito';
   local: any;
-  icom = true;
   session: any;
   listProduct: IProducto[] = [];
   filter = '';
@@ -55,8 +54,6 @@ export class ShopComponent implements OnInit {
   addCar(id: string) {
     this.productoservis.getProductoByID(id).subscribe(
       (data) => {
-        console.log(data);
-
         this.carritoservis.addCarrito(this.urls, data).subscribe((data) => {
           console.log(data);
         });

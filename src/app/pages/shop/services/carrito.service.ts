@@ -22,6 +22,7 @@ export class CarritoService {
 
   deleteCarrito(id: string): Observable<any> {
     return this.http.delete(this.urls + `/${id}`);
+    
   }
 
   addCarrito(urls: string, body: any): Observable<any> {
