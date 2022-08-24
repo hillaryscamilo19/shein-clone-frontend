@@ -22,8 +22,7 @@ export class NavsComponent implements OnInit {
     0,
     this.fecha,
     '',
-    0,
-    false
+    0
   );
 
   public rutas: Array<any> = [];
@@ -91,15 +90,11 @@ export class NavsComponent implements OnInit {
   }
 
   //La funcion actualiza el precio cada vez que le hacemos click en check
-  toggleItem(item: string) {
+  toggleItem(items: any) {
     this.getTotal();
-
-    this.service.getProductoByID(item).subscribe((data) => {
-      this.total = data.quantity;
-      this.price = data.price;
-      console.log(this.price);
-      
-    });
+      this.total = this.price;
+      this.ToggleItem.emit(items);
+    console.log(this.total);
   }
 
   getTotal() {

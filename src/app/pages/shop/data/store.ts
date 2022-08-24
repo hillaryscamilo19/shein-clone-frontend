@@ -6,10 +6,9 @@ export  class IProducto {
   fechaCreacion?: Date;
   img: string;
   quantity: number;
-  completed: boolean = false;
 
 
-  constructor( _id:string ,title: string, object: string,  price: number,  fechaCreacion: Date, img: string ,quantity: number ,   completed: boolean ){
+  constructor( _id:string ,title: string, object: string,  price: number,  fechaCreacion: Date, img: string ,quantity: number){
     this._id = _id;
     this.title = title;
     this.object = object;
@@ -17,6 +16,5 @@ export  class IProducto {
     this.price= price;
     this.img = img; 
     this.quantity = quantity;
-    this.completed = completed;
   }
 }

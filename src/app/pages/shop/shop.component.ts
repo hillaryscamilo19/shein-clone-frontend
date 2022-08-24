@@ -3,6 +3,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import { IProducto } from './data/store';
 import { HttpClient } from '@angular/common/http';
+import { CartPageComponent } from '../cart-page/cart-page.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-shop',
@@ -17,6 +19,8 @@ export class ShopComponent implements OnInit {
   filter = '';
   tag = '';
   data: any;
+  Count = this.carritoservis.Count
+
   @Input() producto!: ShopComponent;
   Data: IProducto[] = [];
   showFiller = false;
@@ -30,7 +34,8 @@ export class ShopComponent implements OnInit {
   constructor(
     private productoservis: ServiciosaddService,
     private carritoservis: CarritoService,
-    private http: HttpClient
+    private http: HttpClient,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -58,15 +63,29 @@ export class ShopComponent implements OnInit {
           console.log(data);
         });
         this.carritoservis.cartProduts.push(data);
-
         sessionStorage.setItem(
           'API',
           JSON.stringify([...this.carritoservis.cartProduts])
         );
+        console.log(id);
+        this.carritoservis.increaseCount();
+
+
       },
+      
       (error) => {
         console.log(error);
       }
     );
   }
+  openDialog(id: string) {
+    const dialogRef = this.dialog.open( CartPageComponent );
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+
+  }
 }
+
+
