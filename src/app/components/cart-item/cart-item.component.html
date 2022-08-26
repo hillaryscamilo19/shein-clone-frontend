@@ -1,0 +1,18 @@
+<div class="item-cart-container">
+    <img src="{{ item.img }}" class="imagen"/>
+    <mat-icon (click)="removerartic(item._id ? item._id: '')" class="delete">delete</mat-icon>
+    <input
+        type="checkbox"
+        class="example-margi"
+        [checked]="checkbo"
+        (click)="toggleItem(item._id ? item._id: '')"
+    />
+    <h2 class="title">{{ item.title }}</h2>
+    <h1 class="precio">{{ item.price | currency: "RD" }}</h1>
+    <mat-icon class="sum" (click)="RemovercAr(item._id ? item._id: '')">
+        remove_circle_outline
+    </mat-icon>
+
+    <span>{{ quantity }}</span>
+        <mat-icon (click)="AddcAr()">control_point</mat-icon>
+</div>

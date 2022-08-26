@@ -34,7 +34,7 @@
         </button>
         <span
           [matBadge]="carritoService.Count"
-          [matBadgeHidden]="count ==1"
+          [matBadgeHidden]="count ==0"
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
           matBadgeColor="warn"
@@ -51,33 +51,29 @@
   </mat-toolbar>
   <mat-sidenav-container class="container">
     <mat-sidenav #sidenav class="modal">
-      <p class="total" >Subtotal</p>
-      <h1 class="price">{{total  | currency}}</h1>
-
-      <!-- <app-total [total]="total" class="price"></app-total> -->
-
+      <h1 class="price">Subtotal {{total}}</h1>
       <span *ngFor="let store of carritoService.cartProduts">
-
-        <img src="{{ store.img }}" class="imagen" />
-        <mat-icon (click)="removerartic(store._id)" class="delete"
-          >delete</mat-icon
-        >
+        {{store.quantity}}
+        <app-cart-item [item]="store" [quantity]="store.quantity"></app-cart-item>
+        <!-- <img src="{{ store.img }}" class="imagen"/>
+        <mat-icon (click)="removerartic(store._id)" class="delete">delete</mat-icon>
         <input
         type="checkbox"
         class="example-margi"
-        [checked]="items.price"
-        (change)="toggleItem(store)"
+        [checked]="checkbo"
+        (click)="toggleItem(store._id)"
         />
         <h2 class="title">{{ store.title }}</h2>
-
         <h1 class="precio">{{ store.price | currency: "RD" }}</h1>
           <mat-icon class="sum" (click)="RemovercAr(store._id)">
             remove_circle_outline
           </mat-icon>
+
+
         <span>{{ count }}</span>
-        <mat-icon (click)="AddcAr(store._id)">control_point</mat-icon>
+        <mat-icon (click)="AddcAr(store)">control_point</mat-icon> -->
       </span>
     </mat-sidenav>
-    <mat-sidenav-content class="modal1"> </mat-sidenav-content>
+    <!-- <mat-sidenav-content class="modal1"></mat-sidenav-content> -->
   </mat-sidenav-container>
 </form>

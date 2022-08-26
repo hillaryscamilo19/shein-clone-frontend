@@ -33,6 +33,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TotalComponent } from './components/total/total.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 //componentes
 
 
@@ -50,6 +51,7 @@ import { TotalComponent } from './components/total/total.component';
     RegisterComponent,
     CartPageComponent,
     TotalComponent,
+    CartItemComponent,
   ],
 
   imports: [

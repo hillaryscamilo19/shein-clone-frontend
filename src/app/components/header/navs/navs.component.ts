@@ -13,7 +13,8 @@ export class NavsComponent implements OnInit {
   userLogged = this.googleService.getUserLogged();
   fecha: Date = new Date();
   total: number = 0;
-  price = 0;
+  checkbo: boolean = true;
+  price = 1;
   @Output() ToggleItem: EventEmitter<IProducto> = new EventEmitter();
   @Input() totalPri: IProducto = new IProducto(
     '',
@@ -37,7 +38,7 @@ export class NavsComponent implements OnInit {
   Addcarrito: any;
   add: any;
   items: any = JSON.parse(sessionStorage.getItem('API') || '[]');
-  count: number = this.price;
+  count: number = 1;
   carritoCounts: number | undefined;
   isTouched: boolean = false;
   constructor(
@@ -54,9 +55,12 @@ export class NavsComponent implements OnInit {
     this.carrito = '../../../assets/img/carrito.png';
     this.add = sessionStorage.getItem('API');
     this.Addcarrito = JSON.parse(this.add);
+    this.ToggleItem
     // this.service.Count.subscribe((res) => {
     //   this.count = res;
     // });
+
+    console.log(this.carritoService.cartProduts)
   }
 
 
@@ -90,11 +94,23 @@ export class NavsComponent implements OnInit {
   }
 
   //La funcion actualiza el precio cada vez que le hacemos click en check
-  toggleItem(items: any) {
+  toggleItem(items: string) {
+    // if (this){
+
+    // }
+
+    this.checkbo = !this.checkbo;
+    console.log('togled', this.checkbo);
+    
     this.getTotal();
-      this.total = this.price;
-      this.ToggleItem.emit(items);
-    console.log(this.total);
+     this.service.getProductoByID(items).subscribe(
+      (data)=>{
+        this.total = this.price * this.count
+        console.log(this.total);
+        
+      }
+     )
+    console.log();
   }
 
   getTotal() {

@@ -69,8 +69,6 @@ export class ShopComponent implements OnInit {
         );
         console.log(id);
         this.carritoservis.increaseCount();
-
-
       },
       
       (error) => {

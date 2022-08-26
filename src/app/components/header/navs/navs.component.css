@@ -9,11 +9,6 @@
   display: flex;
   width: 99%;
   justify-content: center;
-  /* width: 99%;
-  margin-top: 15%;
-  display: flex;
-  justify-content: center;
-  margin-left: 16%; */
 }
 
 .toa{
@@ -47,9 +42,6 @@
 }
 .carrito {
   margin-left: 50px;
-  /* font-size: 42px;
-  margin-left: 28%;
-  margin-top: 13%; */
 }
 
 .heart {

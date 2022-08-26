@@ -5,7 +5,7 @@ export  class IProducto {
   price: number;
   fechaCreacion?: Date;
   img: string;
-  quantity: number;
+  quantity: number
 
 
   constructor( _id:string ,title: string, object: string,  price: number,  fechaCreacion: Date, img: string ,quantity: number){

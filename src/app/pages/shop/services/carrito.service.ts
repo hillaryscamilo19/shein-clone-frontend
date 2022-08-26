@@ -11,6 +11,7 @@ export class CarritoService {
   urls = 'http://localhost:4000/api/productos';
   Count = 0;
   number = 0;
+  total = 0;
   cartProduts: any = JSON.parse(sessionStorage.getItem('API') || '[]');
 
   constructor(private http: HttpClient) {
