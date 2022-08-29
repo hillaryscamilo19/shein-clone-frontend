@@ -37,26 +37,6 @@
   border: none;
 }
 
-.buscador {
-  display: flex;
-  width: 100%;
-  height: auto;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  margin-top: 2%;
-}
-
-.card {
-  max-width: 420px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  margin: 15px;
-}
 
 .img {
   height: 274px;
@@ -68,10 +48,7 @@
   margin-left: 8%;
 }
 
-.price {
-  font-family: "EB Garamond", serif;
-  color: black;
-}
+
 .Myicon {
   width: 0%;
   margin-left: 5%;
@@ -109,12 +86,6 @@ section button {
   min-height: 64px;
 }
 
-.titulo {
-  margin-left: 0%;
-  align-items: center;
-  font-size: 107%;
-  display: flex;
-}
 
 .example-button-row {
   width: 100%;

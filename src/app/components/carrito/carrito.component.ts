@@ -18,12 +18,10 @@ export class CarritoComponent implements OnInit {
 
   ngOnInit(): void {
     this.carrito = '../../../assets/img/carrito.png';
-    this.Addcarrito = JSON.parse(this.add);
-    console.log(this.carritoService.cartProduts)
+    this.Addcarrito = (this.add);
   }
 
   DisplayProduc(sidenav: any) {
     sidenav.toggle();
-    this.Addcarrito = JSON.parse(this.add);
   }
 }

@@ -10,6 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./cart-item.component.css']
 })
 export class CartItemComponent implements OnInit {
+  items: any = JSON.parse(sessionStorage.getItem('API') || '[]');
   @Input() item: IProducto= {
     _id: '',
     quantity: 0,
@@ -28,6 +29,7 @@ export class CartItemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    
   }
 
   removerartic(id: string) {
@@ -63,7 +65,7 @@ export class CartItemComponent implements OnInit {
     console.log(this.item);
   }
 
-  // getTotal() {
-  //   this.carritoService.total = this.items.filter((items: any) => !items.completed);
-  // }
+  getTotal() {
+    this.carritoService.total = this.items.filter((items: any) => !items.completed);
+  }
 }

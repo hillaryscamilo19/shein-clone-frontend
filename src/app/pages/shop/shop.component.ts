@@ -3,8 +3,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
 import { IProducto } from './data/store';
 import { HttpClient } from '@angular/common/http';
-import { CartPageComponent } from '../cart-page/cart-page.component';
 import { MatDialog } from '@angular/material/dialog';
+import { CartPageComponent } from '../cart-page/cart-page.component';
 
 @Component({
   selector: 'app-shop',
@@ -41,6 +41,8 @@ export class ShopComponent implements OnInit {
   ngOnInit(): void {
     this.tag = '../../../assets/img/tag.png';
     this.getProduct();
+
+    
   }
 
   //backed
@@ -54,6 +56,15 @@ export class ShopComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  openDialog(id: string) {
+    const dialogRef = this.dialog.open( CartPageComponent );
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+
   }
 
   addCar(id: string) {
@@ -76,14 +87,8 @@ export class ShopComponent implements OnInit {
       }
     );
   }
-  openDialog(id: string) {
-    const dialogRef = this.dialog.open( CartPageComponent );
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-
-  }
 }
+
+
 
 

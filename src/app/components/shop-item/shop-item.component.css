@@ -1,0 +1,126 @@
+.buscador {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 2%;
+  }
+  .card {
+    max-width: 420px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 15px;
+  }
+  .img {
+    height: 274px;
+  }  
+
+  .titulo {
+    margin-left: 0%;
+    align-items: center;
+    font-size: 107%;
+    display: flex;
+  }
+  .price {
+    font-family: "EB Garamond", serif;
+    color: black;
+  }  
+
+  .add_shopping {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media only screen and (max-width: 1300px) and (min-width: 850px) {
+    .buscador {
+      flex-direction: column;
+    }
+  }
+  
+  /* Para 480px */
+  @media only screen and (max-width: 850px) and (min-width: 552px) {
+    .cotenedor {
+      width: 100%;
+    }
+  
+    .input {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .form {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  
+    .titulo {
+      font-size: 51%;
+    }
+  
+    .buscador {
+      flex-direction: column;
+    }
+  }
+  
+  @media only screen and (max-width: 552px) and (min-width: 340px) {
+    .cotenedor {
+      width: 100%;
+    }
+  
+    .input {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .form {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+    .buscador {
+      flex-direction: column;
+    }
+  }
+  /* Para 320px */
+  @media only screen and (max-width: 340px) and (min-width: 0px) {
+    .cotenedor {
+      width: 100%;
+    }
+  
+    .input {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .form {
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+    }
+  
+    .img {
+      width: 112px;
+      height: 110px;
+    }
+  
+    .buscador {
+      flex-direction: column;
+    }
+  }
+  
