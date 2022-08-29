@@ -34,6 +34,8 @@ import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TotalComponent } from './components/total/total.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { LoggingComponent } from './components/logging/logging.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 //componentes
 
 
@@ -52,6 +54,8 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     CartPageComponent,
     TotalComponent,
     CartItemComponent,
+    LoggingComponent,
+    CarritoComponent,
   ],
 
   imports: [

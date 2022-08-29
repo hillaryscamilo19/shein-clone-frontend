@@ -3,77 +3,9 @@
     <div class="logo">
       <img class="fondo" [src]="fondo" routerLink="home" />
     </div>
-
-    <span class="example-spacer"></span>
-
-    <button mat-button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngIf="userLogged | async as user">
-          <span>{{ user.email }}</span>
-        </button>
-        <mat-divider></mat-divider>
-        <button mat-menu-item routerLink="login">
-          <span>login</span>
-        </button>
-        <button mat-menu-item routerLink="registro">
-          <span>Register</span>
-        </button>
-        <mat-divider></mat-divider>
-        <button mat-menu-item *ngIf="userLogged | async as user">
-          <span (click)="logout()" routerLink="login">Sign Out</span>
-        </button>
-      </mat-menu>
-
-      <div class="container-art">
-        <button
-          mat-icon-button
-          [matMenuTriggerFor]="menu"
-          aria-label="Example icon-button with a menu"
-        >
-          <img class="usuario" [src]="usuario" />
-        </button>
-        <span
-          [matBadge]="carritoService.Count"
-          [matBadgeHidden]="count ==0"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
-          matBadgeColor="warn"
-          (click)="(showFiller)"
-        >
-          <img
-            class="carrito"
-            [src]="carrito"
-            (click)="DisplayProduc(sidenav)"
-          />
-        </span>
+      <div>
+        <app-logging></app-logging>
+        <app-carrito></app-carrito>
       </div>
-    </button>
   </mat-toolbar>
-  <mat-sidenav-container class="container">
-    <mat-sidenav #sidenav class="modal">
-      <h1 class="price">Subtotal {{total}}</h1>
-      <span *ngFor="let store of carritoService.cartProduts">
-        {{store.quantity}}
-        <app-cart-item [item]="store" [quantity]="store.quantity"></app-cart-item>
-        <!-- <img src="{{ store.img }}" class="imagen"/>
-        <mat-icon (click)="removerartic(store._id)" class="delete">delete</mat-icon>
-        <input
-        type="checkbox"
-        class="example-margi"
-        [checked]="checkbo"
-        (click)="toggleItem(store._id)"
-        />
-        <h2 class="title">{{ store.title }}</h2>
-        <h1 class="precio">{{ store.price | currency: "RD" }}</h1>
-          <mat-icon class="sum" (click)="RemovercAr(store._id)">
-            remove_circle_outline
-          </mat-icon>
-
-
-        <span>{{ count }}</span>
-        <mat-icon (click)="AddcAr(store)">control_point</mat-icon> -->
-      </span>
-    </mat-sidenav>
-    <!-- <mat-sidenav-content class="modal1"></mat-sidenav-content> -->
-  </mat-sidenav-container>
 </form>

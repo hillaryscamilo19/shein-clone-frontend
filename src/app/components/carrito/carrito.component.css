@@ -1,0 +1,99 @@
+.carrito {
+    margin-left: 50px;
+  }
+  
+.modal::before {
+  content: "";
+  top: 0;
+  margin-top: 128%;
+  height: 39rem;
+  width: 17rem;
+}
+
+.modal {
+  width: 18rem;
+  height: 17rem;
+  background-color: #f1f1f1;
+  margin-top: 4%;
+  margin-left: 75%;
+}
+
+.price {
+  display: flex;
+  font-size: 23px;
+  margin-left: 36%;
+  font-family: ui-monospace;
+  color: #d51010;
+}
+
+.container {
+  display: contents;
+  width: 73%;
+  margin-left: 28%;
+  height: 88%;
+}
+
+@media only screen and (max-width: 820px) and (min-width: 501px) {
+    .container {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+    }
+  
+    .fondo {
+      width: 100%;
+    }
+  
+    .usuario {
+      font-size: 12px;
+    }
+  
+    .carrito[_ngcontent-eyk-c117] {
+      font-size: 35px;
+      margin-left: -12%;
+      margin-top: 13%;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) and (min-width: 341px) {
+    .container {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+    }
+  
+    .fondo {
+      width: 40%;
+    }
+  
+    .usuario {
+      width: 89%;
+      margin-left: -100%;
+    }
+  
+    .carrito {
+      font-size: 35px;
+      margin-left: -74%;
+      margin-top: 13%;
+    }
+  }
+  
+  @media only screen and (max-width: 820px) and (min-width: 501px) {
+    .container {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+    }
+  
+    .fondo {
+      width: 20%;
+    }
+  
+    .usuario {
+      width: 80%;
+    }
+  
+    .carrito {
+      font-size: 35px;
+      margin-left: 28%;
+      margin-top: 13%;
+    }
+  }
+  

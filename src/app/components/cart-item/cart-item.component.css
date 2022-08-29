@@ -48,22 +48,7 @@
     font-size: 34px;
     margin-left: 0rem;
   }
-  
-  .modal::before {
-    content: "";
-    top: 0;
-    margin-top: 128%;
-    height: 39rem;
-    width: 17rem;
-  }
-  
-  .modal {
-    width: 21%;
-    height: 38%;
-    background-color: #f1f1f1;
-    margin-top: 4%;
-    margin-left: 78%;
-  }
+
   
   .title {
     display: flex;
@@ -76,8 +61,8 @@
   
   .delete {
     display: grid;
-    margin-left: 84%;
-    margin-top: -20%;
+    margin-left: 87%;
+    margin-top: -17%;
     cursor: pointer;
   }
   
@@ -86,17 +71,17 @@
     justify-content: center;
     width: 27%;
     height: 35%;
-    margin-top: 9%;
-    margin-left: 21%;
+    margin-top: 14%;
+    margin-left: 21%
   }
   
   .precio {
     display: flex;
-    font-size: 100%;
+    font-size: 78%;
     -webkit-text-stroke-width: medium;
     margin-left: 53%;
     margin-top: -2%;
-    font-family: "EB Garamond", serif;
+    font-family: serif;
     color: black;
   }
   
@@ -108,8 +93,8 @@
   }
   
   .sum {
-    margin-left: 53%;
-    margin-top: -9%;
+    margin-left: 54%;
+    margin-top: 3%;
   }
   /* Para 600px */
   

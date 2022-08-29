@@ -1,0 +1,28 @@
+<button mat-button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngIf="userLogged | async as user">
+        <span>{{ user.email }}</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item routerLink="login">
+        <span>login</span>
+      </button>
+      <button mat-menu-item routerLink="registro">
+        <span>Register</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item *ngIf="userLogged | async as user">
+        <span (click)="logout()" routerLink="login">Sign Out</span>
+      </button>
+    </mat-menu>
+
+    <div class="container-art">
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu"
+      >
+        <img class="usuario" [src]="usuario" />
+      </button>
+    </div>
+  </button>
