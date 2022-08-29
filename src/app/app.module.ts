@@ -36,6 +36,7 @@ import { TotalComponent } from './components/total/total.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { LoggingComponent } from './components/logging/logging.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
+import { CartImgComponent } from './pages/cart-img/cart-img.component';
 //componentes
 
 
@@ -56,6 +57,7 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     CartItemComponent,
     LoggingComponent,
     CarritoComponent,
+    CartImgComponent,
   ],
 
   imports: [
