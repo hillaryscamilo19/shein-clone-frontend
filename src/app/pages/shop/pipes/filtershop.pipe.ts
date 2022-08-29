@@ -15,4 +15,14 @@ export class FiltershopPipe implements PipeTransform {
      };
      return result
   }
+
+
+  filt(value: Array<any>, arg: string | null = null ){
+    const buton = [];
+    for(const pip of value){
+      if(pip.object.indexOf(arg) > -1){
+        buton.push(pip)
+      }
+    }
+  }
 }

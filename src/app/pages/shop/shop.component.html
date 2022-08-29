@@ -13,14 +13,5 @@
       name="filter"
     />
   </div>
-  <section class="seccion">
-    <div class="example-button-row">
-      <button mat-raised-button (click)="Data = Data">Everything</button>
-      <button mat-raised-button (click)="Data = vestidos">Dress</button>
-      <button mat-raised-button (click)="Data = abrigos">Coat</button>
-      <button mat-raised-button (click)="Data = pantalones">Pants</button>
-      <button mat-raised-button (click)="Data = zapatos">Shoes</button>
-    </div>
-  </section>
   <app-shop-item [listProduct]="listProduct" [filter]="filter"></app-shop-item>
 </div>
