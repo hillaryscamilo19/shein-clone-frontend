@@ -35,8 +35,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { TotalComponent } from './components/total/total.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { LoggingComponent } from './components/logging/logging.component';
+import {MatChipsModule} from '@angular/material/chips';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { ShopItemComponent } from './components/shop-item/shop-item.component';
+import { KidsPageComponent } from './pages/kids-page/kids-page.component';
+import { MenPageComponent } from './pages/men-page/men-page.component';
+import { BeautyPageComponent } from './pages/beauty-page/beauty-page.component';
+import { WomenPageComponent } from './pages/women-page/women-page.component';
+import { SeccionesComponent } from './pages/secciones/secciones.component';
 
 //componentes
 
@@ -59,6 +65,11 @@ import { ShopItemComponent } from './components/shop-item/shop-item.component';
     LoggingComponent,
     CarritoComponent,
     ShopItemComponent,
+    KidsPageComponent,
+    MenPageComponent,
+    BeautyPageComponent,
+    WomenPageComponent,
+    SeccionesComponent,
 
   ],
 
@@ -83,6 +94,7 @@ import { ShopItemComponent } from './components/shop-item/shop-item.component';
     MatBadgeModule,
     MatBottomSheetModule,
     MatDialogModule,
+    MatChipsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     OAuthModule.forRoot(),
   ],

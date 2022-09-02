@@ -1,0 +1,32 @@
+.cotenedor {
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.input {
+    width: 15%;
+    background: #d5e9e9;
+    height: 42px;
+    margin-left: 63%;
+    border: none;
+  }
+
+.form {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.componet {
+    display: grid;
+    justify-content: center;
+  }
+
+
+  

@@ -6,9 +6,10 @@ export  class IProducto {
   fechaCreacion?: Date;
   img: string;
   quantity: number
+  classification : string
 
 
-  constructor( _id:string ,title: string, object: string,  price: number,  fechaCreacion: Date, img: string ,quantity: number){
+  constructor( _id:string ,title: string, object: string,  price: number,  fechaCreacion: Date, img: string ,quantity: number, classification: string){
     this._id = _id;
     this.title = title;
     this.object = object;
@@ -16,5 +17,6 @@ export  class IProducto {
     this.price= price;
     this.img = img; 
     this.quantity = quantity;
+    this.classification = classification
   }
 }

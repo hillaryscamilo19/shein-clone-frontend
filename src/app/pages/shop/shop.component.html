@@ -5,6 +5,12 @@
     aria-label="Example icon-button with a menu"
   ></button>
   <div class="form">
+    <mat-chip-list aria-label="Fish selection"  class="componet">
+      <mat-chip  class="women" routerLink="/Women" (click)="redirectTo('women')">WOMEN</mat-chip>
+      <mat-chip routerLink="/secciones/">KIDS</mat-chip>
+      <mat-chip routerLink="/Men" >MEN</mat-chip>
+      <mat-chip routerLink="/beauty" >BEAUTY</mat-chip>
+    </mat-chip-list>
     <input
       type="text"
       class="input"
@@ -12,6 +18,7 @@
       [(ngModel)]="filter"
       name="filter"
     />
-  </div>
+    <!-- <mat-icon>search</mat-icon> -->
+    </div>
   <app-shop-item [listProduct]="listProduct" [filter]="filter"></app-shop-item>
 </div>

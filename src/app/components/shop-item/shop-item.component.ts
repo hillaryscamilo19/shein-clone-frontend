@@ -15,7 +15,6 @@ export class ShopItemComponent implements OnInit {
   @Input()listProduct: IProducto[] = [];
   @Input()filter = '';
   showFiller = false;
-  @Input()Data: IProducto[] = [];
   // zapatos = this.Data.filter((zapato) => zapato.object === 'zapato');
   // vestidos = this.Data.filter((vestido) => vestido.object === 'vestido');
   // abrigos = this.Data.filter((abrigo) => abrigo.object === 'abrigo');
@@ -24,16 +23,17 @@ export class ShopItemComponent implements OnInit {
   constructor( public dialog: MatDialog,private productoservis: ServiciosaddService,private carritoservis: CarritoService) { }
 
   ngOnInit(): void {
+    console.log(this.listProduct);
   }
 
-  openDialog(id: string) {
-    const dialogRef = this.dialog.open( CartPageComponent );
+  // openDialog(id: string) {
+  //   const dialogRef = this.dialog.open( CartPageComponent );
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
+  //   dialogRef.afterClosed().subscribe(result => {
+  //     console.log(`Dialog result: ${result}`);
+  //   });
 
-  }
+  // }
 
   addCar(id: string) {
     this.productoservis.getProductoByID(id).subscribe(

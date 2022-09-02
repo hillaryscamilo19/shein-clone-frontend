@@ -5,7 +5,8 @@ import { IProducto } from './data/store';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { CartPageComponent } from '../cart-page/cart-page.component';
-
+import { Router } from '@angular/router';
+import { Route } from '@angular/router';
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -18,6 +19,7 @@ export class ShopComponent implements OnInit {
   listProduct: IProducto[] = [];
   filter = '';
   tag = '';
+  public fondo!: string;
   data: any;
   Count = this.carritoservis.Count
 
@@ -35,12 +37,16 @@ export class ShopComponent implements OnInit {
     private productoservis: ServiciosaddService,
     private carritoservis: CarritoService,
     private http: HttpClient,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.tag = '../../../assets/img/tag.png';
+    this.fondo = '../../../assets/img/logo.png';;
     this.getProduct();
+    console.log(this.listProduct);
+    
 
     
   }
@@ -67,10 +73,16 @@ export class ShopComponent implements OnInit {
 
   }
 
+  redirectTo(id: string) {
+    this.router.navigateByUrl(`/secciones/${id}`);
+  }
+
   addCar(id: string) {
     this.productoservis.getProductoByID(id).subscribe(
       (data) => {
         this.carritoservis.addCarrito(this.urls, data).subscribe((data) => {
+          console.log();
+          
           console.log(data);
         });
         this.carritoservis.cartProduts.push(data);

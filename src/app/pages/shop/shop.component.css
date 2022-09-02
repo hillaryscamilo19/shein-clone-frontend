@@ -1,3 +1,12 @@
+.componet {
+  display: grid;
+  justify-content: center;
+}
+
+.women {
+  display: flex;
+  margin-left: 6%;
+}
 .cotenedor {
   width: 100%;
   display: flex;
@@ -28,15 +37,12 @@
 }
 
 .input {
-  width: 26%;
+  width: 15%;
   background: #d5e9e9;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 42px;
+  margin-left: 63%;
   border: none;
 }
-
 
 .img {
   height: 274px;
@@ -47,7 +53,6 @@
   font-size: 8%;
   margin-left: 8%;
 }
-
 
 .Myicon {
   width: 0%;
@@ -86,7 +91,6 @@ section button {
   min-height: 64px;
 }
 
-
 .example-button-row {
   width: 100%;
   height: auto;
@@ -94,6 +98,7 @@ section button {
   justify-content: center;
   align-items: center;
 }
+
 /* Para 600px */
 @media only screen and (max-width: 1300px) and (min-width: 850px) {
   .buscador {

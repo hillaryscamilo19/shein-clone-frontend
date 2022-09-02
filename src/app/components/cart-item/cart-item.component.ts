@@ -18,7 +18,8 @@ export class CartItemComponent implements OnInit {
     img: '',
     object: '',
     price: 0,
-    title: ''
+    title: '',
+    classification: ''
   }
   @Input() quantity: number = 0;
   checkbo: boolean = false;
@@ -29,6 +30,7 @@ export class CartItemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
     
   }
 
@@ -60,6 +62,7 @@ export class CartItemComponent implements OnInit {
   }
 
   AddcAr() {
+    this.getTotal
     this.quantity += 1;
     this.carritoService.total += this.item.price;
     console.log(this.item);
