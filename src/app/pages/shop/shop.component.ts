@@ -5,7 +5,7 @@ import { IProducto } from './data/store';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
 import { CartPageComponent } from '../cart-page/cart-page.component';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Route } from '@angular/router';
 @Component({
   selector: 'app-shop',
@@ -19,6 +19,7 @@ export class ShopComponent implements OnInit {
   listProduct: IProducto[] = [];
   filter = '';
   tag = '';
+  id: string = '';
   public fondo!: string;
   data: any;
   Count = this.carritoservis.Count
@@ -38,7 +39,9 @@ export class ShopComponent implements OnInit {
     private carritoservis: CarritoService,
     private http: HttpClient,
     public dialog: MatDialog,
-    private router: Router
+    private router: Router,
+
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -46,9 +49,6 @@ export class ShopComponent implements OnInit {
     this.fondo = '../../../assets/img/logo.png';;
     this.getProduct();
     console.log(this.listProduct);
-    
-
-    
   }
 
   //backed
@@ -73,7 +73,7 @@ export class ShopComponent implements OnInit {
 
   }
 
-  redirectTo(id: string) {
+  redirectTo(id: any) {
     this.router.navigateByUrl(`/secciones/${id}`);
   }
 
@@ -100,7 +100,3 @@ export class ShopComponent implements OnInit {
     );
   }
 }
-
-
-
-

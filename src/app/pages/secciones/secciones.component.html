@@ -1,23 +1,18 @@
 <div class="cotenedor">
-    <div class="form">
-        <mat-chip-list aria-label="Fish selection"  class="componet">
-            <mat-chip  class="women" routerLink="/Women">WOMEN</mat-chip>
-            <mat-chip routerLink="/secciones/">KIDS</mat-chip>
-            <mat-chip routerLink="/Men" >MEN</mat-chip>
-            <mat-chip routerLink="/beauty" >BEAUTY</mat-chip>
-        </mat-chip-list>
-        
-        
-        <input
-        type="text"
-        class="input"
-        placeholder="Search"
-        [(ngModel)]="filter"
-        name="filter"
-        />
-        <!-- <mat-icon>search</mat-icon> -->
-    
-    </div>
-    <app-shop-item [listProduct]="listProduct" [filter]="filter"></app-shop-item>   
+  <div class="form">
+    <mat-chip-list aria-label="Fish selection" class="componet">
+      <mat-chip class="women"  (click)="redirectTo('women')">WOMEN</mat-chip>
+      <mat-chip  (click)="redirectTo('kids')">KIDS</mat-chip>
+      <mat-chip (click)="redirectTo('men')">MEN</mat-chip>
+      <mat-chip (click)="redirectTo('beauty')">BEAUTY</mat-chip>
+    </mat-chip-list>
+    <input
+      type="text"
+      class="input"
+      placeholder="Search"
+      [(ngModel)]="filter"
+      name="filter"
+    />
+  </div>
+  <app-shop-item [listProduct]="listProduct" [filter]="filter"></app-shop-item>
 </div>
-

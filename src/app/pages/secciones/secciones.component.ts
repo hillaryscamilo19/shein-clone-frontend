@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IProducto } from '../shop/data/store';
 import { CarritoService } from '../shop/services/carrito.service';
 import { ServiciosaddService } from '../shop/services/serviciosadd.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-secciones',
@@ -11,18 +11,22 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SeccionesComponent implements OnInit {
   filter = '';
-  id = '';
+  id: string = '';
   listProduct: IProducto[] = [];                                                                                                                          
-  constructor(private productoservis: ServiciosaddService, private carritoservis: CarritoService, private router: ActivatedRoute) { }
+  constructor(private productoservis: ServiciosaddService, private carritoservis: CarritoService, private router: ActivatedRoute ,    private route: Router) { }
 
   ngOnInit(): void {
-    this.getProduct();
     this.router.params.subscribe((param) => {
+      this.getProduct();
       this.id = param['id'];
+
+      console.log(this.id);
+      console.log(this.listProduct);
+      
     });
   }
 
-    //backed
+  //backed
   getProduct() {
     this.productoservis.getProducto().subscribe(
       (data) => {
@@ -36,4 +40,9 @@ export class SeccionesComponent implements OnInit {
     );
   }
 
+
+  redirectTo(id: any) {
+    this.route.navigate([`/secciones/${id}`]);
+    
+  }
 }
