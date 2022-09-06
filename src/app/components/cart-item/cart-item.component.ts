@@ -39,22 +39,15 @@ export class CartItemComponent implements OnInit {
   }
 
   toggleItem(items: string) {
-    // if (this){
-
-    // }
-
     this.checkbo = !this.checkbo;
     console.log('togled', this.checkbo);
-    
-    // this.getTotal();
      this.service.getProductoByID(items).subscribe(
       (data)=>{
-        this.carritoService.total = this.item.price * this.carritoService.Count
+        this.carritoService.total = 1540
         console.log(this.carritoService.total);
         
       }
      )
-    console.log();
   }
 
   RemovercAr(item: string) {

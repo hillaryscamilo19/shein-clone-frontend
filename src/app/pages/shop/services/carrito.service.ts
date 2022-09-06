@@ -47,4 +47,10 @@ export class CarritoService {
   toggleItem(items: string): Observable<IProducto> {
     return this.http.get<IProducto>(this.urls + '/' + items);
   }
+
+  
+  sudTotal(){
+    this.total = 15463
+  }
+
 }
