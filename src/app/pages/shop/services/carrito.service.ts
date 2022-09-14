@@ -1,6 +1,6 @@
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Input, Output } from '@angular/core';
 import { IProducto } from '../data/store';
 
 @Injectable({
@@ -13,7 +13,8 @@ export class CarritoService {
   number = 0;
   total = 0;
   cartProduts: any = JSON.parse(sessionStorage.getItem('API') || '[]');
-
+  @Output() toggleItem: EventEmitter<IProducto> = new EventEmitter();
+  @Input() mensaje: string = ''
   constructor(private http: HttpClient) {
     console.log(this.cartProduts);
   }
@@ -44,13 +45,12 @@ export class CarritoService {
     return this.http.post(urls, body);
   }
 
-  toggleItem(items: string): Observable<IProducto> {
+  toggleIte(items: string): Observable<IProducto> {
     return this.http.get<IProducto>(this.urls + '/' + items);
   }
-
   
-  sudTotal(){
-    this.total = 15463
+  setTotal(num:number){
+    this.total = num 
   }
 
 }

@@ -11,6 +11,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CartItemComponent implements OnInit {
   items: any = JSON.parse(sessionStorage.getItem('API') || '[]');
+  completed = false
   @Input() item: IProducto= {
     _id: '',
     quantity: 0,
@@ -19,7 +20,8 @@ export class CartItemComponent implements OnInit {
     object: '',
     price: 0,
     title: '',
-    classification: ''
+    classification: '',
+    completed: false
   }
   @Input() quantity: number = 0;
   checkbo: boolean = false;
@@ -30,20 +32,18 @@ export class CartItemComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
-    
   }
 
   removerartic(id: string) {
     this.carritoService.deleteCarrito(id).subscribe((data) => {});
   }
 
-  toggleItem(items: string) {
+  toggleIte(items: string) {
     this.checkbo = !this.checkbo;
     console.log('togled', this.checkbo);
      this.service.getProductoByID(items).subscribe(
       (data)=>{
-        this.carritoService.total = 1540
+        this.carritoService.total 
         console.log(this.carritoService.total);
         
       }
@@ -55,13 +55,22 @@ export class CartItemComponent implements OnInit {
   }
 
   AddcAr() {
-    this.getTotal
     this.quantity += 1;
     this.carritoService.total += this.item.price;
     console.log(this.item);
   }
 
-  getTotal() {
-    this.carritoService.total = this.items.filter((items: any) => !items.completed);
+//esta funcion se ejecuta cuando click al ckeckd y se actualiza el precio.
+  onToggle(item:IProducto){
+    this.completed = !this.completed
+    if(this.completed){
+      console.log('aumentar');
+      return
+    }
+    console.log('Descrementar');
+    
+    // this.getTotal(item);
+    this.carritoService.total += this.item.quantity * this.item.price;
+    console.log('DATA ENVIADA', this.carritoService.total);
   }
 }

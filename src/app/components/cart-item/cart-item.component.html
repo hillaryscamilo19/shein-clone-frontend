@@ -4,8 +4,8 @@
     <input
         type="checkbox"
         class="example-margi"
-        [checked]="checkbo"
-        (click)="toggleItem(item._id ? item._id: '')"
+        [checked]="item.completed"
+        (change)="onToggle(item)"
     />
     <h2 class="title">{{ item.title }}</h2>
     <h1 class="precio">{{ item.price | currency: "RD" }}</h1>

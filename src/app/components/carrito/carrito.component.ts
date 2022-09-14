@@ -7,8 +7,7 @@ import { CarritoService } from 'src/app/pages/shop/services/carrito.service';
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent implements OnInit {
-
-  count: number = 1;
+  count: number = 1
   showFiller = false;
   Addcarrito: any;
   add: any;

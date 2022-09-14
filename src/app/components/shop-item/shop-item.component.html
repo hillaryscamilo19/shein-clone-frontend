@@ -1,22 +1,25 @@
  <div class="buscador">
-    <mat-card
-      *ngFor="let store of listProduct | filtershop: filter"
-      class="card"
-    >
-      <mat-card-content class="foto" >
-        <img src="{{ store.img }}" class="img"/>
-      </mat-card-content>
-      <mat-card-title-group>
-        <!-- <button  mat-icon-button color="warn"class="example-button-container" class="Myicon" type="{{icom ? 'button' : 'button' }}">
-          <mat-icon (click)="icom = !icom" matSuffix>{{icom ? "favorite" : "visibility"}}</mat-icon>
-        </button> -->
-        <button mat-icon-button>
-          <mat-icon class="add_shopping" (click)="addCar(store._id)">add_shopping_cart</mat-icon>
-        </button>
-        <mat-card-title class="titulo">{{ store.title }}</mat-card-title>
-        <mat-card-subtitle class="price">{{
-          store.price | currency:'RD'
-        }}</mat-card-subtitle>
-      </mat-card-title-group>
-    </mat-card>
+  <div class="component">
+    <mat-card class="card" *ngFor="let store of listProduct | filtershop: filter">
+    <mat-card-content class="foto" >
+      <img src="{{ store.img }}" class="img">
+    </mat-card-content>
+    <button class="butooADD" (click)="addCar(store._id)">ADD TO BAG</button>
+    <mat-card-title-group>
+      <button  mat-icon-button (click)="Color()" [color]="color" class="example-button-container" class="Myicon" type="{{icom ? 'button' : 'button' }}">
+        <mat-icon (click)="Color()"> favorite</mat-icon>
+      </button>
+      <!-- <button mat-icon-button>
+        <mat-icon class="add_shopping" (click)="addCar(store._id)">add_shopping_cart</mat-icon>
+      </button> -->
+      <mat-card-title class="titulo">{{ store.title }}</mat-card-title>
+      <mat-card-subtitle class="price">{{
+        store.price | currency:'RD'
+      }}</mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card>
   </div>
+  </div>
+
+
+  

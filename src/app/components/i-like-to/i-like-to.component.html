@@ -1,0 +1,20 @@
+<form action="form">
+    <span
+    class="form"
+    [matBadge]="carritoService.Count"
+    [matBadgeHidden]="count == 0"
+    data-bs-toggle="modal"
+    data-bs-target="#staticBackdrop"
+    matBadgeColor="warn"
+    (click)="(showFiller)"
+  >
+  </span>
+    <section>
+        <div class="example-flex-container">
+          <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+            <mat-icon class="heart">favorite</mat-icon>
+          </button>
+      </div>
+    </section>
+    
+</form>

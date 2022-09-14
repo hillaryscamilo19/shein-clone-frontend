@@ -43,6 +43,7 @@ import { MenPageComponent } from './pages/men-page/men-page.component';
 import { BeautyPageComponent } from './pages/beauty-page/beauty-page.component';
 import { WomenPageComponent } from './pages/women-page/women-page.component';
 import { SeccionesComponent } from './pages/secciones/secciones.component';
+import { ILikeToComponent } from './components/i-like-to/i-like-to.component';
 
 //componentes
 
@@ -70,6 +71,7 @@ import { SeccionesComponent } from './pages/secciones/secciones.component';
     BeautyPageComponent,
     WomenPageComponent,
     SeccionesComponent,
+    ILikeToComponent,
 
   ],
 
