@@ -9,9 +9,11 @@ import { CarritoService } from 'src/app/pages/shop/services/carrito.service';
 export class ILikeToComponent implements OnInit {
   count: number = 1
   showFiller = false;
+  public like!: String
   constructor(public carritoService: CarritoService) { }
 
   ngOnInit(): void {
+    this.like = '../../../assets/img/like.png';
   }
 
 }
