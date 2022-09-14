@@ -1,10 +1,10 @@
  <div class="buscador">
   <div class="component">
-    <mat-card class="card" *ngFor="let store of listProduct | filtershop: filter">
+    <mat-card class="card" *ngFor="let store of listProduct | filtershop: filter" (mouseenter)="addToBag(store._id)">
     <mat-card-content class="foto" >
       <img src="{{ store.img }}" class="img">
     </mat-card-content>
-    <button class="butooADD" (click)="addCar(store._id)">ADD TO BAG</button>
+    <button [ngClass]="{'butooADD': store._id == cardId }" (click)="addCar(store._id)" >ADD TO BAG</button>
     <mat-card-title-group>
       <button  mat-icon-button (click)="Color()" [color]="color" class="example-button-container" class="Myicon" type="{{icom ? 'button' : 'button' }}">
         <mat-icon (click)="Color()"> favorite</mat-icon>

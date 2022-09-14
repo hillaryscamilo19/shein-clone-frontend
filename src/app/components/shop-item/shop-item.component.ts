@@ -14,6 +14,7 @@ export class ShopItemComponent implements OnInit {
   icom = true;
   like: boolean = false;
   color: string = '#bdbdbd';
+  cardId: string = '';
   @Input() listProduct: IProducto[] = [];
   @Input() filter = '';
   showFiller = false;
@@ -56,6 +57,10 @@ export class ShopItemComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+  addToBag(id:string){
+    this.cardId = id
+
   }
 
 
