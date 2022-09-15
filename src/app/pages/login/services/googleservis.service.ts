@@ -17,13 +17,8 @@ export class GoogleservisService {
     }
   }
 
-  async login(email: string, password: string) {
-    try {
-      return await this.afauth.signInWithEmailAndPassword(email, password);
-    } catch (err) {
-      console.log('error en el login', err);
-      return null;
-    }
+  async LoginIn(email: string, password: string) {
+    return this.afauth.signInWithEmailAndPassword(email,password)
   }
 
   async loginWithGoogle(email: string, password: string) {

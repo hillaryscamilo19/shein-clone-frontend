@@ -11,7 +11,6 @@ export class LoginComponent implements OnInit {
     email: '',
     password: '',
   };
-
   hide = true;
   public google!: string;
   public firebaseConfig = {
@@ -29,22 +28,21 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   googleToken() {
-    console.log(this.usuario);
     const { email, password } = this.usuario;
-    this.authService.loginWithGoogle(email, password).then(res => {
-      console.log('se registro:', res);
-      this.router.navigate(['/home']);
-    });
+    console.log(this.usuario);
+    
+    // this.authService.loginWithGoogle(email, password).then(res => {
+    //   console.log('se registro:', res);
+    //   this.router.navigate(['/home']);
+    // });
   }
 
   Login() {
-    const { email, password } = this.usuario;
-    this.authService.login(email, password).then((res) => {
-      console.log('Se registro:', res);
-    });
-  }
-
-  
-
-  
+    console.log('Credeciales', this.usuario)
+    // const res =  this.authService.LoginIn(this.usuario.email,this.usuario.password);
+    // if(res){
+       //console.log('res ->', res);
+      
+    // }
+  } 
 }

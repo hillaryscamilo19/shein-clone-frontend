@@ -10,6 +10,9 @@ Injectable({
   providedIn: 'root',
 })
 export class GoogleApiService {
+  LoginIn(email: string, password: string) {
+    throw new Error('Method not implemented.');
+  }
   constructor(private afauth: AngularFireAuth){}
 
   async register(email: string, passord: string) {
