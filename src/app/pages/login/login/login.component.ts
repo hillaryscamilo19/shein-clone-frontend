@@ -30,19 +30,20 @@ export class LoginComponent implements OnInit {
   googleToken() {
     const { email, password } = this.usuario;
     console.log(this.usuario);
-    
-    // this.authService.loginWithGoogle(email, password).then(res => {
-    //   console.log('se registro:', res);
-    //   this.router.navigate(['/home']);
-    // });
+    this.authService.loginWithGoogle(email, password).then(res => {
+      console.log('se registro:', res);
+      this.router.navigate(['/home']);
+    });
   }
 
-  Login() {
+  async  Login() {
     console.log('Credeciales', this.usuario)
-    // const res =  this.authService.LoginIn(this.usuario.email,this.usuario.password);
-    // if(res){
-       //console.log('res ->', res);
-      
-    // }
+    const res =  this.authService.login(this.usuario.email,this.usuario.password).catch(error => {
+      console.log('error');
+    });
+    if(res){
+       console.log('res ->', res);
+       this.router.navigate(['/home']);
+    }
   } 
 }

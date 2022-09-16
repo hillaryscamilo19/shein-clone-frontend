@@ -4,15 +4,16 @@
         <span>{{ user.email }}</span>
       </button>
       <mat-divider></mat-divider>
-      <button mat-menu-item routerLink="login">
+      <button *ngIf="!userAuth" mat-menu-item routerLink="registro" >
+        <span>Register</span> 
+      </button>
+      
+      <button *ngIf="!userAuth" mat-menu-item routerLink="login">
         <span>login</span>
       </button>
-      <button mat-menu-item routerLink="registro">
-        <span>Register</span>
-      </button>
-      <mat-divider></mat-divider>
+      <mat-divider *ngIf="userAuth"></mat-divider>
       <button mat-menu-item *ngIf="userLogged | async as user">
-        <span (click)="logout()" routerLink="login">Sign Out</span>
+        <span (click)="logout()" routerLink="home">Sign Out</span>
       </button>
     </mat-menu>
 
