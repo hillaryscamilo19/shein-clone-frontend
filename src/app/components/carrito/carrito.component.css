@@ -1,3 +1,8 @@
+.container1{
+  display: flex;
+  justify-content: flex-end;
+}
+
 .carrito {
     margin-left: 50px;
   }
@@ -13,7 +18,7 @@
 .modal {
   width: 18rem;
   height: 17rem;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   margin-top: 4%;
   margin-left: 75%;
 }

@@ -1,8 +1,9 @@
 .header {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #fff4e5;
+
 }
 .toa{
   display: grid;
@@ -16,7 +17,9 @@
   color: black;
 }
 
-
+.container1{
+  display: flex;
+}
 .heart {
   font-size: 34px;
   margin-left: 0rem;
