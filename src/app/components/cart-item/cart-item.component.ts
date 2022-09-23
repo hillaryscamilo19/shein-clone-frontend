@@ -3,16 +3,15 @@ import { CarritoService } from './../../pages/shop/services/carrito.service';
 import { IProducto } from 'src/app/pages/shop/data/store';
 import { Component, Input, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-cart-item',
   templateUrl: './cart-item.component.html',
-  styleUrls: ['./cart-item.component.css']
+  styleUrls: ['./cart-item.component.css'],
 })
 export class CartItemComponent implements OnInit {
   items: any = JSON.parse(sessionStorage.getItem('API') || '[]');
-  completed = false
-  @Input() item: IProducto= {
+  completed = false;
+  @Input() item: IProducto = {
     _id: '',
     quantity: 0,
     fechaCreacion: new Date(),
@@ -21,18 +20,18 @@ export class CartItemComponent implements OnInit {
     price: 0,
     title: '',
     classification: '',
-    completed: false
-  }
+    completed: false,
+  };
+
   @Input() quantity: number = 0;
   checkbo: boolean = false;
 
   constructor(
     public carritoService: CarritoService,
-    private service:ServiciosaddService,
-  ) { }
+    private service: ServiciosaddService
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   removerartic(id: string) {
     this.carritoService.deleteCarrito(id).subscribe((data) => {});
@@ -41,36 +40,54 @@ export class CartItemComponent implements OnInit {
   toggleIte(items: string) {
     this.checkbo = !this.checkbo;
     console.log('togled', this.checkbo);
-     this.service.getProductoByID(items).subscribe(
-      (data)=>{
-        this.carritoService.total 
-        console.log(this.carritoService.total);
-        
-      }
-     )
+    this.service.getProductoByID(items).subscribe((data) => {
+      this.carritoService.total;
+      console.log(this.carritoService.total);
+    });
   }
 
   RemovercAr(item: string) {
-    this.carritoService.Count = this.carritoService.Count -1;
+    this.quantity -= 1;
+    this.carritoService.cartProduts = this.carritoService.cartProduts.map(
+      (p: any) => {
+        if ((p._id = this.item._id)) {
+          p.quantity = this.quantity;
+          return p;
+        }
+        return p;
+      }
+    );
+    this.carritoService.total -= this.item.price;
+    console.log(this.item);
   }
 
   AddcAr() {
     this.quantity += 1;
+    this.carritoService.cartProduts = this.carritoService.cartProduts.map(
+      (p: any) => {
+        if ((p._id = this.item._id)) {
+          p.quantity = this.quantity;
+          return p;
+        }
+        return p;
+      }
+    );
     this.carritoService.total += this.item.price;
     console.log(this.item);
   }
 
-//esta funcion se ejecuta cuando click al ckeckd y se actualiza el precio.
-  onToggle(item:IProducto){
-    this.completed = !this.completed
-    if(this.completed){
+  //esta funcion se ejecuta cuando click al ckeckd y se actualiza el precio.
+  onToggle(item: IProducto) {
+    this.completed = !this.completed;
+    if (this.completed) {
       console.log('aumentar');
-      return
+      this.carritoService.total += item.price * item.quantity;
+      return;
+    } else {
+      this.carritoService.total -= item.price * item.quantity;
+      console.log(item.quantity);
     }
     console.log('Descrementar');
-    
-    // this.getTotal(item);
-    this.carritoService.total += this.item.quantity * this.item.price;
     console.log('DATA ENVIADA', this.carritoService.total);
   }
 }
