@@ -17,12 +17,22 @@ export class GoogleservisService {
     }
   }
 
-  async LoginIn(email: string, password: string) {
-    return this.afauth.signInWithEmailAndPassword(email,password)
+  async loginIn(email: string, password: string) {
+    try {
+      console.log('usuario registrado');
+      return await this.afauth.signInWithPopup(
+        new firebase.auth.GoogleAuthProvider()
+      );
+    } catch (err) {
+      console.log('error en el login', err);
+      return null;
+    }
   }
 
   async loginWithGoogle(email: string, password: string) {
     try {
+      console.log('usuario registrado');
+      
       return await this.afauth.signInWithPopup(
         new firebase.auth.GoogleAuthProvider()
       );

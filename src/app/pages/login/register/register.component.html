@@ -3,16 +3,24 @@
         <div class="div">
             <h1 class="title">register</h1>
           </div>
-          <form class="example-form">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">Name</label>
               <input
                 type="text"
                 class="form-control"
                 id="exampleFormControlInput1"
+                [(ngModel)]=" Datos.Name"
               />
             </div>
-          </form>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                [(ngModel)]=" Datos.apellido"
+              />
+            </div>
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
             <input
@@ -20,6 +28,7 @@
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="hcamilo@exple.com"
+              [(ngModel)]=" Datos.correo"
       
             />
           </div>
@@ -29,20 +38,20 @@
               type="password"
               class="form-control"
               id="exampleFormControlInput1"
+              [(ngModel)]="Datos.password"
 
       
             />
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">password reset</label>
+            <label for="exampleFormControlInput1" class="form-label">password repeat</label>
             <input
               type="password"
               class="form-control"
               id="exampleFormControlInput1"
-      
             />
           </div>
           <br />
-          <button type="button" class="btn btn-outline-primary" id="startSection">submit</button>
+          <button  (click)="registrar()" type="button" class="btn btn-outline-primary" id="startSection">submit</button>
         </div> 
     </div>

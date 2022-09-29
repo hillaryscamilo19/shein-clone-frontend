@@ -41,7 +41,6 @@ import { ShopItemComponent } from './components/shop-item/shop-item.component';
 import { KidsPageComponent } from './pages/kids-page/kids-page.component';
 import { MenPageComponent } from './pages/men-page/men-page.component';
 import { BeautyPageComponent } from './pages/beauty-page/beauty-page.component';
-import { WomenPageComponent } from './pages/women-page/women-page.component';
 import { SeccionesComponent } from './pages/secciones/secciones.component';
 import { ILikeToComponent } from './components/i-like-to/i-like-to.component';
 
@@ -69,7 +68,6 @@ import { ILikeToComponent } from './components/i-like-to/i-like-to.component';
     KidsPageComponent,
     MenPageComponent,
     BeautyPageComponent,
-    WomenPageComponent,
     SeccionesComponent,
     ILikeToComponent,
 

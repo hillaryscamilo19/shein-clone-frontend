@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
     password: '',
   };
   hide = true;
+  hasError!: boolean;
   public google!: string;
   public firebaseConfig = {
     apiKey: 'AIzaSyDwsIAh8_ah91FZhPdjHJWo29gM2K3YI0s',
@@ -30,20 +31,15 @@ export class LoginComponent implements OnInit {
   googleToken() {
     const { email, password } = this.usuario;
     console.log(this.usuario);
-    this.authService.loginWithGoogle(email, password).then(res => {
+    this.authService.loginWithGoogle(email, password).then((res) => {
       console.log('se registro:', res);
       this.router.navigate(['/home']);
     });
   }
 
-  async  Login() {
-    console.log('Credeciales', this.usuario)
-    const res =  this.authService.login(this.usuario.email,this.usuario.password).catch(error => {
-      console.log('error');
+  async Login() {
+    console.log('Credeciales', this.usuario);
+    const res = this.authService.login(this.usuario.email, this.usuario.password).catch((error) => {
     });
-    if(res){
-       console.log('res ->', res);
-       this.router.navigate(['/home']);
-    }
-  } 
+  }
 }
