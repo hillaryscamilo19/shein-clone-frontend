@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
+import { Firestore, collectionData, collection } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GoogleservisService {
-  constructor(private afauth: AngularFireAuth) {}
+  constructor(private afauth: AngularFireAuth, private auth: Firestore) {}
 
   async register(email: string, password: string) {
     try {
@@ -40,6 +41,11 @@ export class GoogleservisService {
       console.log('error en el login', err);
       return null;
     }
+  }
+
+  createDoc(data: any, path: string, id: string){
+    // const collectio = this.auth.collection(path);
+    // return collection.doc(id)
   }
 
   getUserLogged() {

@@ -1,10 +1,10 @@
 .container1 {
   position: absolute;
-  background-color: rgb(246, 250, 250);
-  width: 28%;
-  height: 79%;
+  background-color: rgb(246 250 250 / 42%);
+  width: 31%;
+  height: 76%;
   margin-top: 5%;
-  margin-left: 22%;
+  margin-left: 25%;
 }
 
 .title {
@@ -27,10 +27,10 @@
 }
 
 .btn-outline-primary {
-    width: 50%;
-    height: 41px;
-    margin-top: 0%;
-    margin-left: 29%;
+  width: 50%;
+  height: 41px;
+  margin-top: 0%;
+  margin-left: 29%;
 }
 
 /* Para 600px */
