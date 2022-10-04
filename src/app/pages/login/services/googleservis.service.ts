@@ -7,7 +7,8 @@ import { Firestore, collectionData, collection } from '@angular/fire/firestore';
   providedIn: 'root',
 })
 export class GoogleservisService {
-  constructor(private afauth: AngularFireAuth, private auth: Firestore) {}
+  urls = 'http://localhost:4000//api/auth/register';
+  constructor(private afauth: AngularFireAuth) {}
 
   async register(email: string, password: string) {
     try {
@@ -43,14 +44,14 @@ export class GoogleservisService {
     }
   }
 
-  createDoc(data: any, path: string, id: string){
-    // const collectio = this.auth.collection(path);
-    // return collection.doc(id)
-  }
+  // createDoc(data: any, path: string, id: string){
+  //   // const collectio = this.auth.collection(path);
+  //   // return collection.doc(id)
+  // }
 
-  getUserLogged() {
-    return this.afauth.authState;
-  }
+  // getUserLogged() {
+  //   return this.afauth.authState;
+  // }
 
   logout() {
     this.afauth.signOut();

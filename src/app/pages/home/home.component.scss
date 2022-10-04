@@ -42,17 +42,17 @@
 
 .titulo {
   font-size: 30px;
-  color: rgb(131, 28, 28);
+  color: #ffffff;
 }
 
 .tituloTwo {
   font-size: 25px;
-  color: rgb(29, 27, 27);
+    color: #ffffff;
 }
 
 .texto {
   font-size: 20px;
-  color: rgb(29, 27, 27);
+  color: #ffffff;
 }
 .mat-step-icon-mat-step-icon-state-edit {
   background-color: #fffffd;
@@ -62,13 +62,13 @@
 }
 
 mat-stepper {
-  background-color: #ffffff;
+  background-color: #fc8f3c00;
   padding: 0;
   margin: 0;
 }
 
 mat-card {
-  background-color: #ffffff;
+  background-color: #fc8f3c00;
   width: 135px;
   height: 85px;
   padding: 0;
@@ -104,7 +104,7 @@ mat-card {
   -webkit-user-select: none;
   user-select: none;
   overflow: hidden;
-  color: royalblue;
+  color: black;
   z-index: 1;
   font-family: inherit;
   font-weight: 500;
