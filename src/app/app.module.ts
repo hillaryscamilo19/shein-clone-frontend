@@ -19,7 +19,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { StepperComponent } from './pages/home/components/stepper/stepper.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { AngularFireModule } from '@angular/fire/compat';
@@ -85,6 +85,7 @@ import { ILikeToComponent } from './components/i-like-to/i-like-to.component';
     MatCardModule,
     MatMenuModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     MatDividerModule,
     AppRoutingModule,

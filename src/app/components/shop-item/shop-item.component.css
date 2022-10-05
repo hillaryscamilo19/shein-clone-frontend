@@ -30,13 +30,14 @@
 
 .butooADD {
   position: absolute;
-  width: 57%;
-  margin-left: 4px;
-  margin-top: 57%;
-  border: none;
-  font-family: emoji;
+  width: 76%;
+  margin-left: 10px;
+  margin-top: 81%;
+  border: 1.2;
+  text-align: center;
+  font-family: serif;
   height: 12%;
-  background-color: #f5efde;
+  background-color: #ffffff;
   opacity: 0;
 }
 

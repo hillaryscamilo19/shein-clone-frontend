@@ -28,7 +28,6 @@ export class ServiciosaddService {
   }
 
   getProducto(): Observable<any> {
-    console.log('get product')
     return this.http.get(this.url);
   }
 

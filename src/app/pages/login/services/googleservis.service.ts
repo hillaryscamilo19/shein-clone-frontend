@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import firebase from 'firebase/compat/app';
-import { Firestore, collectionData, collection } from '@angular/fire/firestore';
+/* import { Firestore, collectionData, collection } from '@angular/fire/firestore'; */
 
 @Injectable({
   providedIn: 'root',
 })
 export class GoogleservisService {
-  urls = 'http://localhost:4000//api/auth/register';
+  urls = 'http://localhost:4000//api/auth';
   constructor(private afauth: AngularFireAuth) {}
 
   async register(email: string, password: string) {

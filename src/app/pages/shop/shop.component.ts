@@ -48,7 +48,6 @@ export class ShopComponent implements OnInit {
     this.tag = '../../../assets/img/tag.png';
     this.fondo = '../../../assets/img/logo.png';;
     this.getProduct();
-    console.log(this.listProduct);
   }
 
   //backed
