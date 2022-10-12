@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GoogleApiService } from '../login/service/google-api.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { GoogleservisService } from '../services/googleservis.service';
+
 
 @Component({
   selector: 'app-register',
@@ -18,7 +20,7 @@ export class RegisterComponent implements OnInit {
     perfil: '',
   };
 
-  userName: FormControl = new FormControl('', [Validators.minLength(3), Validators.maxLength(255), Validators.required]);
+  name: FormControl = new FormControl('', [Validators.minLength(3), Validators.maxLength(255), Validators.required]);
   lastName: FormControl = new FormControl('', [Validators.minLength(3), Validators.maxLength(255)]);
   email: FormControl = new FormControl('', Validators.email);
   password: FormControl = new FormControl('');
@@ -26,7 +28,7 @@ export class RegisterComponent implements OnInit {
 
   register: FormGroup = new FormGroup(
     {
-      userName: this.userName,
+      userName: this.name,
       lastName: this.lastName,
       email: this.email,
       password: this.password,
@@ -34,27 +36,20 @@ export class RegisterComponent implements OnInit {
     }
   )
 
-  constructor(private authService: GoogleApiService, private router: Router) {}
+  constructor(private authService: GoogleApiService, private router: Router , private auth:  GoogleservisService) {}
 
   ngOnInit(): void {
     console.log('init')
-    this.userName.statusChanges.subscribe(val => {
-      console.log(this.userName.value);
-    })
+    // this.name.statusChanges.subscribe(val => {
+    //   console.log(this.name.value);
+    // })
     console.log(this.register.valid)
   }
 
-  async registrar() {
+  registrar(form:any):void {
     console.log('Registro', this.Datos);
-    const res = await this.authService
-      .registrarUser(this.Datos.email, this.Datos.password)
-      .catch((error) => {
-        console.log('error de registro');
-      });
-    if (res) {
-      console.log('Existo al crear el usuario');
-      const path = 'Usuario';
-      const id = res.user?.uid;
-    }
+    this.auth.register(form.value).subscribe(res => {
+      this.router.navigateByUrl('/login')
+    })
   }
 }

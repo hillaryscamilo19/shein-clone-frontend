@@ -17,15 +17,6 @@ export class GoogleApiService {
   }
   constructor(private afauth: AngularFireAuth) {}
 
-  // async register(email: string, passord: string) {
-  //   try{
-  //     return await this.afauth.signInWithEmailAndPassword(email,passord)
-  //   }catch(err){
-  //     console.log("error en el login", err);
-  //     return null;
-  //   }
-  // }
-
   async login(email: string, password: string) {
     try {
       return await this.afauth.signInWithEmailAndPassword(email, password);
@@ -51,8 +42,6 @@ export class GoogleApiService {
   }
 
   createDoc(data: any, path: any, id: any) {
-    // // const collection = this.uth.collection(path);
-    // return collection.doc(id).set(data);
   }
 
   getUserLogged() {
