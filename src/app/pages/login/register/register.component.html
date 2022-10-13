@@ -5,70 +5,31 @@
         <h1 class="title">register</h1>
       </div>
       <form [formGroup]="register" #formRegistro="ngForm">
-        
-          <label for="exampleFormControlInput1" class="form-label">Name</label>
-          <input
-            [formControl]="name"
-            type="text"
-            class="form-control"
-            id="exampleFormControlInput1"
-            [(ngModel)]="Datos.name"
-          />
-      
-      
-          <label for="exampleFormControlInput1" class="form-label"
-            >Last name</label
-          >
-          <input
-            [formControl]="lastName"
-            type="text"
-            class="form-control"
-            id="exampleFormControlInput1"
-            [(ngModel)]="Datos.LastName"
-          />
-        
-    
-          <label for="exampleFormControlInput1" class="form-label"
-            >Correo electronico</label
-          >
-          <input
-            [formControl]="email"
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="hcamilo@exple.com"
-            [(ngModel)]="Datos.email"
-          />
- 
-      
-          <label for="exampleFormControlInput1" class="form-label"
-            >Password</label
-          >
-          <input
-            [formControl]="password"
-            type="password"
-            class="form-control"
-            id="exampleFormControlInput1"
-            [(ngModel)]="Datos.password"
-          />
 
-  
-          <label for="exampleFormControlInput1" class="form-label"
-            >password repeat</label
-          >
-          <input
-            [formControl]="ConfirmPassword"
-            type="password"
-            class="form-control"
-            id="exampleFormControlInput1"
-          />
-  
-        <button
-          (click)="registrar(formRegistro)"
-          type="button"
-          class="btn btn-outline-primary"
-          id="startSection"
-        >
+        <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <input [formControl]="name" type="text" class="form-control" id="exampleFormControlInput1"
+          [(ngModel)]="Datos.name" />
+
+
+        <label for="exampleFormControlInput1" class="form-label">Last name</label>
+        <input [formControl]="lastName" type="text" class="form-control" id="exampleFormControlInput1"
+          [(ngModel)]="Datos.LastName" />
+
+
+        <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
+        <input [formControl]="email" type="email" class="form-control" id="exampleFormControlInput1"
+          placeholder="hcamilo@exple.com" [(ngModel)]="Datos.email" />
+
+
+        <label for="exampleFormControlInput1" class="form-label">Password</label>
+        <input [formControl]="password" type="password" class="form-control" id="exampleFormControlInput1"
+          [(ngModel)]="Datos.password" />
+
+
+        <label for="exampleFormControlInput1" class="form-label">password repeat</label>
+        <input [formControl]="ConfirmPassword" type="password" class="form-control" id="exampleFormControlInput1" />
+
+        <button (click)="registrar(formRegistro)" type="button" class="btn btn-outline-primary" id="startSection">
           submit
         </button>
       </form>

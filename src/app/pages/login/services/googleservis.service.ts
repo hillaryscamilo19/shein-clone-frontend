@@ -31,7 +31,7 @@ export class GoogleservisService {
     return this.http.post<JWt>(`${this.urls}/login`, user).pipe(
       tap((res: JWt) => {
         if (res) {
-          this.saveToken(res.DataUser.accessToken, res.DataUser.expiresIn)
+          this.saveToken(res.DataUser.accessToken, res.DataUser.expiresIn);
         }
       })
     );

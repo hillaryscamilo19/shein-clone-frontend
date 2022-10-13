@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { CartPageComponent } from 'src/app/pages/cart-page/cart-page.component';
 import { IProducto } from 'src/app/pages/shop/data/store';
 import { CarritoService } from 'src/app/pages/shop/services/carrito.service';
 import { ServiciosaddService } from 'src/app/pages/shop/services/serviciosadd.service';
@@ -29,14 +30,14 @@ export class ShopItemComponent implements OnInit {
     console.log(this.listProduct);
   }
 
-  // openDialog(id: string) {
-  //   const dialogRef = this.dialog.open( CartPageComponent );
+  openDialog() {
+    const dialogRef = this.dialog.open( CartPageComponent );
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log(`Dialog result: ${result}`);
-  //   });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
 
-  // }
+  }
 
   addCar(id: string) {
     this.productoservis.getProductoByID(id).subscribe(

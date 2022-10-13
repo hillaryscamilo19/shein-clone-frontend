@@ -11,14 +11,17 @@ export class CarritoComponent implements OnInit {
   showFiller = false;
   Addcarrito: any;
   add: any;
-  public carrito!: string;
+  Show: boolean = false;
+  emptyCart: string = '../../../assets/img/empty_cart.png';
+  carrito: string = '../../../assets/img/carrito.png';
   
 
   constructor(public carritoService: CarritoService) { }
 
   ngOnInit(): void {
-    this.carrito = '../../../assets/img/carrito.png';
     this.Addcarrito = (this.add);
+    console.log(this.carritoService.cartProduts.length);
+    
   }
 
   DisplayProduc(sidenav: any) {

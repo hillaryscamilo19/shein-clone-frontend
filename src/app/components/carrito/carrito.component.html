@@ -1,31 +1,45 @@
 <form action="">
   <div class="container1">
     <span
-    class="form"
-    [matBadge]="carritoService.Count"
-    [matBadgeHidden]="count == 0"
-    data-bs-toggle="modal"
-    data-bs-target="#staticBackdrop"
-    matBadgeColor="warn"
-    (click)="(showFiller)"
-  >
-    <img class="carrito" [src]="carrito" (click)="DisplayProduc(sidenav)" />
-  </span>
+      class="form"
+      [matBadge]="carritoService.Count"
+      [matBadgeHidden]="count == 0"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+      matBadgeColor="warn"
+      (click)="(showFiller)"
+    >
+      <img class="carrito" [src]="carrito" (click)="DisplayProduc(sidenav)" />
+
+    </span>
+
   </div>
+  
   <div class="container2">
     <mat-sidenav-container class="container">
       <mat-sidenav #sidenav class="modal">
-        <app-total mensaje="Subtotal:" class="price"></app-total>
-        <mat-chip-list>
-          <mat-chip-list>Item 1</mat-chip-list>
-        </mat-chip-list>
-        <span *ngFor="let store of carritoService.cartProduts">
-          <app-cart-item
-            [item]="store"
-            [quantity]="store.quantity"
-          ></app-cart-item>
-        </span>
+        <mat-divider></mat-divider>
+        <div *ngIf="carritoService.cartProduts.length > 0 ? true: false">
+          <app-total mensaje="Subtotal:" class="price"></app-total>
+          <mat-divider></mat-divider>
+          <span *ngFor="let store of carritoService.cartProduts">
+            <app-cart-item
+              [item]="store"
+              [quantity]="store.quantity"
+            ></app-cart-item>
+            <mat-divider></mat-divider>
+          </span>
+          <button class="mtpago">VIEW BAG</button>
+        </div>
+      
+        <div *ngIf="carritoService.cartProduts.length <= 0 ? true: false">
+          <!-- SOMETHING TO APPEAR WHEN THERE ARE NO ITEMS -->
+          <img class="img" [src]="emptyCart">
+          <h1 class="title1">EMPTY CART</h1>
+          <h2 class="title2">ADD TO CART</h2>
+        </div>  
       </mat-sidenav>
+  
     </mat-sidenav-container>
   </div>
 </form>

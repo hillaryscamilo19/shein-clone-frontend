@@ -16,11 +16,15 @@
 }
 
 .modal {
-  width: 17rem;
-  height: 18rem;
+  width: 18rem;
+  height: 21rem;
   background-color: #f3f3f3;
-  margin-top: 4%;
+  margin-top: 3%;
   margin-left: 85%;
+}
+
+.img{
+  width: 300px;
 }
 
 .price {
@@ -30,7 +34,30 @@
   font-family: ui-monospace;
   color: #d51010;
 }
+.mtpago{
+  background-color: #212529;
+  margin-left: 15%;
+  margin-top: 10%;
+  color: aliceblue;
+  width: 74%;
 
+}
+
+.title1{
+  color: rgb(8 8 8);
+  display: flex;
+  font-family: none;
+  justify-content: center;
+  font-size: small;
+}
+
+.title2{
+  color: #060606;
+  display: flex;
+  font-family: none;
+  justify-content: center;
+  font-size: larger;
+}
 .container {
   display: contents;
   width: 73%;

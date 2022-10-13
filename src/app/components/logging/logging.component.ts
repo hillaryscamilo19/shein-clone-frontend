@@ -1,4 +1,3 @@
-import { userI } from './../../pages/shop/data/registre';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Component, OnInit } from '@angular/core';
 import { GoogleApiService } from 'src/app/pages/login/login/service/google-api.service';
@@ -39,6 +38,6 @@ export class LoggingComponent implements OnInit {
   }
 
   public isLoggedIn(): boolean {
-    return !!this.auth.currentUser;
+    return !this.auth.currentUser;
   }
 }

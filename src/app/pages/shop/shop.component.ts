@@ -22,17 +22,12 @@ export class ShopComponent implements OnInit {
   id: string = '';
   public fondo!: string;
   data: any;
-  Count = this.carritoservis.Count
+  Count = this.carritoservis.Count;
 
   @Input() producto!: ShopComponent;
   Data: IProducto[] = [];
   showFiller = false;
   Api: Array<any> = [];
-
-  zapatos = this.Data.filter((zapato) => zapato.object === 'zapato');
-  vestidos = this.Data.filter((vestido) => vestido.object === 'vestido');
-  abrigos = this.Data.filter((abrigo) => abrigo.object === 'abrigo');
-  pantalones = this.Data.filter((pantalon) => pantalon.object === 'pantalon');
 
   constructor(
     private productoservis: ServiciosaddService,
@@ -46,7 +41,7 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
     this.tag = '../../../assets/img/tag.png';
-    this.fondo = '../../../assets/img/logo.png';;
+    this.fondo = '../../../assets/img/logo.png';
     this.getProduct();
   }
 
@@ -64,12 +59,11 @@ export class ShopComponent implements OnInit {
   }
 
   openDialog(id: string) {
-    const dialogRef = this.dialog.open( CartPageComponent );
+    const dialogRef = this.dialog.open(CartPageComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
     });
-
   }
 
   redirectTo(id: any) {
@@ -81,7 +75,7 @@ export class ShopComponent implements OnInit {
       (data) => {
         this.carritoservis.addCarrito(this.urls, data).subscribe((data) => {
           console.log();
-          
+
           console.log(data);
         });
         this.carritoservis.cartProduts.push(data);
@@ -92,7 +86,7 @@ export class ShopComponent implements OnInit {
         console.log(id);
         this.carritoservis.increaseCount();
       },
-      
+
       (error) => {
         console.log(error);
       }
