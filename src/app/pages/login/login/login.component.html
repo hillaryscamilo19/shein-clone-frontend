@@ -1,38 +1,51 @@
-<div class="cotainer">
+<div class="cotaine">
   <div class="container2">
     <div class="div">
       <h1 class="title">Log In</h1>
     </div>
-    <form class="example-form">
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Email address</label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="name@example.com"
-        />
-      </div>
-    </form>
-    <br />
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Password</label>
+    <form #formLogin="ngForm">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
       <input
-        type="{{ hide ? 'password' : 'text' }}"
+        type="email"
+        name="email"
         class="form-control"
-        id="exampleFormControlInput1"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        [(ngModel)]="usuario.email"
       />
-    </div>
-    <br />
-    <button
-      (click)="googleToken()"
-      type="button"
-      class="btn btn-outline-primary"
-      id="startSection"
-    >
-      sign up with google
-    </button>
+
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        name="password"
+        [type]="hide ? 'password' : 'text'"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+        [(ngModel)]="usuario.password"
+      />
+      <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+     -->
+
+      <button
+        value="send"
+        type="submit"
+        class="btn btn-outline-primary"
+        (click)="login(formLogin)"
+      >
+        Sign up
+      </button>
+      <br />
+      <button
+        (click)="googleToken()"
+        type="button"
+        class="btn btn-outline-primary"
+        id="startSection"
+      >
+        Sign up with google
+      </button>
+    </form>
   </div>
 </div>

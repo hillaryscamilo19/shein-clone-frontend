@@ -1,31 +1,12 @@
-<p class="header">
+<form class="form">
   <mat-toolbar color="primary" class="header">
     <div class="logo">
       <img class="fondo" [src]="fondo" routerLink="home" />
     </div>
-    <span class="example-spacer"></span>
-    <button mat-button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item *ngIf="userLogged | async as user">
-          <span>{{ user.email }}</span>
-        </button>
-        <button mat-menu-item routerLink="login">
-          <span>login</span>
-        </button>
-        <button mat-menu-item routerLink="registro">
-          <span>Register</span>
-        </button>
-      </mat-menu>
-      <button
-        mat-icon-button
-        [matMenuTriggerFor]="menu"
-        aria-label="Example icon-button with a menu"
-      >
-        <img class="usuario" [src]="usuario" />
-      </button>
-        <span matBadge="0" matBadgeOverlap="false">
-          <img class="carrito" [src]="carrito" routerLink="cart"/>
-        </span>
-    </button>
+      <div class="container1">
+        <app-logging></app-logging>
+        <app-carrito></app-carrito>
+        <app-i-like-to></app-i-like-to>
+      </div>
   </mat-toolbar>
-</p>
+</form>

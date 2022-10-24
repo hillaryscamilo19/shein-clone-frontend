@@ -1,0 +1,22 @@
+ <div class="buscador">
+  <div class="component">
+    <mat-card class="card" *ngFor="let store of listProduct | filtershop: filter" (mouseenter)="addToBag(store._id)">
+    <mat-card-content class="foto" >
+      <img src="{{ store.img }}" class="img">
+    </mat-card-content>
+    <span [ngClass]="{'butooADD': store._id == cardId }" (click)="addCar(store._id)" >ADD TO BAG</span>
+    <mat-card-title-group>
+      <button  mat-icon-button (click)="Color()" [color]="color" class="example-button-container" class="Myicon" type="{{icom ? 'button' : 'button' }}">
+        <mat-icon (click)="Color()"> favorite</mat-icon>
+      </button>
+      <mat-card-title class="titulo">{{ store.title }}</mat-card-title>
+      <mat-card-subtitle class="price">{{
+        store.price | currency:'RD'
+      }}</mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card>
+  </div>
+  </div>
+
+
+  
