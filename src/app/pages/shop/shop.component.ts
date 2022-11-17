@@ -85,6 +85,7 @@ export class ShopComponent implements OnInit {
         );
         console.log(id);
         this.carritoservis.increaseCount();
+        this.carritoservis.deleteCarrito(id);
       },
 
       (error) => {

@@ -22,6 +22,11 @@ export class ServiciosaddService {
     this.lista.push(shop);
   }
 
+
+  deleteCarrito(id: string): Observable<any> {
+    return this.http.delete(this.url + `/${id}`);
+  }
+
   getjso(getjs: any) {
     this.jso.push(getjs);
     console.log(getjs);

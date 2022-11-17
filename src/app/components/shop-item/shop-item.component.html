@@ -4,7 +4,7 @@
     <mat-card-content class="foto" >
       <img src="{{ store.img }}" class="img">
     </mat-card-content>
-    <span [ngClass]="{'butooADD': store._id == cardId }" (click)="addCar(store._id)" >ADD TO BAG</span>
+    <span [ngClass]="{'butooADD': store._id == cardId }" (click)="addCar(store._id)"  routerLink="carrito">ADD TO BAG</span>
     <mat-card-title-group>
       <button  mat-icon-button (click)="Color()" [color]="color" class="example-button-container" class="Myicon" type="{{icom ? 'button' : 'button' }}">
         <mat-icon (click)="Color()"> favorite</mat-icon>
@@ -19,4 +19,3 @@
   </div>
 
 
-  

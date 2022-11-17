@@ -3,6 +3,7 @@ import { CarritoService } from './../../pages/shop/services/carrito.service';
 import { IProducto } from 'src/app/pages/shop/data/store';
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-cart-item',
   templateUrl: './cart-item.component.html',
@@ -31,10 +32,12 @@ export class CartItemComponent implements OnInit {
     private service: ServiciosaddService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.removerartic;
+  }
 
   removerartic(id: string) {
-    this.carritoService.deleteCarrito(id).subscribe((data) => {});
+    sessionStorage.removeItem('API');
   }
 
   toggleIte(items: string) {
